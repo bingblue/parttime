@@ -12,14 +12,14 @@
 
 ##Getting Started
 ### 荣誉榜(参与人员)
-昵称 | **QQ号** | description
+昵称 | **QQ号** | 备注
 ----|---------|------------
-- [小牧COOL](https://github.com/XiaoMuCOOL/) | 895355044 | 
-- [小成](https://github.com/xiaochenggit/) | 707996290 | 
-- [小色](https://github.com/kehuayuan/) | 291236937 | 
-- [肉球] | 466***359 | 
-- [简单] | 962***255 | 
-- [壮实] | 127****601 | 
+[小牧COOL](https://github.com/XiaoMuCOOL/) | 895355044 | 小队长
+[小成](https://github.com/xiaochenggit/) | 707996290 | 
+[小色](https://github.com/kehuayuan/) | 291236937 | 帅比猛戳
+[肉球] | 466***359 | 
+[简单] | 962***255 | 
+[壮实] | 127****601 | 
 
 ##版本日志
 - [X] v0313 增加模板步骤
