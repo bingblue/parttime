@@ -17,9 +17,9 @@
 [小牧COOL](https://github.com/XiaoMuCOOL/) | 895355044 | 小队长
 [小成](https://github.com/xiaochenggit/) | 707996290 | 高大帅气威猛成
 [小色](https://github.com/kehuayuan/) | 291236937 | 帅比猛戳
-[肉球](https://github.com/rouqiu110/) | 466***359 | 
-[简单](https://github.com/xmdatuer/) | 962***255 | 
-[壮实](https://github.com/) | 127****601 | 
+[肉球](https://github.com/rouqiu110/) | 466599359 | 
+[简单](https://github.com/xmdatuer/) | 962048255 | 
+[壮实](https://github.com/) | 1271314601 | 
 
 ##版本日志
 - [X] v0313 增加模板步骤
@@ -31,6 +31,6 @@
 
 [View the license file](https://github.com/XiaoMuCOOL/mutouch/blob/master/LICENSE)
 
-Copyright © 2015 · 冰蓝科技 , Inc. 
+Copyright © 2016 · 冰蓝科技 , Inc. 
 
 All Rights Reserved · Powered by : **小牧COOL**
