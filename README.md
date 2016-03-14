@@ -1,4 +1,4 @@
-# parttime 兼职
+﻿# parttime 兼职
 
 利用业余时间兼职做一些页面,欢迎加入！
 
@@ -15,7 +15,7 @@
 昵称 | **QQ号** | 备注
 ----|---------|------------
 [小牧COOL](https://github.com/XiaoMuCOOL/) | 895355044 | 小队长
-[小成](https://github.com/xiaochenggit/) | 707996290 | 
+[小成](https://github.com/xiaochenggit/) | 707996290 | 高大帅气威猛成
 [小色](https://github.com/kehuayuan/) | 291236937 | 帅比猛戳
 [肉球](https://github.com/rouqiu110/) | 466***359 | 
 [简单](https://github.com/xmdatuer/) | 962***255 | 
