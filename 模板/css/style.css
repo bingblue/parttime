@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* 
+ * 注意：请务必按照注释步骤来写，并删除注释！！！
+ * 注意：请务必按照注释步骤来写，并删除注释！！！
+ * 注意：请务必按照注释步骤来写，并删除注释！！！
+ */
+/* 第一步：
+   这是全局类，可以使用、
+   如不用也请不要删除，直接跳到第二步 */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  color: #fff;
+  border: 0;
+  background: #383838; }
+
+.wrap {
+  min-width: 320px;
+  max-width: 640px;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  position: relative;
+  background: #fff; }
+
+.main {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative; }
+
+#audio_btn {
+  position: fixed;
+  right: 20px;
+  top: 8.5%;
+  z-index: 200;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/mic_icon_01.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px; }
+
+#audio_btn.off {
+  /*background-position: 0px -50px;*/ }
+
+audio {
+  height: 1px;
+  width: 1px;
+  display: none; }
+
+/* 第二步：
+   请在此处写你的CSS代码，请在所有class前加 “.你的bodyClass”，如：
+   你的bodyClass为xm,则应该写为：
+.xm .class{
+  
+} 
+.xm ul{
+  
+}
+.xm #id{
+  
+}
+*/
+.class{
+
+}
+
+
+
+/* 第三步：
+   css3动画使用教程，可以参考使用，并在最后删除下面代码！*/
+
+.music-ani {
+  -webkit-transform-origin: 50% 50%;
+  animation-timing-function: linear;/*linear,ease,ease-in,ease-in-out,ease-out*/
+  -webkit-animation-name: "music-ani";/*动画属性名，也就是我们前面keyframes定义的动画名*/
+  -webkit-animation-duration: 100s;/*动画持续时间*/
+  -webkit-animation-delay: 0s;/*动画延迟时间*/
+  -webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
+  -webkit-animation-fill-mode: forwards;/* forwards 固定在最后一帧| backwards 固定在第一帧*/ }
+
+@-webkit-keyframes music-ani {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(36000deg);
+    transform: rotate(36000deg); } }

@@ -1,0 +1,32 @@
+{
+  "name": "main",
+  "description": "微网站-我爱用",
+  "version": "0.0.2",
+  "author": {
+    "name": "小牧COOL",
+    "url": "http://weibo.com/xiaomucool",
+    "QQ":"895355044"
+  },
+  "homepage": "www.5iuse.com",
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/bingblue/mutemplate/blob/master/LICENSE"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-css": "*",
+    "grunt-replace": "*",
+    "grunt-usemin": "*",
+    "jpegtran-bin": "^3.0.1"
+  },
+  "readme": "ERROR: No README data found!"
+}

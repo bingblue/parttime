@@ -1,0 +1,619 @@
+/* 自定义变量 */
+$main-color:#e1a752;
+$over-height-bg-color:#171717;
+$over-height-bg-color2:#171717;
+
+/* 全局类和方法 */
+@mixin webkit-ani($name:an1,$duration:1s,$delay:0s,$count:1,$mode:none,$fun:linear){
+  -webkit-transform-origin: 50% 50%;
+  animation-timing-function:$fun;/*linear,ease,ease-in,ease-in-out,ease-out*/
+  -webkit-animation-name: $name;/*动画属性名，也就是我们前面keyframes定义的动画名*/
+  -webkit-animation-duration: $duration;/*动画持续时间*/
+  -webkit-animation-delay: $delay;/*动画延迟时间*/
+  -webkit-animation-iteration-count: $count;/*定义循环资料，infinite为无限次*/
+  -webkit-animation-fill-mode: $mode;/* forwards 固定在最后一帧| backwards 固定在第一帧*/
+}
+@mixin btn-abs($width:60%,$height:12%,$top:0,$left:0){
+  display: inline-block;
+  width: $width;
+  height: $height;
+  position: absolute;
+  top: $top;
+  left: $left;
+  z-index: 99;
+}
+@mixin pos($width:auto,$height:auto,$top:0,$left:0){
+  position: absolute;
+  top:$top;
+  left:$left;
+  width: $width;
+  height: $height;
+  z-index: 89;
+}
+@mixin caret($rotate:0deg,$color:#27a9f2,$big:6px){
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: $big/2;
+  vertical-align: middle;
+  border-bottom: $big dashed;
+  border-bottom: $big solid\9;
+  border-right: $big solid transparent;
+  border-left: $big solid transparent;
+  color: $color;
+  transform: rotate($rotate);
+}
+
+%mask{
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.8);
+  display: none;
+}
+%btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 60%;
+  height: 12%;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  color: #fff;
+}
+.btn{
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  color: #fff;
+  border: 0;
+  background: #383838;
+}
+.wrap{
+  min-width: 320px;
+  max-width: 640px;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  position: relative;
+  background: $over-height-bg-color;
+}
+.wrap-color{
+  background: $over-height-bg-color2;
+}
+.main{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+#audio_btn{
+  position: fixed;
+  right: 20px;
+  top: 8.5%;
+  z-index: 200;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/mic_icon_01.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+#audio_btn.off{
+  /*background-position: 0px -50px;*/
+}
+audio{
+  height: 1px;
+  width: 1px;
+  display: none;
+}
+
+/* 微官网 页面 */
+.slider{
+  width: 100%;
+  overflow: hidden;
+  ul{
+    display: inline-block;
+    width: 700%;
+    li{
+      float: left;
+      width: 14.28%;
+    }
+  }
+}
+
+.pos{
+  @include pos(100%,100%,0%,0%);
+  .logo{
+    border-bottom: 1px solid #368208;
+    width: 100%;
+    padding: 6% 0;
+    img{
+      width: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .copyright{
+    border-top: 1px solid #368208;
+    padding: 7%;
+    p{
+      font-size: 13px;
+      color: #323232;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 5px;
+    }
+  }
+}
+.menu3{
+  display: inline-block;
+  width: 100%;
+  padding: 15% 0;
+  li{
+    float: left;
+    width: 40%;
+    height: auto;
+    text-align: center;
+    margin: 4% 5%;
+    img{
+      display: block;
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+    span{
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+}
+/* 微官网 页面END */
+
+/* 关于我们 页面 */
+.about .wrap{
+  background: #fff;
+  padding-bottom: 78px;
+}
+.menu{
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color: #f4f4f4;
+  width: 100%;
+  li{
+    width: 22%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #d5d7dc;
+    line-height: 30px;
+    a{
+      font-size: 14px;
+      color: #b4b4b4;
+    }
+  }
+  li:nth-child(1){
+    img{
+      float: right;
+      margin-right: 20%;
+      max-width: 30px;
+    }
+    width: 10%;
+  }
+  li:nth-child(5){
+    border: 0;
+  }
+}
+.title{
+  background-color: #8ec322;
+  padding: 10px 3%;
+  width: 94%;
+  margin-top: 20px;
+  .ir{
+    max-height: 30px;
+  }
+  .il{
+    float: right;
+    max-height: 30px;
+  }
+  h2{
+    display: inline-block;
+    border:1px solid #fff;
+    color: #fff;
+    padding: 5px 10px;
+    padding-bottom: 8px;
+    padding-right: 15px;
+    font-size: 16px;
+    border-right: 0;
+    position: relative;
+  }
+  h2:after{
+    content: " ";
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border:1px solid #fff;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border-left: 0;
+    border-bottom: 0;
+    position: absolute;
+    right: -12px;
+    top: 4px;
+  }
+  a{
+    display: inline-block;
+    border:1px solid #fff;
+    color: #fff;
+    padding: 5px 10px;
+    padding-bottom: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    float: right;
+    margin-right: 0px;
+  }
+}
+
+.list{
+  li{
+    display: inline-block;
+    padding: 20px 3%;
+    border-bottom: 1px solid #d5d7dc;
+    width: 96%;
+    div{
+      width: 75%;
+      float: left;
+      h2{
+        color: #323232;
+        font-size: 14px;
+        padding: 10px 0 20px 0;
+      }
+      span{
+        color:#909090;
+        font-size: 12px;
+      }
+    }
+    img{
+      margin-left: 4%;
+      width: 20%;
+      float: right;
+    }
+  }
+}
+.menu-list{
+  padding-top: 10px;
+  li{
+    padding: 10px 0;
+    padding-left: 3%;
+    background: url(../img/menu_list_bg_icon.jpg) 3% center no-repeat;
+    border-bottom: 1px solid #d5d7dc;
+    a{
+      padding-left: 30px;
+      font-size: 14px;
+      color: #5a8900;
+    }
+  }
+}
+.about .copyright{
+  background: #0c3601;
+  text-align: center;
+  padding: 30px 0;
+  p{
+    color: #fff;
+    font-size: 13px;
+  }
+}
+.btm-menu-box{
+  background: #00562e;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  .btm-menu{
+    padding: 10px 0;
+    li{
+      display: inline-block;
+      width: 24%;
+      text-align: center;
+    }
+    span{
+      display: block;
+      color: #fff;
+      font-size: 12px;
+      padding-top: 5px;
+    }
+  }
+}
+/* 关于我们 页面END */
+
+/* 旧衣改造 页面 */
+.jygz{}
+.jygz .wrap{
+  background: #fff;
+}
+.jygz-top{
+  top: auto;
+  bottom: 0;
+  height: 20px;
+  line-height: 20px;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  background: rgba(0,0,0,0.6);
+}
+.jygz-btm-menu-box{
+  background: #eee;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  .jygz-btm-menu{
+    padding: 20px 0;
+    li{
+      display: inline-block;
+      width: 32%;
+      text-align: center;
+    }
+    a{
+      display: block;
+      color: #333;
+      font-size: 12px;
+      padding-top: 5px;
+    }
+    span{
+      @include caret(135deg,#b6b6b6,6px);
+      position: relative;
+      top: 5px;
+      left: 10px;
+    }
+  }
+}
+.jygz-gyf,.jygz-gkq,.jygz-wyg{
+  position: fixed;
+  top: auto;
+  bottom: 58px;
+  left: 5%;
+  display: none;
+  width: 22%;
+  height: auto;
+  background: #fff;
+  li{
+    border: 1px solid #d5d7dc;
+    padding: 10px 0;
+    border-bottom: 0;
+    text-align: center;
+    a{
+      font-size: 12px;
+      color: #666;
+    }
+  }
+}
+.jygz-gkq{
+  left: 37%;
+}
+.jygz-wyg{
+  left: 73%;
+}
+/* 旧衣改造 页面END */
+
+/* 批量预约 页面 */
+.pl{}
+.pl .wrap{background: #fff;}
+.pl-form{
+  padding: 20px 3%;
+  width: 94%;
+  border-bottom: 1px solid #fb6242;
+}
+.form-row{
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+  h3{
+    font-size: 14px;
+    color:#161616;
+    margin-bottom: 5px;
+    small{
+      font-size: 12px;
+      color: #949499;
+    }
+  }
+  span{
+    display: inline-block;
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: #505050;
+    font{
+      color: #e9410e;
+    }
+  }
+  input[type='text'],input[type='phone'],input[type='number'],input[type='date']{
+    width: 95%;
+    padding: 10px 2%;
+    height: 15px;
+    border: 1px solid #d5d7dc;
+    font-size: 15px;
+  }
+  select{
+    width: 50%;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 5px;
+    border: 1px solid #d5d7dc;
+    background: #fff;
+  }
+  textarea{
+    padding: 2%;
+    width: 95%;
+    border: 1px solid #d5d7dc;
+  }
+  .m-l{
+    float: left;
+    margin-left: 20%;
+  }
+  .m-r{
+    float: left;
+    margin-left: 5%;
+  }
+}
+.pl-sub{
+  width: 99%;
+  background: #026d38;
+  border-radius: 0;
+}
+.fh{
+  padding: 20px 3%;
+  width: 95%;
+  p{
+    padding-right: 4%;
+    color: #787878;
+    font-size: 14px;
+    line-height: 16px;
+    text-indent: 2em;
+  }
+  h2{
+    width: 98%;
+    text-align: center;
+    color: #fa3b00;
+    font-size: 14px;
+    margin-top: 10px;
+    font{
+      font-size: 16px;
+      font-weight: 800;
+    }
+  }
+}
+/* 批量预约 页面END */
+
+/* 精品预约 页面 */
+.jp .wrap{background: #10100e;}
+.jp-form{
+  padding: 20px 3%;
+  width: 94%;
+  background: url(../img/jp_bg1.jpg) no-repeat;
+}
+.jp-form3{
+  padding: 20px 3%;
+  width: 94%;
+  background: url(../img/jp_bg3.jpg) no-repeat;
+}
+.jp-form .form-row,.jp-form3 .form-row{
+  h3{
+    color: #fff;
+  }
+  h4{
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+  h5{
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 12%;
+  }
+  .sm{
+    width: 20%;
+    margin-right: 10px;
+  }
+  .xl{
+    width: 20%;
+  }
+  span{
+    color: #5f5f5f;
+  }
+}
+.desc{
+  background: url(../img/jp_bg4_2.jpg);
+  background-size: 100% 100%;
+  h3{
+    padding-left: 5%;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #fff;
+  }
+  p{
+    font-size: 14px;
+    padding-top: 10px;
+    padding-left: 20%;
+    color: #8f8f8f;
+    span{
+      display: inline-flex;
+      width: 85%;
+      height: 100%;
+    }
+  }
+}
+.jp-phone{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #205d00;
+  bottom: 40%;
+  left: 0;
+}
+
+/* 小于390px */
+@media screen and (max-width: 391px) {
+  .jp-form .form-row{
+    .sm{
+      margin-right: 0px;
+    }
+    .xl{
+      width: 17%;
+    }
+  }
+}
+
+#jqFile1,#jqFile2,#jqFile3,#jqFile4{
+  display: none;
+}
+.file-a{
+  position: absolute;
+  display: inline-block;
+  top: 5%;
+  left: 5%;
+  width: 47%;
+  height: 22%;
+}
+.jqA1{top: 5%;left: 5%;}
+.jqA2{top: 27%;left: 48%;}
+.jqA3{top: 49%;left: 5%;}
+.jqA4{top: 71%;left: 48%;}
+/* 精品预约 页面END */
+
+
+/* 动画定义 */
+.music-ani{
+  @include webkit-ani(music-ani,100s,0s,infinite,forwards);
+}
+@-webkit-keyframes music-ani{
+  0% {
+    -webkit-transform : rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform : rotate(36000deg);
+    transform: rotate(36000deg);
+  }
+}
