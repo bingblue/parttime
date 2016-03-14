@@ -12,12 +12,12 @@
 
 ##Getting Started
 ### 荣誉榜(参与人员)
-- [小牧COOL](https://github.com/XiaoMuCOOL/)
-- [小成](https://github.com/xiaochenggit/)
-- [小色](https://github.com/deark/)
-- [肉球] QQ：
-- [简单] QQ：
-- [壮实] QQ：
+- [小牧COOL](https://github.com/XiaoMuCOOL/) **QQ号** ： 895355044
+- [小成](https://github.com/xiaochenggit/) **QQ号** ： 707996290
+- [小色](https://github.com/kehuayuan/) **QQ号** ： 291236937
+- [肉球] **QQ号** ： 466***359
+- [简单] **QQ号** ： 962***255
+- [壮实] **QQ号** ： 127****601
 
 ##版本日志
 - [X] v0313 增加模板步骤
