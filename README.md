@@ -12,14 +12,17 @@
 
 ##Getting Started
 ### 荣誉榜(参与人员)
-昵称 | **QQ号** | 备注
-----|---------|------------
-[小牧COOL](https://github.com/XiaoMuCOOL/) | 895355044 | 小队长
-[小成](https://github.com/xiaochenggit/) | 707996290 | 高大帅气威猛成
-[小色](https://github.com/kehuayuan/) | 291236937 | 帅比猛戳
-[肉球](https://github.com/rouqiu110/) | 466599359 | 
-[简单](https://github.com/xmdatuer/) | 962048255 | 
-[壮实](https://github.com/) | 1271314601 | 
+昵称 | **QQ号** | 勋章(page) | 备注
+---- |--------- |------------| ----
+[小牧COOL](https://github.com/XiaoMuCOOL/) | 895355044 | 5 | 小队长
+[小成](https://github.com/xiaochenggit/) | 707996290 | 2 | 高大帅气威猛成
+[小色](https://github.com/kehuayuan/) | 291236937 | 1 | 帅比猛戳
+[肉球](https://github.com/rouqiu110/) | 466599359 | 1 | 
+[简单](https://github.com/xmdatuer/) | 962048255 | 1 | 
+[壮实](https://github.com/linyezz/) | 1271314601 | 1 | 
+####预备队 |  |  | 
+[丝袜](https://github.com/pengle609/) | 695344490 | 0 | 
+[Daemon](https://github.com/zhiyandaemon/) | 526752951 | 0 | 
 
 ##版本日志
 - [X] v0313 增加模板步骤
