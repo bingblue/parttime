@@ -30,9 +30,9 @@
 
 ##License
 
-**mutouch.js** is licensed under the GNU GENERAL PUBLIC LICENSE, Version 3. 
+**Bingblue & parttime** is licensed under the GNU GENERAL PUBLIC LICENSE, Version 3. 
 
-[View the license file](https://github.com/XiaoMuCOOL/mutouch/blob/master/LICENSE)
+[View the license file](https://github.com/bingblue/parttime/blob/master/LICENSE)
 
 Copyright © 2016 · 冰蓝科技 , Inc. 
 
