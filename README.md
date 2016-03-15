@@ -14,7 +14,7 @@
 ### 荣誉榜(参与人员)
 昵称 | **QQ号** | 勋章(page) | 备注
 ---- |--------- |------------| ----
-[小牧COOL](https://github.com/XiaoMuCOOL/) | 895355044 | 5 | 小队长
+[小牧COOL](https://github.com/XiaoMuCOOL/) | 895355044 | 6(total) | 小队长
 [小成](https://github.com/xiaochenggit/) | 707996290 | 2 | 高大帅气威猛成
 [小色](https://github.com/kehuayuan/) | 291236937 | 1 | 帅比猛戳
 [肉球](https://github.com/rouqiu110/) | 466599359 | 1 | 
