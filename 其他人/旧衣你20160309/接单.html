@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>接单</title>
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+
+		<!-- 移动设备支持 -->
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+		<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+		<meta content="no-cache" http-equiv="pragma">
+		<meta content="0" http-equiv="expires">
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+			
+			
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.min.css" />
+	<style type="text/css">
+	body{
+		font: "微软雅黑";
+		
+	}
+	.wrap{
+		background-color: white;
+	}
+	.main{
+		z-index: 1;
+	}
+		.remind{
+			background-color: #fcfbcf;
+			vertical-align: middle;
+			padding-left: 10.9%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-top: 1px solid #9e9e9e;
+		}
+		.remind>p{
+			position: relative;
+			font-size: 12px;
+			color: #9e9e9e;
+		}
+		.remind>img{
+			width: 12px;
+			height: 12px;
+			position: absolute;
+			left: 5%;
+			top: 12px;
+		}
+		.con{
+			padding-left: 4.7%;
+			padding-top: 15px;
+			padding-bottom: 8px;
+			padding-right: 6.25%;
+			font-size: 12px;
+			border-top: 1px solid #9e9e9e;
+			
+		}
+		.con-up{
+			display: -webkit-box;
+			
+		}
+		.up-left{
+			display: -webkit-box;
+			line-height: 30px;
+		}
+		.icon{
+			border-radius:100px ;
+			background-color: #249056;
+			font-size: 10px;
+			color:white;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			margin-right: 7px;
+		}
+		.up-right{
+			-webkit-box-flex: 1;
+			text-align: right;
+			margin-left: 25.6%;
+			line-height: 30px;
+		}
+		
+		.con-down{
+			margin-top: 7px;
+			display: -webkit-box;
+			
+		}
+		.down-left>p>span{
+			color: #adadad;
+		}
+		.down-right{
+			-webkit-box-flex: 1;
+			background-color: #249056;
+			color: white;
+			height: 25px;
+			width: 20.3%;
+			border-radius: 4px;
+			text-align: center;
+			line-height: 25px;
+			margin-left: 7.5%;
+			margin-top: 25px;
+		}
+		
+		.bottom{
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			border-top: 1px solid #9e9e9e;
+			padding-left: 5.46%;
+			padding-top: 9px;
+			padding-bottom: 5px;
+			display: -webkit-box;
+			font-size: 9px;
+			color: #9e9e9e;
+			text-align: center;
+		}
+		.bottom>div>img{
+			width: 15px;
+		}
+		.home{
+			padding-right: 10%;
+			border-right: 1px solid #9e9e9e;
+		}
+		
+		.order{
+			padding-right: 10%;
+			padding-left: 10%;
+			border-right: 1px solid #9e9e9e;
+			color: #249056;
+		}
+		.wait{
+			padding-right: 10%;
+			padding-left: 10%;
+			border-right: 1px solid #9e9e9e;
+		}
+		
+		.mine{
+			padding-left: 10%;
+		}
+		.sure{
+			background-color:white ;
+			position: fixed;
+			top: 100px;
+			left: 19%;
+			right: 19%;
+			z-index: 2;
+			border: 1px solid #69b790;
+			border-radius: 4px;
+			padding-top: 6px;
+			padding-left: 6.25%;
+			padding-bottom: 40px;
+			
+		}
+		.sure-up{
+			text-align: right;
+			padding-right: 6px;
+		}
+		.sure-middle{
+			padding-top: 25px;
+			padding-right: 6.25%;
+			font-size: 12px;
+		}
+		
+		.sure-middle>p>span{
+			border-bottom: 1px solid #f83030;
+			color: #f83030;
+		}
+		.sure-down{
+			display: -webkit-box;
+			padding-top: 45px;
+			padding-right: 6.25%;
+		}
+		.sur-left{
+			border: 1px solid #9e9e9e;
+			border-radius:4px ;
+			font-size: 12px;
+			color: #9e9e9e;
+			height: 25px;
+			text-align: center;
+			line-height: 25px;
+			-webkit-box-flex: 1;
+			margin-right: 10px;
+		}
+		.sure-right{
+			-webkit-box-flex: 1;
+			background-color: #249056;
+			border: 1px solid #249056;
+			border-radius:4px ;
+			font-size: 12px;
+			color: white;
+			height: 25px;
+			text-align: center;
+			line-height: 25px;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="main">
+	<div class="remind">
+		<img src="img/remind.png"/>
+		<p> 】温馨提示:下雨天回收衣服注意安全……</p>
+	</div>
+	<div class="con">
+	<div class="con-up">
+		<div class="up-left">
+			<div class="icon">
+				预约
+			</div>
+			<p>3月8日 15:00</p>
+		</div>
+	<div class="up-right">
+		估计：10公斤
+	</div>	
+	</div>
+	<div class="con-down">
+		<div class="down-left">
+			<p>回收地址：<span>普陀区中山北路XXXX号</span></p><br />
+			<p>重要说明：<span>无需求</span></p>
+		</div>
+		<div class="down-right">
+			接单
+		</div>
+		
+	</div>	
+	</div>
+	
+	<div class="con">
+	<div class="con-up">
+		<div class="up-left">
+			<div class="icon">
+				预约
+			</div>
+			<p>3月8日 15:00</p>
+		</div>
+	<div class="up-right">
+		估计：10公斤
+	</div>	
+	</div>
+	<div class="con-down">
+		<div class="down-left">
+			<p>回收地址：<span>普陀区中山北路XXXX号</span></p><br />
+			<p>重要说明：<span>无需求</span></p>
+		</div>
+		<div class="down-right">
+			接单
+		</div>
+		
+	</div>	
+	</div>
+	
+	<div class="con">
+	<div class="con-up">
+		<div class="up-left">
+			<div class="icon">
+				预约
+			</div>
+			<p>3月8日 15:00</p>
+		</div>
+	<div class="up-right">
+		估计：10公斤
+	</div>	
+	</div>
+	<div class="con-down">
+		<div class="down-left">
+			<p>回收地址：<span>普陀区中山北路XXXX号</span></p><br />
+			<p>重要说明：<span>无需求</span></p>
+		</div>
+		<div class="down-right">
+			接单
+		</div>
+		
+	</div>	
+	</div>
+	
+	<div class="con">
+	<div class="con-up">
+		<div class="up-left">
+			<div class="icon">
+				预约
+			</div>
+			<p>3月8日 15:00</p>
+		</div>
+	<div class="up-right">
+		估计：10公斤
+	</div>	
+	</div>
+	<div class="con-down">
+		<div class="down-left">
+			<p>回收地址：<span>普陀区中山北路XXXX号</span></p><br />
+			<p>重要说明：<span>无需求</span></p>
+		</div>
+		<div class="down-right">
+			接单
+		</div>
+		
+	</div>	
+	</div>
+	
+	<div class="bottom">
+	<div class="home">
+		<img src="img/icon-home.png"/>
+		<p>首页</p>
+	</div>
+	<div class="order">
+		<img src="img/icon-order.png"/>
+		<p>订单</p>
+	</div>
+	<div class="wait">
+		<img src="img/icon-wait.png"/>
+		<p>待收货</p>
+	</div>
+	<div class="mine">
+		<img src="img/icon-mine.png"/>
+		<p>我的</p>
+	</div>
+	</div>	
+	</div>
+	<div class="sure">
+		<div class="sure-up">
+			<img src="img/icon-close.png"/>
+			
+		</div>
+		<div class="sure-middle">
+			<p>确认接单后将从您的账户余额 </p><br />
+			<p>扣取<span>50.00E币</span>如该订单无效</p><br />
+			<p>将返回至您的账户。</p>
+			
+		</div>
+		<div class="sure-down">
+			<div class="sur-left">
+				取消
+			</div>
+			<div class="sure-right">
+				确认
+			</div>
+		</div>
+	</div>
+	
+	</div>	
+	</body>
+</html>
