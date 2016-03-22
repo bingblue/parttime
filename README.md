@@ -18,6 +18,7 @@
 [肉球][4]     | 466599359  | 1           | 
 [简单][5]     | 962048255  | 1           | 
 [壮实][6]     | 1271314601 | 1           | 
+[Zing][9]     | 745320968  | 0           | 
 **预备队**    |            |             | 
 [丝袜][7]     | 695344490  | 0           | 
 [Daemon][8]   | 526752951  | 0           | 
@@ -44,3 +45,4 @@ All Rights Reserved · Powered by : **小牧COOL**
 [6]:https://github.com/linyezz/
 [7]:https://github.com/pengle609/
 [8]:https://github.com/zhiyandaemon/
+[9]:https://github.com/micorochio/
