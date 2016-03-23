@@ -1240,3 +1240,295 @@
     color: #cecece;
     font-size: 12px;
 }
+
+/* pengle update */
+.dhsdd .wrap {
+	min-width: 320px;
+	max-width: 640px;
+	width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+	font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
+	overflow: hidden;
+	color: #333;
+	position: relative;
+	background: #fff;
+}
+
+.dhsdd .wrap-color {
+	background: #fff;
+}
+
+.dhsdd .nav {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	background-color: #fff;
+	padding: 10px 5%;
+	width: 90%;
+	border-bottom: #e5e5e5 1px solid;
+}
+
+.dhsdd .nav .nav-middle {
+	color: #026d38;
+	font-size: 24px;
+	text-align: center;
+	display: inline-block;
+	width: 40%;
+	height: auto;
+}
+
+.dhsdd .nav .nav-left {
+	color: #026d38;
+	font-size: 24px;
+	display: inline-block;
+	width: 30%;
+	float: left;
+}
+
+.dhsdd .nav .nav-left a {
+	color: #026d38;
+}
+
+.dhsdd .nav .nav-left img {
+	max-width: 34px;
+	padding: 0 15px 0 0;
+}
+
+.dhsdd .nav .nav-right {
+	width: 30%;
+	line-height: auto;
+	float: right;
+}
+
+.dhsdd .content {
+	padding: 12px 5%;
+	
+}
+
+.dhsdd .content-right {
+	float: left;
+	width: 70%;
+}
+
+.dhsdd .content ul li {
+	font-size: 15px;
+	padding: 10px 5%;
+	width: 90%;
+}
+
+.dhsdd .content ul li .hs {
+	color: #9e9e9e;
+}
+
+.dhsdd .content ul li .ddhm {
+	color: #026d38;
+}
+
+.dhsdd .content ul li .eb {
+	color: #fd602d;
+	font-weight: normal;
+}
+
+.dhsdd .title {
+	width: 100%;
+	height: auto;
+	margin: 3px auto;
+	overflow: hidden;
+	position: relative;
+	background-color: #e5e5e5;
+	font-size: 15px;
+	padding: 12px 10%;
+	width: 90%;
+	border-bottom: #d5d7dc 1px solid;
+}
+
+.dhsdd .title img {
+	width: 5%;
+	float: right;
+	padding: 0 30px 0 0;
+}
+
+.dhsdd .add {
+	padding: 0;
+}
+
+.dhsdd .add ul li {
+	border-bottom: #d5d7dc 1px solid;
+}
+
+.dhsdd .solid {
+	height: 5px;
+	background: #dad7dc;
+}
+
+.dhsdd .dheb {
+	padding: 0;
+	border-bottom: #d5d7dc 1px solid;
+}
+
+.dhsdd .dheb ul li .dheb-right {
+	float: right;
+	clear: both;
+}
+
+.dhsdd .btn {
+	padding: 10px 5%;
+	width: 90%;
+	border-bottom: #d5d7dc 1px solid;
+}
+
+.dhsdd .btn-box {
+	float: right;
+}
+
+.dhsdd .btn-box a {
+	border: 1px solid #fd602d;
+	color: #fd602d;
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 0 10px 5px;
+	padding: 8px;
+}
+
+.dhsdd .btn a {
+	padding: 8px;
+	margin: 0 0 10px 5px;
+	border-radius: 5px;
+	border: 1px solid #bbb;
+	font-size: 12px;
+	display: inline-block;
+}
+
+.dhsdd .btn .btn-box .btn-1 {
+	/*申报异常btn*/
+	border: 1px solid #fd602d;
+	font-size: 12px;
+	color: #fd602d;
+}
+
+.dhsdd .btn-box2 {
+	text-align: center;
+}
+
+.dhsdd .btn .btn-box2 .btn-2 {
+	/*确认回收btn*/
+	border: 1px solid #026d38;
+	font-size: 15px;
+	color: white;
+	width: 50%;
+	background-color: #026d38;
+	text-align: center;
+	margin: 10px 0 10px 0;
+	padding: 10px 0 10px 0;
+}
+
+.dhsdd .fix {
+	min-width: 250px;
+	display: none;
+	position: fixed;
+	width: 20%;
+	left: 40%;
+	bottom: 50%;
+	border: 1px solid #249056;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+.dhsdd .fix img {
+	margin-top: 7px;
+	width: 6%;
+	height: auto;
+	float: right;
+	margin-right: 7px;
+}
+
+.dhsdd .fix .cha {
+	overflow: hidden;
+}
+
+.dhsdd .fix .cha a {
+	display: block;
+}
+
+.dhsdd .fix .cha p {
+	padding: 0px 2%;
+	margin-top: 22px;
+	font-size: 14px;
+	text-indent: 20%;
+	color: #9E9E9E;
+	line-height: 20px;
+}
+
+.dhsdd .fix .cha h4 {
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 30px;
+	color: #ff0000;
+}
+
+.dhsdd .xg {
+	padding: 0 2%;
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.dhsdd .xg h4 {
+	float: left;
+	margin-right: 4%;
+}
+
+.dhsdd .xg input {
+	width: 24%;
+	height: 30px;
+	margin: 0 4%;
+	color: #ccc;
+}
+
+.dhsdd .xg div {
+	padding: 8px 0px;
+}
+
+.dhsdd .xg .sjzl span {
+	color: #9E9E9E;
+}
+
+.dhsdd .xg .yzm h4 {
+	letter-spacing: 4px;
+}
+
+.dhsdd .xg .yzm span {
+	display: inline-block;
+	background-color: #008543;
+	color: #fff;
+	padding: 0 10px;
+}
+
+.dhsdd .xg .eb h4 {
+	letter-spacing: 14px;
+}
+
+.dhsdd .xg .eb span {
+	margin-left: 4%;
+	color: #ff0000;
+}
+
+.dhsdd .qd {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.dhsdd .qd .qr {
+	display: inline-block;
+	margin: 0 auto;
+	line-height: 40px;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 8px;
+	padding: 0 20px;
+	background-color: #008543;
+}
