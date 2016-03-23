@@ -880,3 +880,11 @@
 			text-align: center;
 			line-height: 25px;
 		}
+		
+	.linye-jiedan input{
+		background-color: #249056;
+		border: none;
+		font-size: 12px;
+			color: white;
+			font: "微软雅黑";
+	}

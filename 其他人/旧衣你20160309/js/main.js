@@ -10,3 +10,21 @@ $(function(){
     $(".dyd-dd .dd-menu li").eq(num).css("color","#FD602D");
   }
 })
+
+
+//接单
+$(function(){
+			$(".sure").hide();
+			$(".down-right").click(function(){
+				$(".sure").show();
+				
+			})
+			
+			$(".sur-left").click(function(){
+				$(".sure").hide();
+			})
+			$(".sure-up").click(function(){
+				$(".sure").hide();
+			})
+			
+		})
