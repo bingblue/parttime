@@ -983,6 +983,7 @@
   width: 5%;
 }
 .xs .content-box ul li span{
+  color: #333;
   font-size: 14px;
   padding-left: 10px;
   line-height: 34px;
