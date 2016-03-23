@@ -1117,3 +1117,124 @@
   left: 0;
   background: rgba(0,0,0,0.6);
 }
+/*zing 更新*/
+.my_rest_money .title_bar {
+    height: 44px;
+    background: white;
+    text-align: center;
+    line-height: 44px;
+    color: #008543;
+    padding-left: 15px;
+    box-shadow: 0 1px 1px #9e9e9e;
+}
+
+.my_rest_money .go_back {
+    position: absolute;
+    line-height: 44px;
+}
+
+.my_rest_money .head {
+    padding: 0 15px 0 15px;
+    background: url(../img/exchange_money_bg.png) repeat-x;
+    height: 230px;
+}
+
+.my_rest_money .text-label {
+    font-size: 14px;
+}
+
+.my_rest_money .head {
+    position: relative;
+}
+
+.my_rest_money .overage_money {
+    color: white;
+}
+
+.my_rest_money .e_money {
+    padding-top: 20px;
+}
+
+.my_rest_money .my_overage {
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.my_rest_money .bottom_but {
+    position: absolute;
+    height: 40px;
+    bottom: 0;
+    width: 90%;
+}
+
+.my_rest_money .split_line {
+    float: left;
+    width: 1px;
+    height: 20px;
+    margin: 10px 0 10px 0;
+    background: white;
+}
+
+.my_rest_money .top_split_line {
+    position: absolute;
+    width: 120%;
+    height: 1px;
+    left: -15px;
+    background: white;
+}
+
+.my_rest_money #withdraw_money {
+    float: left;
+    width: 50%;
+    line-height: 40px;
+    text-align: center;
+}
+
+.my_rest_money #recharge_money {
+    float: right;
+    width: 50%;
+    line-height: 40px;
+    text-align: center;
+}
+
+.my_rest_money .exchange_item_info {
+    height: 30px;
+    padding: 10px 35px 10px 15px;
+}
+
+.my_rest_money .left_label {
+    float: left;
+    line-height: 15px;
+}
+
+.my_rest_money .money_label {
+    float: right;
+    text-align: center;
+    line-height: 30px;
+}
+
+.my_rest_money .left_text {
+    line-height: 15px;
+    color: #333333;
+}
+
+.my_rest_money .bottom_split_line {
+    height: 1px;
+    width: 100%;
+    margin-left: 2px;
+    background: #9e9e9e;
+}
+
+.my_rest_money .add_back {
+    color: green;
+}
+
+.my_rest_money .subtraction_back {
+    color: red;
+}
+.my_rest_money .time_text {
+    color: #cecece;
+    font-size: 12px;
+}
