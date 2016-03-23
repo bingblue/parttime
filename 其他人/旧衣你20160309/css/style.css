@@ -1241,7 +1241,7 @@
     font-size: 12px;
 }
 
-/* pengle update */
+/* 彭乐 update */
 .dhsdd .wrap {
 	min-width: 320px;
 	max-width: 640px;
@@ -1430,9 +1430,9 @@
 	min-width: 250px;
 	display: none;
 	position: fixed;
-	width: 20%;
-	left: 40%;
-	bottom: 50%;
+	width: 50%;
+	left: 30%;
+	bottom: 60%;
 	border: 1px solid #249056;
 	border-radius: 5px;
 	background-color: #fff;
