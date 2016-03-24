@@ -6,22 +6,31 @@ $(function() {
 	})
 
 	/*  彭乐 更新 2016-3-23 16:25:24*/
-	$(".dhsdd .btn-2").bind("click", function() {
-		$(".dhsdd .fix").css({
-			"display": "inline-block"
-		});
-	})
-	$(".dhsdd .fix .cha a").bind("click", function() {
-		$(".dhsdd .fix").css({
-			"display": "none"
-		});
-	})
+	$(".btn-2").click(function() {
+		$(".sw-mask").toggle();
+		$(".fix").toggle();
+	});
+	$(".btn-1").click(function() {
+		$(".sw-mask").toggle();
+		$(".fix-2").toggle();
+	});
+	$(".sw-fix2-gb").click(function() {
+		$(".sw-mask").hide();
+		$(".fix-2").hide();
+	});
+	$(".qr-fix2").click(function() {
+		$(".sw-mask").hide();
+		$(".fix-2").hide();
+	});
+	$(".sw-gb").click(function() {
+		$(".sw-mask").hide();
+		$(".fix").hide();
+	});
+	$(".qr").click(function() {
+		$(".sw-mask").hide();
+		$(".fix").hide();
+	});
 
-	function go(num) {
-		$(".dyd-dd .gzdd div").css("display", "none").eq(num).css("display", "block");
-		$(".dyd-dd .dd-menu li").css("color", "#9E9E9E");
-		$(".dyd-dd .dd-menu li").eq(num).css("color", "#FD602D");
-	}
 	/*小色更新 2016-3-12 17：17*/
 	$(".hd-focus-left").click(function() {
 		$(".xs-mask").toggle();

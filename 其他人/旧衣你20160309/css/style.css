@@ -1253,6 +1253,7 @@
 	color: #333;
 	position: relative;
 	background: #fff;
+  padding-bottom: 100px;
 }
 
 .dhsdd .wrap-color {
@@ -1268,7 +1269,7 @@
 	background-color: #fff;
 	padding: 10px 5%;
 	width: 90%;
-	border-bottom: #e5e5e5 1px solid;
+	border-bottom: #9e9e9e 1px solid;
 }
 
 .dhsdd .nav .nav-middle {
@@ -1305,6 +1306,9 @@
 
 .dhsdd .content {
 	padding: 12px 5%;
+  display: inline-block;
+  width: 90%;
+  border-bottom: 1px solid #9e9e9e;
 	
 }
 
@@ -1320,7 +1324,7 @@
 }
 
 .dhsdd .content ul li .hs {
-	color: #9e9e9e;
+	color: #666666;
 }
 
 .dhsdd .content ul li .ddhm {
@@ -1333,6 +1337,7 @@
 }
 
 .dhsdd .title {
+  line-height: 30px;
 	width: 100%;
 	height: auto;
 	margin: 3px auto;
@@ -1340,15 +1345,13 @@
 	position: relative;
 	background-color: #e5e5e5;
 	font-size: 15px;
-	padding: 12px 10%;
-	width: 90%;
-	border-bottom: #d5d7dc 1px solid;
+	padding: 12px 8%;
+	width: 84%;
 }
 
 .dhsdd .title img {
-	width: 5%;
+	
 	float: right;
-	padding: 0 30px 0 0;
 }
 
 .dhsdd .add {
@@ -1356,7 +1359,6 @@
 }
 
 .dhsdd .add ul li {
-	border-bottom: #d5d7dc 1px solid;
 }
 
 .dhsdd .solid {
@@ -1377,9 +1379,11 @@
 .dhsdd .btn {
 	padding: 10px 5%;
 	width: 90%;
-	border-bottom: #d5d7dc 1px solid;
+	border-bottom: #9e9e9e 1px solid;
 }
-
+.dhsdd .btn-nostyle{
+  border-bottom:0;
+}
 .dhsdd .btn-box {
 	float: right;
 }
@@ -1425,25 +1429,34 @@
 	margin: 10px 0 10px 0;
 	padding: 10px 0 10px 0;
 }
-
+.dhsdd .sw-mask{
+   z-index:9999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  top:0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+}
 .dhsdd .fix {
 	min-width: 250px;
 	display: none;
-	position: fixed;
-	width: 50%;
-	left: 30%;
-	bottom: 60%;
+	position: absolute;
+	width: 60%;
+	left: 20%;
+	top:130px;
 	border: 1px solid #249056;
 	border-radius: 5px;
 	background-color: #fff;
 }
 
 .dhsdd .fix img {
-	margin-top: 7px;
+	margin-top: 10px;
 	width: 6%;
 	height: auto;
 	float: right;
-	margin-right: 7px;
+	margin-right:10px;
 }
 
 .dhsdd .fix .cha {
@@ -1455,10 +1468,10 @@
 }
 
 .dhsdd .fix .cha p {
-	padding: 0px 2%;
+	padding: 10px 5%;
+  text-indent:25px;
 	margin-top: 22px;
 	font-size: 14px;
-	text-indent: 20%;
 	color: #9E9E9E;
 	line-height: 20px;
 }
@@ -1472,7 +1485,7 @@
 }
 
 .dhsdd .xg {
-	padding: 0 2%;
+	padding: 0 5%;
 	font-size: 12px;
 	line-height: 30px;
 }
@@ -1483,9 +1496,10 @@
 }
 
 .dhsdd .xg input {
-	width: 24%;
+	width: 25%;
 	height: 30px;
 	margin: 0 4%;
+  padding: 0 5px;
 	color: #ccc;
 }
 
@@ -1501,11 +1515,13 @@
 	letter-spacing: 4px;
 }
 
-.dhsdd .xg .yzm span {
-	display: inline-block;
+.dhsdd .xg .yzm .sw-btn {
 	background-color: #008543;
 	color: #fff;
-	padding: 0 10px;
+  width:20%;
+  margin: 0;
+  padding:7px  5px ;
+  border-top:1px solid #ccc;
 }
 
 .dhsdd .xg .eb h4 {
@@ -1529,6 +1545,91 @@
 	color: #fff;
 	font-size: 18px;
 	border-radius: 8px;
-	padding: 0 20px;
+	padding: 0 15%;
 	background-color: #008543;
+  cursor:pointer;
+}
+.dhsdd .gd-box {
+  min-width: 320px;
+  width: 100%;
+  border-top:1px solid #9e9e9e;
+  position: fixed;
+  background: #fff;
+  left: 0;
+  bottom: 0; 
+}
+.dhsdd .gd-box .gd-menu {
+    padding: 10px 0;
+     }
+.dhsdd .gd-box .gd-menu li {
+      display: inline-block;
+      width: 23.8%;
+      text-align: center;
+      border-right:1px solid #9e9e9e;
+       }
+.dhsdd .gd-box .gd-menu span {
+      display: block;
+      color: #9e9e9e;
+      font-size: 12px;
+      padding-top: 5px; 
+    }
+.dhsdd .gd-box .gd-menu .li-focus {
+      border-right: 0px;
+    }
+.dhsdd .gd-box .gd-menu .wd-focus {
+      color: #249056;
+    }
+.dhsdd .fix-2 {
+  min-width: 250px;
+  display: none;
+  position: absolute;
+  width: 60%;
+  left: 20%;
+  top:130px;
+  border: 1px solid #249056;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.dhsdd .fix-2 img {
+  margin-top: 10px;
+  width: 6%;
+  height: auto;
+  float: right;
+  margin-right:10px;
+}
+
+.dhsdd .fix-2 .cha {
+  overflow: hidden;
+}
+
+.dhsdd .fix-2 .cha a {
+  display: block;
+}
+.dhsdd .fix-2 h2{
+  font-size: 18px;
+  text-align: center;
+  width: 80%;
+  margin: 5px auto;
+  color: #333;
+}
+.dhsdd .fix-2 textarea{
+  font-size: 12px;
+  width: 80%;
+  border:1px solid #9e9e9e;
+  margin: 10px 10%;
+  height: 150px;
+  padding: 5px;
+  text-align: left;
+  color: #9e9e9e;
+}
+.dhsdd .qd .qr-fix2 {
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 40px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 0 15%;
+  background-color: #008543;
+  cursor:pointer;
 }
