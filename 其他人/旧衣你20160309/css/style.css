@@ -1153,10 +1153,18 @@
 }
 
 .my_rest_money .go_back {
-    position: absolute;
+    float: left;
     line-height: 44px;
+    width:20%;
+    text-align: left;
 }
-
+.my_rest_money .go_back a{
+    color:  #008543;
+}
+.my_rest_money .go_back a img{
+    margin-right: 3%;
+    max-width: 15px;
+  }
 .my_rest_money .head {
     padding: 0 15px 0 15px;
     background: url(../img/exchange_money_bg.png) repeat-x;
