@@ -1464,17 +1464,10 @@
 .dhsdd .fix {
 	min-width: 250px;
 	display: none;
-<<<<<<< HEAD
 	position: absolute;
 	width: 60%;
 	left: 20%;
 	top:130px;
-=======
-	position: fixed;
-	width: 66%;
-	left: 17%;
-	bottom: 50%;
->>>>>>> origin/master
 	border: 1px solid #249056;
 	border-radius: 5px;
 	background-color: #fff;
