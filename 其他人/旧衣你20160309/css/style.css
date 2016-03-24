@@ -1550,7 +1550,8 @@
   width:20%;
   margin: 0;
   padding:7px  5px ;
-  border-top:1px solid #ccc;
+  border-top:1px solid #008543;
+  border-bottom: 1px solid #008543;
 }
 
 .dhsdd .xg .eb h4 {
