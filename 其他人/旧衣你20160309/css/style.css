@@ -636,7 +636,7 @@
     }
   .zs .input{
     display:-webkit-box;
-    margin-top: 10px;
+    margin-top: 11px;
     height: 30px;
     max-width: 640px;
   }
@@ -645,12 +645,14 @@
     -webkit-box-flex: 1;
       font-size: 12px;
       color: #9e9e9e;
-    padding: 10px 2.5% 10px 5.3%;
+   padding-top: 10px;
+     padding-left: 5.3%;
+     padding-bottom: 10px;
   }
   .zs .box{
-    
+    padding-left: 3.21%;
     margin-right: 5%;
-  width: 70%;
+  	width: 70%;
   }
   .zs .input-box{
       -webkit-box-flex: 1;
@@ -669,10 +671,20 @@
       -webkit-box-flex: 1;
       font-size: 12px;
       color: #9e9e9e;
-      padding: 10px 2.5% 10px 5.3%;
+     padding-top: 10px;
+     padding-left: 5.3%;
+     padding-bottom: 10px;
+    }
+    
+    .zs .box2{
+    	display:-webkit-box;
+    	padding-left: 3.21%;
+    margin-right: 5%;
+  	width: 70%;
     }
     .zs .last-box{
-      width: 35%;
+    	
+    	-webkit-box-flex: 1;
     }
     .zs .nub{
       height: 30px;
@@ -683,10 +695,8 @@
       background-color: #008543;
       color: white;
       height: 30px;
-      width: 28%;
       border: none;
       margin-left:3% ;
-      margin-right: 5%;
       text-align: center;
       line-height: 30px;
     }
@@ -703,6 +713,9 @@
       color: white;
     }
 
+	.zs	p{
+			white-space: nowrap;
+		}
 /*接单*/
 
 	
@@ -881,6 +894,15 @@
 			text-align: center;
 			line-height: 25px;
 		}
+		
+	.linye-jiedan input{
+		background-color: #249056;
+		border: none;
+		font-size: 12px;
+			color: white;
+			font: "微软雅黑";
+	}
+=======
 
 /*小色更新 2016-3-12 17：17*/
 .xs .wrap {
@@ -1442,13 +1464,21 @@
 .dhsdd .fix {
 	min-width: 250px;
 	display: none;
+<<<<<<< HEAD
 	position: absolute;
 	width: 60%;
 	left: 20%;
 	top:130px;
+=======
+	position: fixed;
+	width: 66%;
+	left: 17%;
+	bottom: 50%;
+>>>>>>> origin/master
 	border: 1px solid #249056;
 	border-radius: 5px;
 	background-color: #fff;
+
 }
 
 .dhsdd .fix img {
@@ -1547,6 +1577,7 @@
 	border-radius: 8px;
 	padding: 0 15%;
 	background-color: #008543;
+<<<<<<< HEAD
   cursor:pointer;
 }
 .dhsdd .gd-box {
@@ -1633,3 +1664,7 @@
   background-color: #008543;
   cursor:pointer;
 }
+=======
+}
+>>>>>>> d4e9a366a38c57ab0df5704563d27f9707dbe6e8
+>>>>>>> origin/master
