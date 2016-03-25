@@ -12,17 +12,19 @@ function qh() {
 	})
 	$(".navcenter .sm").bind("click",function(){
 		$(".navcenter ul").hide();
-		$(".warp").hide();
-		$(".bg").show();
+		// $(".warp").hide();
+		// $(".bg").show();
 		$(".navcenter .fl").css({"color":""});
 		$(this).css({"color":"#00a0e9"});
+		location.href="cp.html";
 	})
 	$(".navcenter .fl").bind("click",function(){
 		$(".navcenter ul").hide();
-		$(".warp").show();
-		$(".bg").hide();
+		// $(".warp").show();
+		// $(".bg").hide();
 		$(".navcenter .sm").css({"color":""});
 		$(this).css({"color":"#00a0e9"});
+		location.href="index.html";
 	})
 }
 function cpqh() {

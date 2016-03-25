@@ -18,7 +18,6 @@ body{
     background-color: #fff;
 }
 .fixed {
-	overflow:hidden;
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -49,10 +48,10 @@ body{
     list-style: none;
 }
 .navcenter {
+    position:relative;
     width: 1134px;
     margin-left: auto;
     margin-right: auto;
-    overflow:hidden;
 }
 .navcenter .logo {
     float: left;
@@ -64,16 +63,15 @@ body{
     display: none;
     width: 85px;
     text-align: center;
-    position:fixed;
-    z-index: 999;
+    position:absolute;
+    z-index: 99999;
     left: 50%;
-    margin-left: -292px;
-    top:35px;
+    margin-left: -295px;
+    top:0px;
     line-height: 30px;
     background-color: #F3F3F3;
     cursor:pointer;
-    padding:20px 10px 10px 10px;
-    overflow: hidden;
+    padding:15px 10px 10px 10px;
 }
 .navtext ul .fl,.navtext ul .sm{
     border-bottom:1px solid #d5d7dc;
@@ -97,6 +95,7 @@ body{
 }
 /* 中心大图 */
 .banner{
+    z-index:1;
 	margin-top:97px;
 	height:412px;
 	background:url(img/chanpinfuwu.png) no-repeat top center;
@@ -238,7 +237,6 @@ img {
     font-size: 12px;
 }
 .bg{
-    display:none;
     width:1200px;
     margin:0 auto;
     font-size:14px;
