@@ -1479,9 +1479,12 @@
 	border: 1px solid #249056;
 	border-radius: 5px;
 	background-color: #fff;
-
 }
-
+@media screen and (min-width: 250px) {   
+    .dhsdd .fix{
+      left: 40px;
+}
+}
 .dhsdd .fix img {
 	margin-top: 10px;
 	width: 6%;
