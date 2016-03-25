@@ -1527,10 +1527,11 @@
 }
 
 .dhsdd .xg input {
-	width: 25%;
+  border: 1px solid #9e9e9e;
+	width: 32%;
 	height: 30px;
-	margin: 0 4%;
-  padding: 0 5px;
+	margin: 0 2%;
+  padding: 0 2px;
 	color: #ccc;
 }
 
@@ -1551,13 +1552,11 @@
 	color: #fff;
   width:20%;
   margin: 0;
-  padding:7px  5px ;
-  border-top:1px solid #008543;
-  border-bottom: 1px solid #008543;
-}
+  padding:6px 7px;
+  border: 1px solid #008543;}
 
 .dhsdd .xg .eb h4 {
-	letter-spacing: 14px;
+	letter-spacing: 13px;
 }
 
 .dhsdd .xg .eb span {
