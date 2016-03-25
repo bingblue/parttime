@@ -1480,7 +1480,7 @@
 	border-radius: 5px;
 	background-color: #fff;
 }
-@media screen and (max-width: 320px) {   
+@media screen and (max-width: 400px) {   
     .dhsdd .fix{
       left: 40px;
 }
