@@ -1470,8 +1470,8 @@
   background: rgba(0,0,0,0.6);
 }
 .dhsdd .fix {
-	min-width: 250px;
 	display: none;
+  min-width: 250px;
 	position: absolute;
 	width: 60%;
 	left: 20%;
@@ -1480,7 +1480,7 @@
 	border-radius: 5px;
 	background-color: #fff;
 }
-@media screen and (min-width: 250px) {   
+@media screen and (max-width: 320px) {   
     .dhsdd .fix{
       left: 40px;
 }
