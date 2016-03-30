@@ -719,7 +719,42 @@
 /*接单*/
 
 	
-	
+	.linye-jiedan .head{
+			display: -webkit-box;
+			font-size: 17.14px;
+			color: #008543;
+			padding: 13px 4.7% 13px 4.68%;
+		}
+		.linye-jiedan .h-left{
+			-webkit-box-flex: 1;
+			position: relative;
+		}
+		.linye-jiedan .h-right{
+			-webkit-box-flex: 1;
+			text-align: right;
+		}
+		.linye-jiedan .h-middle{
+			text-align: center;
+			padding-right:10% ;
+		}
+		.linye-jiedan .h-left>img{
+			width: 15px;
+		}
+		.linye-jiedan .h-right>img{
+			height: 15px;
+		}
+		.linye-jiedan .loc{
+			position: absolute;
+			z-index: 6;
+			background-color:white ;
+			width: 45%;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		.linye-jiedan .chose{
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
 	.linye-jiedan .wrap{
 		background-color: white;
 	}
@@ -733,6 +768,7 @@
 			padding-top: 10px;
 			padding-bottom: 10px;
 			border-top: 1px solid #9e9e9e;
+			position: relative;
 		}
 	.linye-jiedan	.remind>p{
 			position: relative;
@@ -744,7 +780,7 @@
 			height: 12px;
 			position: absolute;
 			left: 5%;
-			top: 12px;
+			top: 11px;
 		}
 	.linye-jiedan	.con{
 			padding-left: 4.7%;

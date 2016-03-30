@@ -12,6 +12,7 @@ $(function() {
   }
   // 接单
   $(".sure").hide();
+  $('.loc').hide();
 			$(".down-right").click(function(){
 				$(".sure").show();
 				
@@ -23,6 +24,17 @@ $(function() {
 			$(".sure-up").click(function(){
 				$(".sure").hide();
 			})
+	$('.h-left img').click(function(){
+		$('.loc').toggle();
+		
+	})
+	
+	$('.chose').click(function(){
+		var text=$(this).html();
+		$('.h-left span').text(text);
+	})
+	
+			
 	/*  彭乐 更新 2016-3-23 16:25:24*/
 	$(".btn-2").click(function() {
 		$(".sw-mask").toggle();
