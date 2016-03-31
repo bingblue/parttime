@@ -32,6 +32,7 @@ $(function() {
 	$('.chose').click(function(){
 		var text=$(this).html();
 		$('.h-left span').text(text);
+		$('.loc').hide();
 	})
 	
 			
