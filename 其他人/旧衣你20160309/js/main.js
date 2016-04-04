@@ -37,28 +37,22 @@ $(function() {
 			
 	/*  彭乐 更新 2016-3-23 16:25:24*/
 	$(".btn-2").click(function() {
-		$(".sw-mask").toggle();
-		$(".fix").toggle();
+		$(".jq-sw-mask1").show();
 	});
 	$(".btn-1").click(function() {
-		$(".sw-mask").toggle();
-		$(".fix-2").toggle();
+		$(".jq-sw-mask2").show();
 	});
 	$(".sw-fix2-gb").click(function() {
-		$(".sw-mask").hide();
-		$(".fix-2").hide();
+		$(".jq-sw-mask2").hide();
 	});
 	$(".qr-fix2").click(function() {
-		$(".sw-mask").hide();
-		$(".fix-2").hide();
+		$(".jq-sw-mask2").hide();
 	});
 	$(".sw-gb").click(function() {
-		$(".sw-mask").hide();
-		$(".fix").hide();
+		$(".jq-sw-mask1").hide();
 	});
 	$(".qr").click(function() {
-		$(".sw-mask").hide();
-		$(".fix").hide();
+		$(".jq-sw-mask1").hide();
 	});
 
 	/*小色更新 2016-3-12 17：17*/
