@@ -18,6 +18,100 @@
   overflow: hidden;
   position: relative; 
 }
+/* 头部和底部 */
+.xm-header{
+  display: inline-block;
+  position: relative;
+  width: 92%;
+  font-weight: 200;
+  line-height: 24px;
+  font-size: 16px;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 12px 4%;
+  overflow: initial;
+}
+.xm-header a{
+  position: relative;
+  z-index: 999;
+}
+.xm-header .xm-right{
+  float: right;
+  position: relative;
+  top: 5px;
+}
+.xm-header .xm-right img{
+  width: 20px;
+  max-width: 20px;
+}
+.xm-header img{
+  max-width: 15px;
+  float: left;
+  margin-right: 3%;
+  line-height: 50px;
+}
+.xm-header .xm-iconBtm{
+  margin-left: 1%;
+  position: relative;
+  top: 10px;
+}
+.xm-header span{
+  float: left;
+  color: #026D38;
+}
+.xm-header p{
+  width: 100%;
+  line-height: 49px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  color: #026D38;
+  text-align: center;
+}
+.xm-header .loc {
+  position: absolute;
+  z-index: 999;
+  background-color: white;
+  padding:10px 15px;
+  padding-right:18px;
+  left: 0%;
+  top: 40px;
+}
+.xm-header .loc li{
+  padding: 2px 0;
+  color: #026D38;
+}
+
+.xm-menu{
+  min-width: 320px;
+  width: 100%;
+  border-top:1px solid #9e9e9e;
+  position: fixed;
+  background: #fff;
+  left: 0;
+  bottom: 0; 
+}
+.xm-menu ul{
+  padding: 10px 0;
+}
+.xm-menu ul li{
+  display: inline-block;
+  width: 23.8%;
+  text-align: center;
+  border-right:1px solid #9e9e9e;
+}
+.xm-menu ul span {
+  display: block;
+  color: #9e9e9e;
+  font-size: 12px;
+  padding-top: 5px; 
+}
+.xm-menu ul li:last-child(){
+  border-right: 0px;
+}
+.xm-menu ul li.active span{
+  color: #249056;
+}
+
 .ddxq .ewm{
   float: right;
   width: 25.625%;
@@ -938,7 +1032,6 @@
 			color: white;
 			font: "微软雅黑";
 	}
-=======
 
 /*小色更新 2016-3-12 17：17*/
 .xs .wrap {

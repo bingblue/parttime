@@ -13,25 +13,24 @@ $(function() {
   // 接单
   $(".sure").hide();
   $('.loc').hide();
-			$(".down-right").click(function(){
-				$(".sure").show();
-				
-			})
-			
-			$(".sur-left").click(function(){
-				$(".sure").hide();
-			})
-			$(".sure-up").click(function(){
-				$(".sure").hide();
-			})
-	$('.h-left img').click(function(){
-		$('.loc').toggle();
+	$(".down-right").click(function(){
+		$(".sure").show();
 		
 	})
+	$(".sur-left").click(function(){
+		$(".sure").hide();
+	})
+	$(".sure-up").click(function(){
+		$(".sure").hide();
+	})
+	$('*[data-toggle]').click(function(){
+		$class = $(this).attr("data-toggle");
+		$('.'+$class).toggle();
+	})
 	
-	$('.chose').click(function(){
+	$('.loc li').click(function(){
 		var text=$(this).html();
-		$('.h-left span').text(text);
+		$("*[data-toggle='loc'] span").text(text);
 		$('.loc').hide();
 	})
 	
