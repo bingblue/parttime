@@ -1039,6 +1039,8 @@
 		font-size: 12px;
 			color: white;
 			font: "微软雅黑";
+			-webkit-appearance:none;
+
 	}
 
 /*小色更新 2016-3-12 17：17*/
