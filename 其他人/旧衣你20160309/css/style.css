@@ -89,6 +89,7 @@
   background: #fff;
   left: 0;
   bottom: 0; 
+  max-height: 80px;
 }
 .xm-menu ul{
   padding: 10px 0;
