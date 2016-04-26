@@ -814,8 +814,11 @@
 /*接单*/
 
 	.linye-jiedan .main{
-		padding-bottom: 90px;
+		padding-bottom: 80px;
 	}
+  .linye-jiedan .xm-menu{
+    max-height: 0px;
+  }
 	/*.linye-jiedan{
 		padding-bottom: 90px;
 	}*/
