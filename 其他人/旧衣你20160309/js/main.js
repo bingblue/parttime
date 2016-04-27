@@ -14,15 +14,26 @@ $(function() {
   $(".sure").hide();
   $('.loc').hide();
 	$(".down-right").click(function(){
-		$(".sure").show();
-		
+		$(".jq-sure").show();
 	})
-	$(".sur-left").click(function(){
-		$(".sure").hide();
+	$(".jq-message").click(function(){
+		$(".jq-history").show();
 	})
-	$(".sure-up").click(function(){
-		$(".sure").hide();
+	$(".jq-history .sur-left").click(function(){
+		$(".jq-history").hide();
 	})
+	$(".jq-history .sure-up").click(function(){
+		$(".jq-history").hide();
+	})
+
+	$(".jq-sure .sur-left").click(function(){
+		$(".jq-sure").hide();
+	})
+	$(".jq-sure .sure-up").click(function(){
+		$(".jq-sure").hide();
+	})
+
+
 	$('*[data-toggle]').click(function(){
 		$class = $(this).attr("data-toggle");
 		$('.'+$class).toggle();
@@ -74,5 +85,12 @@ $(function() {
 		$(".hd-focus-right-hover").hide();
 	});
 
+
+	$(".jq-assess").click(function(){
+		$(".jq-mask-assess").show();
+	})
+	$(".jq-mask-assess .cha a").click(function(){
+		$(".jq-mask-assess").hide();
+	})
 })
 

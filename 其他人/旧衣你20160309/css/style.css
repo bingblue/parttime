@@ -812,16 +812,12 @@
 			white-space: nowrap;
 		}
 /*接单*/
-
-	.linye-jiedan .main{
-		padding-bottom: 80px;
-	}
-  .linye-jiedan .xm-menu{
-    max-height: 0px;
-  }
-	/*.linye-jiedan{
+	.linye-body{
 		padding-bottom: 90px;
-	}*/
+	}
+  .linye-jiedan .wrap{
+    min-height: auto;
+  }
 	.linye-jiedan .head{
 			display: -webkit-box;
 			font-size: 17.14px;
@@ -860,9 +856,6 @@
 		}
 	.linye-jiedan .wrap{
 		background-color: white;
-	}
-	.linye-jiedan .main{
-		z-index: 1;
 	}
 	.linye-jiedan	.remind{
 			background-color: #fcfbcf;
@@ -1007,10 +1000,15 @@
 			text-align: right;
 			padding-right: 6px;
 		}
+  .linye-jiedan .sure-up img{
+      width: 13px;
+    }
 	.linye-jiedan	.sure-middle{
 			padding-top: 25px;
 			padding-right: 6.25%;
 			font-size: 12px;
+      max-height: 200px;
+      overflow: auto;
 		}
 		
 	.linye-jiedan	.sure-middle>p>span{
@@ -1610,7 +1608,7 @@
 	margin: 10px 0 10px 0;
 	padding: 10px 0 10px 0;
 }
-.dhsdd .sw-mask{
+.sw-mask{
   z-index:9999;
   width: 100%;
   height: 100%;
@@ -1621,7 +1619,7 @@
   background: rgba(0,0,0,0.6);
   text-align: center;
 }
-.dhsdd .fix {
+.dhsdd .fix,.sw-mask .fix{
   display: inline-block;
   min-width: 250px;
   width: 60%;
@@ -1631,7 +1629,7 @@
   background-color: #fff;
   text-align: left;
 }
-.dhsdd .fix img {
+.dhsdd .fix img,.sw-mask .fix img {
 	margin-top: 10px;
 	width: 6%;
 	height: auto;
@@ -1639,15 +1637,15 @@
 	margin-right:10px;
 }
 
-.dhsdd .fix .cha {
+.dhsdd .fix .cha,.sw-mask .fix .cha {
 	overflow: hidden;
 }
 
-.dhsdd .fix .cha a {
+.dhsdd .fix .cha a ,.sw-mask .fix .cha a {
 	display: block;
 }
 
-.dhsdd .fix .cha p {
+.dhsdd .fix .cha p ,.sw-mask .fix .cha p {
 	padding: 10px 5%;
   text-indent:25px;
 	margin-top: 22px;
@@ -1656,7 +1654,7 @@
 	line-height: 20px;
 }
 
-.dhsdd .fix .cha h4 {
+.dhsdd .fix .cha h4,.sw-mask .fix .cha h4 {
 	text-align: center;
 	font-size: 14px;
 	font-weight: 600;
@@ -1810,4 +1808,5 @@
   padding: 0 15%;
   background-color: #008543;
   cursor:pointer;
+  border: 0;
 }
