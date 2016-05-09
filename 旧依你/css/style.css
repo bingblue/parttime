@@ -308,9 +308,12 @@ audio {
   }
     .jygz-btm-menu-box .jygz-btm-menu li {
       display: inline-block;
-      width: 32.6%;
+      width: 32%;
       text-align: center; 
       border-right: 1px #ccc solid;
+    }
+    .jygz-btm-menu-box .jygz-btm-menu li.last{
+      border: none;
     }
     .jygz-btm-menu-box .jygz-btm-menu a {
       display: inline-block;
