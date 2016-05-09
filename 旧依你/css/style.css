@@ -303,18 +303,21 @@ audio {
   max-width: 640px;
 }
   .jygz-btm-menu-box .jygz-btm-menu {
-    padding: 20px 3%; 
+    padding: 0px 3%; 
     background: #eee;
   }
     .jygz-btm-menu-box .jygz-btm-menu li {
       display: inline-block;
-      width: 32%;
-      text-align: center; }
+      width: 32.6%;
+      text-align: center; 
+      border-right: 1px #ccc solid;
+    }
     .jygz-btm-menu-box .jygz-btm-menu a {
-      display: block;
+      display: inline-block;
       color: #333;
       font-size: 12px;
-      padding-top: 5px; }
+      line-height:59px;
+     }
     .jygz-btm-menu-box .jygz-btm-menu span {
       display: inline-block;
       width: 0;
