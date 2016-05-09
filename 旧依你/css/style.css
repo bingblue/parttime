@@ -188,13 +188,14 @@ audio {
   padding: 20px 3%;
   border-bottom: 1px solid #d5d7dc;
   width: 96%; }
-  .list li div {
+.list li div {
     width: 75%;
     float: left; }
-    .list li div h2 {
+.list li div h2 {
+  margin-top: 10%;
       color: #323232;
       font-size: 14px;
-      padding: 10px 0 20px 0; }
+    }
     .list li div span {
       color: #909090;
       font-size: 12px; }
@@ -242,8 +243,45 @@ audio {
 
 /* 关于我们 页面END */
 /* 旧衣改造 页面 */
+.jytop{
+  position: relative;
+    background-color: #000;
+    width: 92%;
+    font-weight: 200;
+    line-height: 24px;
+    font-size: 16px;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 12px 4%;
+}
+.jytop img {
+    max-width: 15px;
+    float: left;
+    margin-right: 3%;
+    width: auto\9;
+    -ms-interpolation-mode: bicubic;
+}
+.jytop img.ellipsis{
+  max-width:20px;
+  float: right;
+  margin-top: 2.5%;
+}
+.jytop span {
+    color: #fff;
+}
+.jytop p {
+    width: 50%;
+    line-height: 49px;
+    top: 0px;
+    left: 25%;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    z-index: 0;
+}
 .jygz .wrap {
-  background: #fff; }
+  background: #fff;
+  margin-bottom: 57px;
+ }
 
 .jygz-top {
   top: auto;
@@ -257,12 +295,17 @@ audio {
   background: rgba(0, 0, 0, 0.6); }
 
 .jygz-btm-menu-box {
-  background: #eee;
   position: fixed;
   left: 0;
   bottom: 0; }
+.jygz-btm-menu-box1{
+  margin: 0 auto;
+  max-width: 640px;
+}
   .jygz-btm-menu-box .jygz-btm-menu {
-    padding: 20px 0; }
+    padding: 20px 3%; 
+    background: #eee;
+  }
     .jygz-btm-menu-box .jygz-btm-menu li {
       display: inline-block;
       width: 32%;
