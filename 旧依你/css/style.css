@@ -263,7 +263,7 @@ audio {
 .jytop img.ellipsis{
   max-width:20px;
   float: right;
-  margin-top: 2.5%;
+  margin-top: 10px;
 }
 .jytop span {
     color: #fff;
@@ -303,12 +303,13 @@ audio {
   max-width: 640px;
 }
   .jygz-btm-menu-box .jygz-btm-menu {
+    overflow: hidden;
     padding: 0px 3%; 
     background: #eee;
   }
     .jygz-btm-menu-box .jygz-btm-menu li {
-      display: inline-block;
-      width: 32%;
+      float: left;
+      width: 33%;
       text-align: center; 
       border-right: 1px #ccc solid;
     }
