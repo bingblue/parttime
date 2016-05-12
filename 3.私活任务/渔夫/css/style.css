@@ -1,12 +1,4 @@
 @charset "UTF-8";
-/* 
- * 注意：请务必按照注释步骤来写，并删除注释！！！
- * 注意：请务必按照注释步骤来写，并删除注释！！！
- * 注意：请务必按照注释步骤来写，并删除注释！！！
- */
-/* 第一步：
-   这是全局类，可以使用、
-   如不用也请不要删除，直接跳到第二步 */
 .btn {
   display: inline-block;
   width: 100%;
@@ -35,7 +27,6 @@
   margin: 0 auto;
   overflow: hidden;
   position: relative; }
-
 #audio_btn {
   position: fixed;
   right: 20px;
@@ -55,28 +46,27 @@ audio {
   height: 1px;
   width: 1px;
   display: none; }
-
-/* 第二步：
-   请在此处写你的CSS代码，请在所有class前加 “.你的bodyClass”，如：
-   你的bodyClass为xm,则应该写为：
-.xm .class{
-  
-} 
-.xm ul{
-  
+.bg{
+  width: 100%;
+  height: 100%;
 }
-.xm #id{
-  
+.time{
+  position: absolute;
+  top: 150px;
+  left: 0px; 
+  font-size: 15px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
-*/
-.class{
-
+.an{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  margin-left: -40px;
 }
-
-
-
-/* 第三步：
-   css3动画使用教程，可以参考使用，并在最后删除下面代码！*/
 
 .music-ani {
   -webkit-transform-origin: 50% 50%;

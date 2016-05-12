@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="">
+	<div class="wrap">
+	  <div class="main">
+      <img class="bg" src="img/bg.png">
+      <span class="time">倒计时:<font>15</font>秒</span>
+      <img class="an jq-an" src="img/anniu.png">
+	  </div>
+	</div>
+  <script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.mutouch.min.js"></script>
+	<script>
+   $(function(){
+    var time = 15;
+    var clickNum = 0;
+    var t = setInterval(function(){
+       --time;
+       $(".time font").text(time);
+       if(time == 0){
+        clearInterval(t);
+        alert(clickNum);
+        $.ajax({  
+          type : "post",  
+          url : "",  
+          data : {num:clickNum},  
+          async : true,  
+          success : function(data){  
+            alert("提交成功！")
+          }  
+        });  
+       }
+     },1000);
+     $(".jq-an").mutouch({
+      banRight :true,
+      onEnd:function(event){
+        clickNum++;
+      }
+     });
+   }); 
+  </script>
+</body>
+</html>
