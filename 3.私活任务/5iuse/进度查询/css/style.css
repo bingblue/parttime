@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* 自定义变量 */
+/* 全局类和方法 */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  color: #fff;
+  border: 0;
+  background: #383838; }
+
+.wrap {
+  min-width: 320px;
+  max-width: 640px;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  position: relative;
+  background: #f8f8f8; }
+.main {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 50px 10%;
+}
+
+.main div{
+  border-left: 1px solid #000;
+  position: relative;
+  height: 90px;
+  padding-left: 10%;
+}
+.main div>img{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -10px;
+  left: -15px;
+}
+h2{
+  color: #333333;
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+h3{
+  color: #333333;
+  font-size: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #000;
+}
+.main div.final img{
+  width: 40px;
+  height: 40px;
+  left: -20px;
+  top: -18px;
+}
+.main div.noBor,.main div.noBor h3{
+  border: 0;
+}
