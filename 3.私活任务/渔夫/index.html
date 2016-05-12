@@ -35,14 +35,13 @@
        $(".time font").text(time);
        if(time == 0){
         clearInterval(t);
-        alert(clickNum);
         $.ajax({  
           type : "post",  
           url : "",  
           data : {num:clickNum},  
           async : true,  
           success : function(data){  
-            alert("提交成功！")
+            console.log("提交成功！")
           }  
         });  
        }
