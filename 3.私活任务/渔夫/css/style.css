@@ -19,7 +19,7 @@
   font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
   overflow: hidden;
   position: relative;
-  background: #fff; 
+  background: #000400; 
 }
 .main {
   width: 100%;
@@ -55,10 +55,11 @@ audio {
   position: absolute;
   top: 150px;
   left: 0px; 
-  font-size: 15px;
+  font-size: 18px;
   display: inline-block;
   width: 100%;
   text-align: center;
+  color: #fff;
 }
 .an{
   width: 80px;
@@ -100,38 +101,39 @@ audio {
   left: 50%;
   top:60%;
   margin-left: -40%;
-  margin-top: -150px;
-  border: 5px solid #CDD7E2;
+  margin-top: -200px;
   border-radius: 10px;
-  background-color: #FEDEE5;
+  background-color: #fff;
 }
 .namebox {
   margin-top: 20px;
   padding: 0px 2%;
-  font:16px/30px "微软雅黑";
+  font-size:16px;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  padding-top: 70px;
 }
 .namebox input{
   line-height: 24px;
-  width: 42%;
-  border:none;
-  border-radius: 4px;
-  border: 2px solid #ccc;
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 .popup .sure{
-  width: 15%;
+  margin-top: 30px;
+  padding: 5px 10px;
+  background: #449d44;
+  color: #fff;
+  border-color: #398439;
 }
 .popup .prompt{
   color: red;
-  font:12px/20px "微软雅黑";
+  font-size:12px;
+  margin-top: 10px;
   margin-left: 2%;
   padding-left: 90px;
-  display: inline-block;
+  display: block;
   height: 20px;
-}
-.count{
-  display: none;
-  text-align: center;
-  line-height: 200px;
-  font-size: 100px;
-  color: #f60;
 }
