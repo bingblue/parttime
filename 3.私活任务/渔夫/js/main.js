@@ -4,11 +4,16 @@ var time = 15;
 var clickNum = 0;
 var timesure = false;
 $(function(){
-	$("#name").bind("blur",function(){
-		if($(this).val()==""){
+	$("body").click(function(){
+		$(".prompt").html("");
+	})
+	$(".popup .sure").bind("click",function(){
+		if($("#name").val()==""){
 			$(".prompt").html("请先输入昵称!");
+			event.stopPropagation();
 		}else{
-			$(".prompt").html($(this).val()+"准备就绪");
+			event.stopPropagation();
+			$(".prompt").html($("#name").val()+"准备就绪");
 			$(".popup .count").css({display:"block"})
 			countsure = true;
 			var timer = setInterval(function(){
@@ -48,6 +53,7 @@ $(function(){
 		banRight :true,
 		onEnd:function(event){
 			if(timesure){
+				$(".jq-an").attr("src","img/baojian02.png")
 				clickNum++;
 			}
 		}
