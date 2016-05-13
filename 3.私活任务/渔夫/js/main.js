@@ -11,21 +11,21 @@ $(function(){
 			$(".prompt").html($(this).val()+"准备就绪");
 			$(".popup .count").css({display:"block"})
 			countsure = true;
+			var timer = setInterval(function(){
+				if(countsure){
+					--count;
+					$(".popup .count").text(count);
+					if(count == 0){
+						$(".popup .count").text("GO!");
+						clearInterval(timer);
+						$(".popup").css({display:"none"})
+						$(".main .mark").css({display:"none"})
+						timesure = true;
+					}
+				}	
+			},1000);
 		}
 	})
-	var timer = setInterval(function(){
-		if(countsure){
-			--count;
-			$(".popup .count").text(count);
-			if(count == 0){
-				$(".popup .count").text("GO!");
-				clearInterval(timer);
-				$(".popup").css({display:"none"})
-				$(".main .mark").css({display:"none"})
-				timesure = true;
-			}
-		}	
-	},1000);
 	var t = setInterval(function(){
 		if(timesure){
 			--time;
