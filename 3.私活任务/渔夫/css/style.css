@@ -94,6 +94,14 @@ audio {
   background-color: black;
   opacity: 0.5;
 }
+.mask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+}
 .popup{
   position: absolute;
   width: 80%;
