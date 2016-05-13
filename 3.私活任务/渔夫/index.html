@@ -19,40 +19,22 @@
 <body class="">
 	<div class="wrap">
 	  <div class="main">
+      <div class="mark"></div>
       <img class="bg" src="img/bg.png">
       <span class="time">倒计时:<font>15</font>秒</span>
       <img class="an jq-an" src="img/anniu.png">
+      <div class="popup">
+        <form class="namebox">
+          <label for="name">请输入昵称:</label>
+          <input type="text" id="name"></input>
+        </form>
+        <span class="prompt"></span>
+        <p class="count">3</p>
+      </div>
 	  </div>
 	</div>
   <script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery.mutouch.min.js"></script>
-	<script>
-   $(function(){
-    var time = 15;
-    var clickNum = 0;
-    var t = setInterval(function(){
-       --time;
-       $(".time font").text(time);
-       if(time == 0){
-        clearInterval(t);
-        $.ajax({  
-          type : "post",  
-          url : "",  
-          data : {num:clickNum},  
-          async : true,  
-          success : function(data){  
-            console.log("提交成功！")
-          }  
-        });  
-       }
-     },1000);
-     $(".jq-an").mutouch({
-      banRight :true,
-      onEnd:function(event){
-        clickNum++;
-      }
-     });
-   }); 
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
