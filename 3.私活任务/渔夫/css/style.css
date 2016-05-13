@@ -62,12 +62,12 @@ audio {
   color: #fff;
 }
 .an{
-  width: 80px;
-  height: 80px;
+  width: 180px;
+  height: 180px;
   position: absolute;
-  bottom: 20%;
+  bottom: 27%;
   left: 50%;
-  margin-left: -40px;
+  margin-left: -90px;
 }
 
 .music-ani {

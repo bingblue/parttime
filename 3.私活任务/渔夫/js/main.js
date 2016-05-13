@@ -10,12 +10,14 @@ $(function(){
 		}else{
 			event.stopPropagation();
 			$(".time").html($("#name").val()+" 准备就绪!");
+			$(".mask").hide();
 			$(".popup").hide();
 		}
 	})
-	$(".jq-an").mutouch({
+	$(".wrap").mutouch({
 		banRight :true,
 		onEnd:function(event){
+			event.stopPropagation();
 			imgNow = imgNow==1?2:1;
 			$(".jq-an").attr("src","img/baojian0"+imgNow+".png");
 			$.ajax({  
