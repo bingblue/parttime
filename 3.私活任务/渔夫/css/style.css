@@ -51,7 +51,7 @@ audio {
   width: 100%;
   height: 100%;
 }
-.time{
+.time,.timenum{
   position: absolute;
   top: 150px;
   left: 0px; 
@@ -60,6 +60,9 @@ audio {
   width: 100%;
   text-align: center;
   color: #fff;
+}
+.timenum{
+  top:100px;
 }
 .an{
   width: 180px;
