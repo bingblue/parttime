@@ -2,6 +2,7 @@ var imgNow = 1;
 var time = 15;
 var isContinue = true;
 var name = "";
+var num = 0;
 $(function(){
 
 	function goon(name){
@@ -13,6 +14,7 @@ $(function(){
 			if(time == 0){
 				isContinue = false;
 				clearInterval(t);
+				alert("你为世界提取了"+num+"个色彩！")
 			}
 		},1000);
 	}
@@ -39,6 +41,7 @@ $(function(){
 			event.stopPropagation();
 			imgNow = imgNow==1?2:1;
 			$(".jq-an").attr("src","img/baojian0"+imgNow+".png");
+			++num;
 			$.ajax({  
 				type:"GET",  
 				url:"http://52.9.90.143/education/api/attraction/click?nickname="+escape(name),  
