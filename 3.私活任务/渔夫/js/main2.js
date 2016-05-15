@@ -1,5 +1,6 @@
 var imgNow = 1;
 var time = 15;
+var isContinue = true;
 $(function(){
 	$("body").click(function(){
 		$(".prompt").html("");
@@ -25,16 +26,8 @@ $(function(){
 				--time;
 				$(".timenum font").text(time);
 				if(time == 0){
-					clearInterval(t);
-				// $.ajax({  
-				// 	type : "post",  
-				// 	url : "",  
-				// 	data : {num:clickNum},  
-				// 	async : true,  
-				// 	success : function(data){  
-				// 		console.log("提交成功！")
-				// 	}  
-				// });  
+					isContinue = false;
+					clearInterval(t); 
 			}
 		},1000);  
 		}
@@ -42,6 +35,9 @@ $(function(){
 	$(".wrap").mutouch({
 		banRight :true,
 		onEnd:function(event){
+			if(!isContinue){
+			  return false;
+			}
 			event.stopPropagation();
 			imgNow = imgNow==1?2:1;
 			$(".jq-an").attr("src","img/baojian0"+imgNow+".png");
