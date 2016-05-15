@@ -1,6 +1,7 @@
 var imgNow = 1;
 var time = 15;
 var isContinue = true;
+var name = "";
 $(function(){
 
 	function goon(name){
@@ -21,11 +22,12 @@ $(function(){
 				$(".prompt").html("请先输入昵称!");
 			}else{
 				document.cookie = "locname="+$("#name").val();
-				goon($("#name").val()); 
+				name = $("#name").val();
+				goon(name); 
 			}
 		});
 	}else{
-		var name = document.cookie.split("=")[1];
+		name = document.cookie.split("=")[1];
 		goon(name);
 	}
 	$(".wrap").mutouch({
@@ -39,7 +41,7 @@ $(function(){
 			$(".jq-an").attr("src","img/baojian0"+imgNow+".png");
 			$.ajax({  
 				type:"GET",  
-				url:"http://52.9.90.143/education/api/attraction/click?nickname="+$("#name").val(),  
+				url:"http://52.9.90.143/education/api/attraction/click?nickname="+name,  
 				async:true,  
 				success:function(data){  
 					console.log("提交成功！")
