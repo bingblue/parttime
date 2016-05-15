@@ -360,6 +360,8 @@
     });
 
     $(".jq-del").click(function(){
+      //演示，直接删除
+       del();
       var path = $(this).attr("data-path");
       var data = {"id":menusid};
       var result = window.confirm("确定删除吗？");
