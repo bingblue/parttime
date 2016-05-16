@@ -43,8 +43,9 @@ $(function(){
 			$(".jq-an").attr("src","img/baojian0"+imgNow+".png");
 			++num;
 			$.ajax({  
-				type:"GET",  
-				url:"http://52.9.90.143/education/api/attraction/click?nickname="+escape(name),  
+				type:"POST",  
+				url:"http://52.9.90.143/education/api/attraction/click",
+				data:{nickname:name},
 				async:true,  
 				success:function(data){  
 					console.log("提交成功！")
