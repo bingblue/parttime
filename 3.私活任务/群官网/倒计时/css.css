@@ -1,0 +1,69 @@
+body,div,h1,h2{
+	margin: 0px;
+	padding: 0px;
+}
+canvas{
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	height: 100%;
+	display: block;
+	width: 100%;
+}
+a{
+	text-decoration: none;
+}
+#canvas-warpper{
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+#controller{
+	position: absolute;
+	top:30px;
+	left: 30px;
+	background-color: rgba(0,85,116,0.7);
+	padding: 10px 20px 10px 20px;
+	border-radius: 10px;
+}
+#controller h1 span{
+	line-height: 100px;
+}
+#controller h1 img{
+	margin-right: 10px;
+	float: left;
+}
+#controller h1,#controller h2{
+	color: #f60;
+	font-family:"微软雅黑";
+	padding: 10px 0px;
+}
+#controller h2{
+	color: black;
+}
+#controller #canvas-btn{
+	display: inline-block;
+	background-color: #8b0;
+	color: white;
+	font-size: 14px;
+	padding: 5px 15px;
+	border-radius: 6px;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+#controller #canvas-btn:hover{
+	background-color: #7a0;
+}
+#controller .color-btn{
+	display: inline-block;
+	padding: 5px 15px;
+	border-radius: 6px;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-right: 5px;
+}
+#controller #white-color-btn{
+	background-color: white;
+}
+#controller #black-color-btn{
+	background-color: black;
+}
