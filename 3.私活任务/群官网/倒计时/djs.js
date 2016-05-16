@@ -132,9 +132,10 @@ function render(cxt) {
 			seconds = oldSeconds = curSeconds%60;
 		}
 	}
+	// renderDigit(ml,mt,parseInt(days/100),cxt);
 	renderDigit(ml,mt,parseInt(days/10),cxt);
 	renderDigit(ml+15*(radiusx+1),mt,parseInt(days%10),cxt);
-	drawwz(ml+30*(radiusx+1),mt+18*(radiusx+1),cxt)
+	renderDigit(ml+30*(radiusx+1),mt,11,cxt)
 	renderDigit(ml+55*(radiusx+1),mt,parseInt(hours/10),cxt)
 	renderDigit(ml+70*(radiusx+1),mt,parseInt(hours%10),cxt)
 	renderDigit(ml+85*(radiusx+1),mt,10,cxt)
@@ -152,7 +153,7 @@ function render(cxt) {
 	}
 }
 function drawwz(x,y,context){
-	    var fontz = "bold "+(24*radiusx+10)+"px Arial";
+	  var fontz = "bold "+(24*radiusx+10)+"px Arial";
 		context.font = fontz;
 		context.fillStyle = "rgb(0,102,153)";
 		context.fillText("天",x,y);
