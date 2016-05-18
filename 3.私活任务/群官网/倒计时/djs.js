@@ -3,7 +3,7 @@ var ml;
 var mt;
 var ww;
 var wh;
-const endTime = new Date(2016,5,24,09,00,45);//截止时间 月份是从0开始的
+const endTime = new Date(2016,5,24,08,15,45);//截止时间 月份是从0开始的
 var curSeconds = 0;
 var ballsx = [];
 var balls = [];
@@ -20,7 +20,7 @@ window.onload = function(){
 	wh = document.body.clientHeight; 
 	ml  = Math.round(ww/10);
 	controller.style.left = ml+"px";
-	radiusx = Math.round(ww*4/5/163)-1;
+	radiusx = Math.round(ww*4/5/161)-1;
 	mt = wh/2-20*(radiusx+1);
 	var canvas = document.getElementById('canvas');
 	canvas.width =ww;
@@ -55,6 +55,7 @@ function ctblue(cxt){
 	cxt.fillRect(0,0,cxt.canvas.width,cxt.canvas.height);
 }
 function upDate(cxt){
+	console.log(ballsx.length)
 	updateBallsx();
 	draw(cxt);
 	updatex(cxt.canvas.width,cxt.canvas.height)
@@ -75,7 +76,7 @@ function updateBallsx(){
 			ballsx[cnt++]=ballsx[i];
 		}
 	}
-	while(ballsx.length>Math.min(1000,cnt)){
+	while(ballsx.length>Math.min(600,cnt)){
 		ballsx.pop();
 	}
 }
@@ -110,39 +111,41 @@ function render(cxt) {
 			olddays = days = parseInt(getcurSeconds()/86400);
 		}
 		if(parseInt(oldhours/10)!=parseInt(curSeconds/3600/10)){
-			addBalls(ml+55*(radiusx+1),mt,parseInt(oldhours/10));
+			addBalls(ml+52*(radiusx+1),mt,parseInt(oldhours/10));
 		}
 		if(parseInt(oldhours%10)!=parseInt((curSeconds/3600)%10)){
-			addBalls(ml+70*(radiusx+1),mt,parseInt(oldhours%10));
+			addBalls(ml+68*(radiusx+1),mt,parseInt(oldhours%10));
 			console.log(oldhours%10);
 			hours=oldhours=parseInt(curSeconds/3600);
 		}
 		if(parseInt(oldMintues/10)!=parseInt((curSeconds-hours*3600)/60/10)){
-			addBalls(ml+85*(radiusx+1),mt,parseInt(oldMintues/10));
+			addBalls(ml+83*(radiusx+1),mt,parseInt(oldMintues/10));
 		}
 		if(parseInt(oldMintues%10)!=parseInt(((curSeconds-hours*3600)/60)%10)){
-			addBalls(ml+109*(radiusx+1),mt,parseInt(oldMintues%10));
+			addBalls(ml+107*(radiusx+1),mt,parseInt(oldMintues%10));
 			minutes = oldMintues=parseInt((curSeconds-hours*3600)/60);
 		}
 		if(parseInt(oldSeconds/10)!=parseInt((curSeconds%60)/10)){
-			addBalls(ml+133*(radiusx+1),mt,parseInt(oldSeconds/10));
+			addBalls(ml+131*(radiusx+1),mt,parseInt(oldSeconds/10));
 		}
 		if(parseInt(oldSeconds%10)!=parseInt((curSeconds%60)%10)){
-			addBalls(ml+148*(radiusx+1),mt,parseInt(oldSeconds%10));
+			addBalls(ml+146*(radiusx+1),mt,parseInt(oldSeconds%10));
 			seconds = oldSeconds = curSeconds%60;
 		}
 	}
 	renderDigit(ml,mt,parseInt(days/10),cxt);
 	renderDigit(ml+15*(radiusx+1),mt,parseInt(days%10),cxt);
-	drawwz(ml+30*(radiusx+1),mt+18*(radiusx+1),cxt)
-	renderDigit(ml+55*(radiusx+1),mt,parseInt(hours/10),cxt)
-	renderDigit(ml+70*(radiusx+1),mt,parseInt(hours%10),cxt)
-	renderDigit(ml+85*(radiusx+1),mt,10,cxt)
-	renderDigit(ml+94*(radiusx+1),mt,parseInt(minutes/10),cxt)
-	renderDigit(ml+109*(radiusx+1),mt,parseInt(minutes%10),cxt)
-	renderDigit(ml+124*(radiusx+1),mt,10,cxt)
-	renderDigit(ml+133*(radiusx+1),mt,parseInt(seconds/10),cxt)
-	renderDigit(ml+148*(radiusx+1),mt,parseInt(seconds%10),cxt)
+	// drawwz(ml+30*(radiusx+1),mt+18*(radiusx+1),cxt)
+	renderDigit(ml+30*(radiusx+1),mt,11,cxt)
+	renderDigit(ml+52*(radiusx+1),mt,parseInt(hours/10),cxt)
+	renderDigit(ml+68*(radiusx+1),mt,parseInt(hours%10),cxt)
+	renderDigit(ml+83*(radiusx+1),mt,10,cxt)
+	renderDigit(ml+92*(radiusx+1),mt,parseInt(minutes/10),cxt)
+	renderDigit(ml+107*(radiusx+1),mt,parseInt(minutes%10),cxt)
+	renderDigit(ml+122*(radiusx+1),mt,10,cxt)
+	renderDigit(ml+131*(radiusx+1),mt,parseInt(seconds/10),cxt)
+	renderDigit(ml+146*(radiusx+1),mt,parseInt(seconds%10),cxt)
+	drawwz(ww/2,mt-30,cxt);
 	for(var i = 0; i<ballsx.length;i++){
 		cxt.fillStyle=ballsx[i].color;
 		cxt.beginPath();
@@ -152,16 +155,25 @@ function render(cxt) {
 	}
 }
 function drawwz(x,y,context){
-	    var fontz = "bold "+(24*radiusx+10)+"px Arial";
+	    var fontz = "bold "+(5*radiusx+10)+"px Arial";
+	    var linearGrad = context.createLinearGradient(0,0,ww,0);
+		linearGrad.addColorStop(0.0,"red");
+		linearGrad.addColorStop(0.25,"orange");
+		linearGrad.addColorStop(0.5,"yellow");
+		linearGrad.addColorStop(0.75,"green");
+		linearGrad.addColorStop(1.0,"purple");
+		context.fillStyle = linearGrad;
 		context.font = fontz;
-		context.fillStyle = "rgb(0,102,153)";
-		context.fillText("天",x,y);
-		context.lineWidth = 1;
+		context.textAlign = "center";
+		context.fillText("JAVA Android WEB 前端 技术交流群官网。。。",x,y);
 }
 function addBalls(x,y,num){
 	for(var i = 0;i<digit[num].length;i++){
 		for(var j = 0;j<digit[num][i].length;j++){
 			if(digit[num][i][j] == 1){
+				var R = Math.floor(Math.random()*225);
+				var G = Math.floor(Math.random()*225);
+				var B = Math.floor(Math.random()*225);
 				var aBall ={
 					x:x+j*2*(radiusx+1)+(radiusx+1),
 					y:y+i*2*(radiusx+1)+(radiusx+1),
@@ -169,6 +181,7 @@ function addBalls(x,y,num){
 					vx:Math.pow(-1,Math.ceil(Math.random()*1000))*4,
 					vy:-5,
 					color:colors[Math.floor(Math.random()*colors.length)]
+					// color:"rgba("+R+","+G+","+B+","+1+")",
 				}
 				ballsx.push(aBall);
 			}
@@ -177,6 +190,7 @@ function addBalls(x,y,num){
 }
 function renderDigit(x,y,num,cxt){
 	 cxt.fillStyle = "rgb(0,102,153)";
+	 // cxt.fillStyle = "white";
 	 for(var i = 0;i<digit[num].length;i++){
 	 	for(var j = 0;j<digit[num][i].length;j++){
 	 		if(digit[num][i][j] == 1){
