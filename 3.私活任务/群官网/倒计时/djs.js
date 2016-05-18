@@ -133,6 +133,7 @@ function render(cxt) {
 			seconds = oldSeconds = curSeconds%60;
 		}
 	}
+	// renderDigit(ml,mt,parseInt(days/100),cxt);
 	renderDigit(ml,mt,parseInt(days/10),cxt);
 	renderDigit(ml+15*(radiusx+1),mt,parseInt(days%10),cxt);
 	// drawwz(ml+30*(radiusx+1),mt+18*(radiusx+1),cxt)
