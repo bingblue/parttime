@@ -194,8 +194,9 @@ audio {
 .list li div h2 {
   margin-top: 10%;
       color: #323232;
-      font-size: 14px;
-    }
+      font-size: 12px;
+      font-weight: bold;
+  }
     .list li div span {
       color: #909090;
       font-size: 12px; }
@@ -304,8 +305,9 @@ audio {
 }
   .jygz-btm-menu-box .jygz-btm-menu {
     overflow: hidden;
-    padding: 0px 3%; 
+    /*padding: 0px 3%; */
     background: #eee;
+    border-top:1px solid #d5d7dc;
   }
     .jygz-btm-menu-box .jygz-btm-menu li {
       float: left;
@@ -319,8 +321,9 @@ audio {
     .jygz-btm-menu-box .jygz-btm-menu a {
       display: inline-block;
       color: #333;
-      font-size: 12px;
+      font-size: 14px;
       line-height:59px;
+      font-weight: bold;
      }
     .jygz-btm-menu-box .jygz-btm-menu span {
       display: inline-block;
