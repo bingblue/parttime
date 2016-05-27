@@ -1699,8 +1699,10 @@
 	color: #fff;
   width:20%;
   margin: 0;
-  padding:6px 7px;
-  border: 1px solid #008543;}
+  padding:6px 3px;
+  border: 1px solid #008543;
+  min-width: 76px;
+}
 
 .dhsdd .xg .eb h4 {
 	letter-spacing: 13px;
