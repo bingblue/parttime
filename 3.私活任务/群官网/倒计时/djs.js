@@ -133,7 +133,6 @@ function render(cxt) {
 			seconds = oldSeconds = curSeconds%60;
 		}
 	}
-	// renderDigit(ml,mt,parseInt(days/100),cxt);
 	renderDigit(ml,mt,parseInt(days/10),cxt);
 	renderDigit(ml+15*(radiusx+1),mt,parseInt(days%10),cxt);
 	// drawwz(ml+30*(radiusx+1),mt+18*(radiusx+1),cxt)
@@ -163,10 +162,10 @@ function drawwz(x,y,context){
 		linearGrad.addColorStop(0.5,"yellow");
 		linearGrad.addColorStop(0.75,"green");
 		linearGrad.addColorStop(1.0,"purple");
-		context.fillStyle = linearGrad;
+		context.fillStyle = "rgb(0,102,153)";
 		context.font = fontz;
 		context.textAlign = "center";
-		context.fillText("JAVA Android WEB 前端 技术交流群官网。。。",x,y);
+		context.fillText("JAVA、Android、WEB、前端技术交流群官网开启倒计时",x,y);
 }
 function addBalls(x,y,num){
 	for(var i = 0;i<digit[num].length;i++){
