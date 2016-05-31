@@ -3,7 +3,7 @@ var ml;
 var mt;
 var ww;
 var wh;
-const endTime = new Date(2016,5,24,08,15,45);//截止时间 月份是从0开始的
+var endTime = new Date(2016,5,24,08,15,45);//截止时间 月份是从0开始的
 var curSeconds = 0;
 var ballsx = [];
 var balls = [];
