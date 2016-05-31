@@ -24,6 +24,7 @@ a{
 	background-color: rgba(0,85,116,0.7);
 	padding: 10px 20px 10px 20px;
 	border-radius: 10px;
+	display: none;
 }
 #controller h1 span{
 	line-height: 100px;

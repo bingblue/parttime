@@ -165,7 +165,8 @@ function drawwz(x,y,context){
 		context.fillStyle = "rgb(0,102,153)";
 		context.font = fontz;
 		context.textAlign = "center";
-		context.fillText("JAVA、Android、WEB、前端技术交流群官网开启倒计时",x,y);
+		context.fillText("群官网开启倒计时:",x,y-10);
+		context.fillText("QQ群:206683621",x+200,y+300);
 }
 function addBalls(x,y,num){
 	for(var i = 0;i<digit[num].length;i++){
