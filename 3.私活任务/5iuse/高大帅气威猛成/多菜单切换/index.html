@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多菜单切换</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		.btngroup .demoSpan1{height:20px; width:20px; display:inline-block; position:relative;} 
+.demoSpan1:before, .demoSpan1:after{content:''; height:4px; width:20px; display:block; background:#ccc; border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px; position:absolute; top:8px; left:0px;}
+.demoSpan1:after{height:20px; width:4px; top:0; left:8px; }
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<div class="menuleft">
+		<p>点击想要修改的菜单，在右边区域进行编辑</p>
+		<div class="menugroup">
+			<ul class="menugroup-1" id="menugroupOne">
+				<li>
+					<span>菜单1</span>
+					<ul class="menugroupTwo">
+						<span class="bj"></span>
+						<li class="active"><span>菜单1-1</span></li>
+					</ul>
+					<div class="btngroup btntwo"><span class="demoSpan1"></div>
+				</li>
+			</ul>
+			<div class="btngroup" id="btnAdd1"><span class="demoSpan1"></div>
+		</div>
+		</div>
+		<div class="menuright">
+			<div class="left">
+				<h3 class="numeGrade">一级菜单:</h3>
+				<span class="numeName">菜单名称</span>
+				<input type="text" value="菜单名称" class="inputName"></input>
+			</div>
+			<div class="right">
+				<span class="rename">重命名</span>
+				<span class="save">保存</span>
+				<span class="remove">删除</span>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

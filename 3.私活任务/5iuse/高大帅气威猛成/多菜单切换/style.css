@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font:14px/20px "微软雅黑";
+}
+.menu{
+	overflow: hidden;
+	margin: 200px auto;
+	width: 1436px;
+}
+.menuleft p{
+	text-align: center;
+	margin-top: 10px;
+	color: #f60;
+}
+.menuleft,.menuright{
+	height: 450px;
+	border: 1px solid #ccc;
+}
+.menuleft{
+	position: relative;
+	width: 432px;
+	float: left;
+	margin-right: 50px;
+}
+.menuright{
+	width: 950px;
+	float: left;
+}
+.btngroup{
+	height: 42px;
+	overflow: hidden;
+	text-align: center;
+}
+.btngroup span{
+	margin-top: 11px;
+}
+.menugroup #btnAdd1{
+	position: absolute;
+	top:340px;
+	left: 296px;
+	width: 134px;
+}
+.menugroup-1 li ul{
+	border: 0;
+}
+.menugroup .btngroup{
+	cursor: pointer;
+	width: 134px;
+	border: 1px dashed #ccc;
+}
+.menugroup .btngroup:hover{
+	border: 1px dashed #999;
+}
+.menugroup .btngroup:hover :before,
+.menugroup .btngroup:hover :after{
+	background:#999;
+}
+.menugroup-1{
+	cursor: pointer;
+}
+.menugroup-1 li{
+	line-height: 42px;
+	text-align: center;
+	height: 42px;
+	border: 1px solid #ccc;
+}
+.menugroup-1>li{
+	width: 294px;
+	float: left;
+	color: #3498DB;
+	float: left;
+	position: relative;
+}
+.menugroup-1>li ul{
+	position: absolute;
+	top:-60px;
+	left: 8px;
+}
+.menugroup-1 .btngroup{
+	position: absolute;
+	top:-104px;
+	left: 8px;
+}
+.menugroup-1 li.active{
+	background-color: #A6F9B4;
+}
+.menugroup-1{
+	position: absolute;
+	top:340px;
+}
+.menugroupTwo{
+	position: relative;
+}
+.menugroupTwo span.bj{
+	z-index: 9999;
+	position: absolute;
+	display: inline-block;
+	width: 14px;
+	height: 9px;
+	bottom:-14px;
+	background:url(twobg.png) no-repeat center 15px;
+}
+.menuright .left{
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.menuright {
+	line-height: 40px;
+	font-size: 16px;
+}
+.menuright .left h3{
+	float: left;
+	font-weight: 600;
+	margin-right: 50px;
+}
+.menuright .left input{
+	display: none;
+	line-height: 40px;
+	width: 200px;
+	border: 0;
+	border:  1px solid #ccc;
+	text-indent: 20px;
+}
+.menuright .right{
+	margin-top: 10px;
+	margin-right: 10px;
+	float: right;
+}
+.menuright .right span{
+	cursor: pointer;
+	color: #3498DB;
+	text-decoration: underline;
+}
+.menuright .right .save{
+	display: none;
+}
+.menuright .right .remove{
+	color: red;
+}
