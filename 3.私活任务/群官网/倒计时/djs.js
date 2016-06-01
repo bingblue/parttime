@@ -3,7 +3,7 @@ var ml;
 var mt;
 var ww;
 var wh;
-var endTime = new Date(2016,6,11,11,11,11);//截止时间2016-11-11-11-11-11 月份是从0开始的
+var endTime = new Date(2016,11,11,11,11,11);//截止时间2016-11-11-11-11-11 月份是从0开始的
 var curSeconds = 0;
 var ballsx = [];
 var balls = [];
@@ -20,7 +20,7 @@ window.onload = function(){
 	wh = document.body.clientHeight; 
 	ml  = Math.round(ww/10);
 	controller.style.left = ml+"px";
-	radiusx = Math.round(ww*4/5/161)-1;
+	radiusx = Math.round(ww*4/5/176)-1;
 	mt = wh/2-20*(radiusx+1);
 	var canvas = document.getElementById('canvas');
 	canvas.width =ww;
@@ -55,7 +55,6 @@ function ctblue(cxt){
 	cxt.fillRect(0,0,cxt.canvas.width,cxt.canvas.height);
 }
 function upDate(cxt){
-	console.log(ballsx.length)
 	updateBallsx();
 	draw(cxt);
 	updatex(cxt.canvas.width,cxt.canvas.height)
@@ -102,49 +101,52 @@ function render(cxt) {
 		 oldSeconds = seconds;
 		 one=2;
 	}else{
-		if(parseInt(olddays/10)!=parseInt((days/10))){
-			addBalls(ml,mt,parseInt(olddays/10));
-			console.log(olddays/10);
+		if(parseInt(olddays/100)!=parseInt((days/100))){
+			addBalls(ml,mt,parseInt(olddays/100));
 		}
-		if(parseInt(olddays%10)!=parseInt((days%10))){
-			addBalls(ml+15*(radiusx+1),mt,parseInt(olddays%10));
+		if(parseInt((olddays%100)/10)!=parseInt(((days%100)/10))){
+			addBalls(ml+15*(radiusx+1),mt,parseInt((olddays%100)/10));
+		}
+		if(parseInt((olddays%100)%10)!=parseInt(((days%100)%10))){
+			addBalls(ml+30*(radiusx+1),mt,parseInt((olddays%100)%10));
 			olddays = days = parseInt(getcurSeconds()/86400);
 		}
 		if(parseInt(oldhours/10)!=parseInt(curSeconds/3600/10)){
-			addBalls(ml+52*(radiusx+1),mt,parseInt(oldhours/10));
+			addBalls(ml+67*(radiusx+1),mt,parseInt(oldhours/10));
 		}
 		if(parseInt(oldhours%10)!=parseInt((curSeconds/3600)%10)){
-			addBalls(ml+68*(radiusx+1),mt,parseInt(oldhours%10));
+			addBalls(ml+83*(radiusx+1),mt,parseInt(oldhours%10));
 			console.log(oldhours%10);
 			hours=oldhours=parseInt(curSeconds/3600);
 		}
 		if(parseInt(oldMintues/10)!=parseInt((curSeconds-hours*3600)/60/10)){
-			addBalls(ml+83*(radiusx+1),mt,parseInt(oldMintues/10));
+			addBalls(ml+98*(radiusx+1),mt,parseInt(oldMintues/10));
 		}
 		if(parseInt(oldMintues%10)!=parseInt(((curSeconds-hours*3600)/60)%10)){
-			addBalls(ml+107*(radiusx+1),mt,parseInt(oldMintues%10));
+			addBalls(ml+122*(radiusx+1),mt,parseInt(oldMintues%10));
 			minutes = oldMintues=parseInt((curSeconds-hours*3600)/60);
 		}
 		if(parseInt(oldSeconds/10)!=parseInt((curSeconds%60)/10)){
-			addBalls(ml+131*(radiusx+1),mt,parseInt(oldSeconds/10));
+			addBalls(ml+146*(radiusx+1),mt,parseInt(oldSeconds/10));
 		}
 		if(parseInt(oldSeconds%10)!=parseInt((curSeconds%60)%10)){
-			addBalls(ml+146*(radiusx+1),mt,parseInt(oldSeconds%10));
+			addBalls(ml+161*(radiusx+1),mt,parseInt(oldSeconds%10));
 			seconds = oldSeconds = curSeconds%60;
 		}
 	}
-	renderDigit(ml,mt,parseInt(days/10),cxt);
-	renderDigit(ml+15*(radiusx+1),mt,parseInt(days%10),cxt);
+	renderDigit(ml,mt,parseInt((days/100)),cxt);
+	renderDigit(ml+15*(radiusx+1),mt,parseInt((days%100)/10),cxt);
+	renderDigit(ml+30*(radiusx+1),mt,parseInt((days%100)%10),cxt);
 	// drawwz(ml+30*(radiusx+1),mt+18*(radiusx+1),cxt)
-	renderDigit(ml+30*(radiusx+1),mt,11,cxt)
-	renderDigit(ml+52*(radiusx+1),mt,parseInt(hours/10),cxt)
-	renderDigit(ml+68*(radiusx+1),mt,parseInt(hours%10),cxt)
-	renderDigit(ml+83*(radiusx+1),mt,10,cxt)
-	renderDigit(ml+92*(radiusx+1),mt,parseInt(minutes/10),cxt)
-	renderDigit(ml+107*(radiusx+1),mt,parseInt(minutes%10),cxt)
-	renderDigit(ml+122*(radiusx+1),mt,10,cxt)
-	renderDigit(ml+131*(radiusx+1),mt,parseInt(seconds/10),cxt)
-	renderDigit(ml+146*(radiusx+1),mt,parseInt(seconds%10),cxt)
+	renderDigit(ml+45*(radiusx+1),mt,11,cxt)
+	renderDigit(ml+67*(radiusx+1),mt,parseInt(hours/10),cxt)
+	renderDigit(ml+83*(radiusx+1),mt,parseInt(hours%10),cxt)
+	renderDigit(ml+98*(radiusx+1),mt,10,cxt)
+	renderDigit(ml+107*(radiusx+1),mt,parseInt(minutes/10),cxt)
+	renderDigit(ml+122*(radiusx+1),mt,parseInt(minutes%10),cxt)
+	renderDigit(ml+137*(radiusx+1),mt,10,cxt)
+	renderDigit(ml+146*(radiusx+1),mt,parseInt(seconds/10),cxt)
+	renderDigit(ml+161*(radiusx+1),mt,parseInt(seconds%10),cxt)
 	drawwz(ww/2,mt-30,cxt);
 	for(var i = 0; i<ballsx.length;i++){
 		cxt.fillStyle=ballsx[i].color;
