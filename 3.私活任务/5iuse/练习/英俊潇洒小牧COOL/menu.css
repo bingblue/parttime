@@ -1,0 +1,23 @@
+.wrap {
+  max-width: 1020px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative; 
+  padding-top: 50px;
+}
+.view{
+  float: left;
+  width: 400px;
+  height: 500px;
+  border: 1px solid #e3e3e3;
+}
+
+.data{
+  float: left;
+  width: 600px;
+  height: 500px;
+  margin-left: 15px;
+  border: 1px solid #e3e3e3;
+}
