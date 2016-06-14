@@ -92,6 +92,12 @@ Graphic.prototype = {
       });
     }else if(obj.action==3){
       $("#content").val(obj.content);
+      console.log(obj)
+      console.log(obj.content)
+      var ue = UE.getEditor('container');
+      ue.ready(function() {
+          ue.setContent(obj.content);
+      });
     }
   },
   save:function(id){
@@ -114,6 +120,10 @@ Graphic.prototype = {
       nowObj.content[1] = $("#menu2").val();
     }else if(action==3){
       nowObj.content = $("#content").val();
+      var ue = UE.getEditor('container');
+      ue.ready(function() {
+         nowObj.content= ue.getContent();
+      });
     }
     //做验证！
     if(nowObj.title==""){
@@ -176,6 +186,10 @@ $(function(){
     $("#menu2").val('0');
     $("#content_div").css('display','none');
     $("#content").val('');
+    var ue = UE.getEditor('container');
+      ue.ready(function() {
+         ue.setContent("");
+      });
     if($(this).val()==1){
       $("#menus_action_content>div").hide();
       $(".action1").show();

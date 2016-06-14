@@ -1050,7 +1050,9 @@ zhangyong</a>
                     <script type="text/javascript" src="js/zh-cn.js"></script>
                     <script type="text/javascript">
                         var ue = UE.getEditor('container');
-                        UE.getEditor('container').execCommand('insertHtml',"<h1>我是h1</h1>")
+                        ue.ready(function() {
+                            //ue.setContent("<h1 style='color:red'>我是h1</h1>");
+                        });
                     </script>
                   </div>
 
@@ -1089,7 +1091,7 @@ zhangyong</a>
           desc:"我是表述3！",
           img:"img/avatar12.jpg",
           action:3,//1.链接  2.模块 3.内容
-          content:[105,66]
+          content:"sfdsafdf"
         }];
       </script>
       <script src="js/graphic.js"></script>
