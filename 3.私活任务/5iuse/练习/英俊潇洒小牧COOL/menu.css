@@ -1,3 +1,14 @@
+ul,li{
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: #29aae1;
+  text-align: center;
+}
 .wrap {
   max-width: 1020px;
   width: 100%;
@@ -21,3 +32,33 @@
   margin-left: 15px;
   border: 1px solid #e3e3e3;
 }
+.view .menu{
+  width:auto;
+  float: left;
+  position: absolute;
+  bottom: 0;
+}
+  .view .menu>li,.view .menu>a{
+    width:131px;
+    padding: 10px 0;
+    float: left;
+    border:1px solid #ccc;
+  }
+    .view .submenu{
+      position: absolute;
+      bottom: 40px;
+      width: 120px;
+      padding:2px 5px;
+    }
+    .view .submenu>li,.view .submenu>a{
+      width:120px;
+      padding: 10px 0;
+      float: left;
+      border:1px solid #ccc;
+    }
+  .view .menu>a,.view .submenu>a{
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 18px;
+    border:1px dashed #ccc;
+  }
