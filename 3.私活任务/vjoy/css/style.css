@@ -501,3 +501,170 @@ ul{
 
 
 /* 你的 css code*/
+/*service*/
+h3,p,img{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.service{
+  overflow: hidden;
+}
+.servicebanner{
+  background-color: #eaf3f8;
+}
+.f_l{
+  float: left;
+}
+.service-nav{
+  height:100%; 
+  margin-top: 50px;
+}
+.service-nav ul.serviceOne{
+  width: 220px;
+  border: 1px solid #d8d8d8;
+  border-top: none;
+}
+.service-nav .serviceOne>li{
+  position: relative;
+  line-height: 44px;
+  color: #707070;
+  font-size: 14px;
+  border-top: 1px solid #d8d8d8;
+  font-weight: bold;
+  text-indent: 60px;
+}
+.serviceOne>li.active{
+  background-color: #45C5BD;
+  color: #fff;
+}
+.serviceOne>li.active span{
+  background:url(../img/ser-down.png) no-repeat; 
+}
+.serviceOne>li span{
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  left: 38px;
+  top: 14px;
+  background:url(../img/ser-left.png) no-repeat; 
+}
+.serviceOne ul{
+  display: none;
+  width: 100%;
+  padding: 5px 0 10px 0px;
+  background-color: #fff;
+}
+.serviceOne .active ul{
+  display: block;
+}
+.serviceOne ul li{
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 200;
+}
+.serviceOne ul li a{
+  color: #504e4e;
+}
+.f_r{
+  float: right;
+}
+.service-list{
+  margin-top: 60px;
+  width: 854px;
+}
+.service-div{
+  float: left;
+  width: 402px;
+  margin-right: 50px;
+}
+.width{
+  width: 904px;
+}
+.service-div{
+  margin-bottom: 40px;
+}
+.service-div h3{
+  letter-spacing: 2px;
+  text-indent: 18px;
+  color: #38DCDA;
+  font-weight: 600;
+  font-size: 15px;
+  height: 34px;
+  line-height: 29px;
+  background: url(../img/serh3.png) no-repeat;
+  margin-bottom: 7px;
+}
+.human {
+  width:854px;
+}
+.human h3{
+  background: url(../img/serh3big.png) no-repeat;
+}
+.ser-divbm{
+  width: 390px;
+  height: 238px;
+  
+}
+.train .ser-divbm{
+  background: url(../img/train.png) no-repeat;
+}
+.business .ser-divbm{
+  background: url(../img/business.png) no-repeat;
+}
+.information .ser-divbm{
+  background: url(../img/information.png) no-repeat;
+}
+.ectocyst .ser-divbm{
+  background: url(../img/ectocyst.png) no-repeat;
+}
+.ser-divbm ul{
+  letter-spacing: 2px;
+  padding: 44px 0px 0px 20px;
+}
+.ser-divbm ul a{
+  color: #949393;
+}
+.human-down{
+  overflow: hidden;
+  padding: 34px 0;
+  background-color: #f2f2f2;
+}
+.human-down .f_l{
+  width: 180px;
+}
+.human-down .f_r{
+  width: 560px;
+  padding: 0px 68px 0px 45px;
+  border-left: 1px solid #ccc;
+}
+.human-down .f_r ul{
+  width: 100%;
+}
+.human-down .f_r ul li{
+  line-height: 26px;
+  color: #5c5b5b;
+}
+.human-down .f_r ul li a{
+  display: inline-block;
+  float: right;
+  text-align: center;
+  background-color: #71c1c0;
+  border-radius: 4px;
+  width:120px;
+  color: #fff;
+  font-size: 12px;
+  margin-top:30px;
+}
+.human-down .f_l li{
+  font-weight: 600;
+  font-size: 12px;
+  color: #5c5b5b;
+  line-height: 26px;
+  text-indent: 26px;
+  letter-spacing: 2px;
+}
