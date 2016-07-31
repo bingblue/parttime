@@ -178,6 +178,7 @@ ul{
         right: 93px;
         top: 57px;
         z-index: 99;
+        display: none;
       }
       .header .pos ul{
         width: 25%;
@@ -258,9 +259,26 @@ ul{
   height: 15px;
   background: #fafafc;
   margin-left: 5px;
+  cursor: pointer;
 }
-.slider .icons li:active{
+.slider .icons li.active,.slider .icons li:hover{
   background: #65a9aa;
+}
+.slider .jt-left,.slider .jt-right{
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  top: 46%;
+  left: 0;
+  background: url('../img/icon_jtleft.png');
+  background-size: 100% 100%;
+}
+.slider .jt-right{
+  left: auto;
+  right: 0;
+  background: url('../img/icon_jtright.png');
+  background-size: 100% 100%;
 }
 
 .area1{
@@ -287,10 +305,24 @@ ul{
   width: 100%;
   height: 100%;
   background: rgba(113,193,192,0.5);
+  display: none;
 }
 .area2 .pos ul{
   margin-top: 130px;
   margin-left: 30px;
+}
+.area2 .pos-title{
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  background: rgba(113,193,192,0.5);
 }
 .area2 .pos li{
   color: #fff;
@@ -493,10 +525,57 @@ ul{
 }
 .news-area2 .news li{
   padding: 5px 0;
-  list-style: circle;
+  list-style: disc;
+  list-style-position: inside;
+}
+.news-area2 .news li span{
+  display: inline-block;
+  float: right;
+  color: #a5a5a5;
 }
 .news-area2 .news li:before {
-    content: " ";
+  content: " ";
+}
+.news-area2 .pages{
+  float: right;
+  width: 350px;
+  margin-top: 10px;
+  text-align: right;
+  margin-right: 270px;
+}
+.news-area2 .pages li{
+  display: inline-block;
+  margin-right: 5px;
+}
+.news-area2 .pages li a{
+  color: #71c1c0;
+  display: inline-block;
+  padding: 1px 5px;
+  border: 1px solid #71c1c0;
+  border-radius: 50%;
+}
+.news-area2 .pages li.active a{
+  background: #71c1c0;
+  color: #fff;
+}
+.news-area2 .newsInfo{
+  margin-left: 180px;
+  float: left;
+  width: 700px;
+}
+.news-area2 .newsInfo h4{
+  font-size: 15px;
+  color: #838383;
+  margin: 10px 0 50px;
+}
+.news-area2 .newsInfo p{
+  font-size: 14px;
+  color: #838383;
+  margin: 2px 0 2px 0;
+  margin-left: 15px;
+}
+.news-area2 .newsInfo p.title{
+  margin-left: 0px;
 }
 
 
