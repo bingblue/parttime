@@ -502,7 +502,7 @@ ul{
 
 /* 你的 css code*/
 /*service*/
-h3,p,img{
+h3,p,img,h2,dt,dd,dl{
   margin: 0;
   padding: 0;
   border: 0;
@@ -667,4 +667,100 @@ h3,p,img{
   line-height: 26px;
   text-indent: 26px;
   letter-spacing: 2px;
+}
+/*人事页面*/
+.humanMain{
+  margin-top: 50px;
+    width: 808px;
+}
+.agancy{
+  width: 802px;
+  height: 252px;
+  background: url(../img/humantop.png) no-repeat;
+}
+.agancy h2{
+    text-align: center;
+    color: #fff;
+    line-height: 36px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.agancymian{
+  padding: 16px 80px 0px 70px;
+  line-height: 22px;
+  color: #44BFC1;
+}
+.agancymian p{
+  margin: 20px 0px;
+}
+.humandiv{
+    width: 808px;
+    margin-top: 20px;
+}
+.humandiv h3{
+  line-height: 26px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #38DCDA;
+  height: 34px;
+  background: url(../img/humanh3.png) no-repeat;
+}
+.businessmain{
+  color: #848484;
+  line-height: 24px;
+  padding: 10px 5px 10px 0;
+  font-size: 12px;
+}
+.contractTop{
+  margin-top: 30px;
+  height: 30px;
+  background: url(../img/contract.png) no-repeat;
+}
+.contractTop dt{
+  width: 92px;
+  float: left;
+  height: 30px;
+}
+.contractDown table tr{
+  border-top:6px solid #fff;
+  border-bottom:6px solid #fff;
+}
+.contractDown table tr td{
+  border-right: 2px solid #fff;
+  background-color: #f2f2f2;
+  padding:20px;
+  line-height: 20px;
+  color: #8a8a8a;
+}
+.contractDown table ul{
+  padding-left: 20px;
+}
+.contractDown table ul li{
+  list-style-type: disc; 
+}
+.contractDown table tr td:nth-child(1){
+  font-weight: 600;
+  color: #717171;
+}
+
+.contractDown{
+  font-size: 12px;
+}
+.contractTop dd{
+  float: left;
+  width: 334px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  line-height: 30px;
+  text-indent: 22px;
+}
+.processDown{
+  width: 687px;
+  height: 401px;
+  background: url(../img/process.png) no-repeat;
+}
+.process{
+  margin-bottom: 100px;
 }
