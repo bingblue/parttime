@@ -843,3 +843,197 @@ h3,p,img,h2,dt,dd,dl{
 .process{
   margin-bottom: 100px;
 }
+/*社保资讯页面*/
+.security .main{
+  width: 1142px;
+}
+.securityBanner{
+  background-color: #cddbe6;
+}
+.securityList{
+  margin-top: 30px;
+  overflow: hidden;
+}
+.securityList  .securityTop{
+  height: 34px;
+  background: url(../img/securityTop.png) no-repeat;
+}
+.securityTop h3{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #60D4CF;
+  text-indent: 22px;
+  letter-spacing: 2px;
+}
+.securityTop a{
+  margin-right: 40px;
+ color: #60D4CF;
+ line-height: 30px;
+}
+.everyday_l{
+  width: 260px; 
+   padding-right: 40px;
+   float: left;
+}
+.everydayDown,.policyDown{
+  padding-top: 30px;
+  font-size: 12px;
+  color: #757272;
+  padding-bottom: 10px;
+  overflow: hidden;
+
+}
+.everyday_l ul{
+  width: 100%;
+ 
+}
+.everyday_l  li a,.policy_l li a{
+color: #757272;
+}
+.everyday_l  li,.policy_l li {
+  line-height: 24px;
+  height: 24px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.everyday_l  li p{
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  overflow: hidden;
+}
+.everyday_z{
+  border-left: 1px solid #ccc;
+   border-right: 1px solid #ccc;
+  width: 373px;
+  float: left;
+  padding: 0px 40px 0px 30px;
+}
+.everyday_z li h3{
+  color: #707070;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.everyday_z li h3 a{
+  color: #707070;
+}
+.everyday_z ul{
+  width: 100%;
+}
+.everyday_z li{
+  line-height: 24px;
+}
+.everyday_z li p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 48px;
+}
+.everyday_r{
+  width: 397px;
+  float: left;
+}
+.everydaybanner{
+  float: right;
+}
+.everydaybanner li{
+  position: relative;
+}
+.everydaybanner ul{
+  position: relative;
+}
+.everydaybanner  .left,.everydaybanner  .right{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top:85px;
+}
+.everydaybanner  .left{
+  left: 10px;
+}
+.everydaybanner  .right{
+  right: 10px;
+}
+.everydaybanner li p{
+  width: 100%;
+  position: absolute;
+  bottom: 3px;
+  left:0px;
+  background-color: rgba(0,0,0,0.5);
+ text-align: center;
+}
+.everydaybanner li p a{
+  line-height: 30px;
+  color: #fff;
+  
+}
+.hotspotDown{
+  padding: 70px 0px 30px 0;
+  position: relative;
+}
+.hotspotDown .left,.hotspotDown .right{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  top:170px;
+  position: absolute;
+}
+.hotspotDown .left{
+  left:5px;
+  background:url(../img/hotspotleft.png) no-repeat;
+}
+.hotspotDown .right{
+  right:5px;
+  background:url(../img/hotspotright.png) no-repeat;
+}
+.hotspotDown ul{
+  margin-left: 80px;
+  width: 1014px;
+}
+.hotspotDown ul li{
+  float: left;
+  margin-right: 38px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  padding-bottom: 5px;
+}
+.hotspotDown ul li p a{
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #707070;
+  text-indent:16px;
+  display: inline-block;
+}
+.hotspotDown ul li span{
+  display: inline-block;
+  font-size: 12px;
+  text-indent: 16px;
+  color: #A09898;
+}
+.policy{
+  margin-bottom: 90px;
+}
+.policy_l{
+  width: 535px;
+}
+.policy_l li{
+  width: 405px;
+}
+.policy_l li a{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.policy_l li span{
+  display: inline-block;
+  float: right;
+}
+.policy_r{
+  float: right;
+  width: 522px;
+  border-right: none;
+  padding-right: 0px;
+  padding-left: 84px;
+}
