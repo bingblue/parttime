@@ -220,6 +220,9 @@ ul{
   float: left;
   color: #fff;
 }
+.footer .footer-box p{
+  margin-top: 20px;
+}
 .footer .footer-box img{
   position: relative;
   top: 5px;
