@@ -45,6 +45,7 @@ a{
 }
 .topnav ul li.active a{
 	background-color: #ed4e00;
+	color: #fff;
 }
 /* 幻灯 */
 .bannerdiv{
@@ -549,7 +550,7 @@ color:#f25305;
     cursor:pointer;
     text-indent: 117px;
     border-left: 6px solid #ed4e00;
-    background: url('../images/cpfl.png')  no-repeat 70px center;
+    background: url('../images/flo.png')  no-repeat 70px center;
 }
 .cpfl h3:hover,.cpfl h3.active{
    border-left: 6px solid #ed4e00;
@@ -579,47 +580,47 @@ color:#f25305;
     color: #ed4e00;
 }
 .cpfl .wxjc{
-    background: url('../images/1.png') no-repeat 68px center;
+    background: url('../images/1h.png') no-repeat 68px center;
 }
-.cpfl .wxjc:hover{
+/* .cpfl .wxjc:hover{
     background-image:  url('../images/1h.png');
-}
+} */
 .cpfl .wxyx{
-    background: url('../images/2.png') no-repeat 72px center;
+    background: url('../images/2h.png') no-repeat 72px center;
 }
-.cpfl .wxyx:hover{
+/* .cpfl .wxyx:hover{
     background-image:  url('../images/2h.png');
-}
+} */
 .cpfl .qxsz{
-    background: url('../images/3.png') no-repeat 72px center;
+    background: url('../images/3h.png') no-repeat 72px center;
 }
-.cpfl .qxsz:hover{
+/* .cpfl .qxsz:hover{
     background-image:  url('../images/3h.png');
-}
+} */
 .cpfl .lhdy{
-    background: url('../images/4.png') no-repeat 70px center;
+    background: url('../images/4h.png') no-repeat 70px center;
 }
-.cpfl .lhdy:hover{
+/* .cpfl .lhdy:hover{
     background-image:  url('../images/4h.png');
-}
+} */
 .cpfl .jyhy{
-    background: url('../images/5.png') no-repeat 68px center;
+    background: url('../images/5h.png') no-repeat 68px center;
 }
-.cpfl .jyhy:hover{
+/* .cpfl .jyhy:hover{
     background-image:  url('../images/5h.png');
-}
+} */
 .cpfl .dshy{
-    background: url('../images/6.png') no-repeat 68px center;
+    background: url('../images/6h.png') no-repeat 68px center;
 }
-.cpfl .dshy:hover{
+/* .cpfl .dshy:hover{
     background-image:  url('../images/6h.png');
-}
+} */
 .cpfl .rcbg{
-    background: url('../images/7.png') no-repeat 68px center;
+    background: url('../images/7h.png') no-repeat 68px center;
 }
-.cpfl .rcbg:hover{
+/* .cpfl .rcbg:hover{
     background-image:  url('../images/7h.png');
-}
+} */
 .cpd{
     width:874px;
     float:right;
@@ -652,4 +653,5 @@ color:#f25305;
 	width: 1200px;
 	margin: 0 auto;
 	margin-top: 25px;
+	margin-bottom: 50px;
 }
