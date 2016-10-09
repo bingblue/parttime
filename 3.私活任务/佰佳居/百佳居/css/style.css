@@ -22,7 +22,7 @@ html{
   font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
   overflow: hidden;
   position: relative;
-  background: #fff; }
+  background: #0074e0; }
 .abs-btn{
   position: absolute;
   bottom: 0;
@@ -36,7 +36,9 @@ html{
   height: auto;
   margin: 0 auto;
   overflow: hidden;
-  position: relative; }
+  position: relative; 
+  padding-bottom: 60px;
+}
 
 .menu-btn1{
   
@@ -47,8 +49,20 @@ html{
 .menu-btn3{
   left: 66%;
 }
+.menu-btn4{
+  left: 0%;
+  width: 100%;
+  bottom: 60px;
+}
+.pos-bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 .mask{
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   width: 100%;
