@@ -1,5 +1,6 @@
 body{
 	font:200 14px/20px '微软雅黑';
+	min-width: 1200px;
 }
 .publicw{
 	width: 1200px;
@@ -22,6 +23,7 @@ a{
 .nav{
 	clear: both;
 	border-bottom: 1px #3195e0 solid;
+	height: 80px;
 }
 .nav img{
 	float: left;
@@ -65,7 +67,7 @@ a{
 	display: inline-block;	
 }
 .nav ul li a:hover{
-	background:url(../images/triangle.png) no-repeat center bottom;
+	color: #008ef9;
 }
 .nav ul li.docut a:hover{
 	background:url(../images/arr.png) no-repeat center bottom;
@@ -660,7 +662,7 @@ a{
 	padding: 5px 0;
 }
 .cont{
-	width:400px;
+	display: inline-block;
 	color: #000;
 	line-height: 40px;
 	font-size: 16px;
@@ -825,6 +827,9 @@ a{
 }
 /*首页手机适配*/
 @media screen and (max-width: 640px) {
+	body{
+		min-width: 100%;
+	}
 	.qq{
 		display: none;
 	}

@@ -87,6 +87,7 @@ function newsNotice(){
 // 经典案例页面切换
 function success(){
 	var $leftli = $(".sucdown .left li");
+	var $lili  = $(".sucdown .left li");
 	var $right = $(".sucdown .right li");
 	$leftli.click(function(event) {
 		$(this).addClass('active').siblings().removeClass("active");
@@ -101,6 +102,10 @@ function success(){
 				$(this).addClass('pre');
 			}
 		}
+	});
+	$lili.click(function(event) {
+		$right.hide().filter("."+$(this).attr('id')+"").show();
+		return false;
 	});
 }
 // 产品中心 切换
