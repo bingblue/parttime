@@ -77,3 +77,94 @@ ul{
 .browsehappy{
   text-align: center;
 }
+
+/* 头部样式 */
+.header-top{
+  background: #f0f0f0;
+  color: #555555;
+  font-size: 12px;
+  line-height: 30px;
+}
+.header{
+  padding: 30px 0;
+  padding-bottom: 25px;
+}
+  .header .main>img{
+    float: left;
+  }
+  .logo-info{
+    float: left;
+    color: #0059b1;
+    padding-top: 15px;
+  }
+  .header-right{
+    float: right;
+  }
+    .header-right a{
+      color: #333;
+      vertical-align: super;
+    }
+    .header-right>div{
+      margin-top: 5px;
+      text-align: center;
+    }
+/* 头部样式END */
+/* 菜单样式 */
+.menu{
+  background: #014099;
+}
+  .menu ul{
+    width: 100%;
+    display: inline-block;
+    float: left;
+  }
+  .menu li{
+    float: left;
+    width: 16.66%;
+    text-align: center;
+  }
+  .menu li a{
+    display: inline-block;
+    padding: 13px 30px;
+    color: #fff;
+    text-align: center;
+  }
+  .menu li a:hover{
+    background: #1a53a3;
+  }
+/* 菜单样式END */
+/* 底部菜单样式 */
+.footer{
+  background: #014099;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+  .footer ul{
+    width: 500px;
+    display: inline-block;
+    margin:0 auto;
+  }
+  .footer li{
+    width: 16%;
+    float: left;
+    border-right: 1px solid #fff;
+  }
+  .footer li:last-child{
+    border-right: 0;
+  }
+  .footer li a,.footer p{
+    color: #fff;
+    font-size: 12px;
+  }
+/* 底部菜单样式END */
+/* 首页样式 */
+.banner{
+  background: #014099;
+}
+/* 首页样式END */
+
+
+/* {pageName}样式 */
+
+/* {pageName}样式END */
