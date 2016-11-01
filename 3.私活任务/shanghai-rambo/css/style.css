@@ -301,8 +301,62 @@ ul{
   left: auto;
   right: 10px;
 }
-
 /* 首页样式END */
+/* 解决方案样式 */
+.solutions-banner{
+  background: #c4dfef;
+}
+.solutions-title{
+  padding-top: 60px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.solutions-title p{
+  width: 580px;
+  margin: 0 auto;
+  color: #333;
+}
+.solutions-cont{
+  
+}
+  .solutions-cont ul{
+    float: left;
+    width: 1150px;
+    margin-left: 25px;
+    border-bottom:2px solid #014099;
+  }
+  .solutions-cont li{
+    padding: 10px 0;
+    float: left;
+    width: 230px;
+    text-align: center;
+    cursor: pointer;
+    background: #bbbbbb;
+    color: #333;
+    font-size: 18px;
+  }
+  .solutions-cont li:hover,.solutions-cont li.active{
+    background: #014099;
+    color: #fff;
+  }
+  .solutions-cont .box{
+    float: left;
+    width: 1088px;
+    margin-left: 25px;
+    border: 1px solid #bbb;
+    border-top: 0;
+    padding: 50px 30px;
+  }
+  .solutions-cont .box img{
+    float: left;
+    margin-right:10px;
+  }
+  .solutions-cont .box p{
+    width: 640px;
+    float: left;
+    text-indent: 2em;
+  }
+/* 解决方案样式END */
 
 
 /* {pageName}样式 */
