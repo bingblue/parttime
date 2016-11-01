@@ -22,6 +22,7 @@ ul{
   height: auto;
   position: relative;
   display: inline-block;
+  float: left;
 }
 .main{
   width: 1200px;
@@ -161,7 +162,146 @@ ul{
 /* 首页样式 */
 .banner{
   background: #142444;
+  height: 500px;
 }
+  .banner .banner-cont{
+    height: 500px;
+    overflow: hidden;
+  }
+  .banner .banner-icons{
+    width: 60px;
+    height: 10px;
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+  }
+  .banner .banner-icons li{
+    display: inline-block;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background:#fff;
+    cursor: pointer;
+  }
+  .banner .banner-icons li:hover,.banner .banner-icons li.active{
+    background: #84c1ff;
+  }
+.post{
+  padding: 10px 0;
+}
+  .post img,.post span{
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+.about{
+  background: #f0f0f0;
+  padding: 30px 0;
+}
+.title,.title-sub{
+  display: inline-block;
+  color: #555;
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+}
+.title-sub{
+  font-size: 14px;
+}
+.title-hr{
+  width: 25px;
+  height: 3px;
+  background: #014099;
+  border: 0;
+  margin-bottom: 20px;
+}
+.about-img{
+  width: 500px;
+  height: 320px;
+  float: left;
+}
+.cont{
+  width: 640px;
+  padding: 30px;
+  height: 260px;
+  float: left;
+  background: #fff;
+}
+  .cont h2{
+    color: #014099;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .cont p{
+    text-indent: 2em;
+    margin:0;
+  }
+.business{
+  padding: 60px 0;
+}
+  .business ul{
+    width: 1150px;
+    margin-left: 25px;
+  }
+  .business li{
+    float: left;
+    width: 130px;
+    padding: 0 50px;
+    text-align: center;
+  }
+  .business li span{
+    font-size: 18px;
+    color: #000;
+    display: block;
+  }
+  .business li .info{
+    margin-top: 5px;
+    font-size: 14px;
+    color: #014099;
+    display: inline-block;
+    width: 75px;
+    height: 23px;
+    line-height: 23px;
+    border: 1px solid #014099;
+  }
+  .business li .info:hover{
+    color: #fff;
+    background: #014099;
+  }
+.case{
+  background: #f0f0f0;
+  padding: 40px 0;
+  position: relative;
+}
+  .case-cont{
+    width: 1080px;
+    margin:0 auto;
+    overflow: hidden;
+  }
+  .case-cont ul{
+    width: 9999px;
+  }
+  .case-cont li{
+    width: 270px;
+    float: left;
+    text-align: center;
+  }
+  .case-cont li span{
+    color: #555;
+    font-size: 12px;
+    margin-top: 15px;
+    display: inline-block;
+  }
+.jt-pre,.jt-next{
+  position: absolute;
+  top: 48%;
+  left: 10px;
+}
+.jt-next{
+  left: auto;
+  right: 10px;
+}
+
 /* 首页样式END */
 
 
