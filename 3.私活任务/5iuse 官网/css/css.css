@@ -90,16 +90,19 @@ a{
 }
 /*幻灯*/
 .bannerdiv{
+	position: absolute;
+	left: 0px;
+	top: 0px;
 	clear: both;
 	position: relative;
 	overflow: hidden;
+	height: 480px;
 }
 .banner{
-	width: 300%;
 	overflow: hidden;
 }
 .bannerlist{
-	width: 33.3333333333333333%;
+	width: 100%;
 	float: left;
 	height: 480px;
 	overflow: hidden;
@@ -116,7 +119,7 @@ a{
 }
 
 .bannerdiv ul li {
-    float: left;
+	float: left;
     width: 16px;
     height: 16px;
     border-radius: 8px;

@@ -21,9 +21,7 @@ function bannerclick(){
 			.eq(num).addClass("active");
 	},5000);
 	function margin(num){
-		$(".banner").animate({
-     	 	marginLeft : (-100 * num) + "%"
-    	},1000);
+		$(".banner").children().eq(num).fadeIn(200).siblings().fadeOut(200);
 	}
 	$('.bannerdiv ul li').each(function(index) {
 		$(this).click(function() {
