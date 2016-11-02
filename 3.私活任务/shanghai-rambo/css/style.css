@@ -346,15 +346,26 @@ ul{
     border: 1px solid #bbb;
     border-top: 0;
     padding: 50px 30px;
+    margin-bottom: 50px;
+    display: none;
+  }
+  .solutions-cont .box.active{
+    display: block;
   }
   .solutions-cont .box img{
     float: left;
-    margin-right:10px;
+    margin-left:20px;
+    margin-right:40px;
   }
   .solutions-cont .box p{
-    width: 640px;
+    width: 600px;
     float: left;
     text-indent: 2em;
+    color: #8c8b8b;
+    font-size: 18px;
+  }
+  .solutions-cont .box-xxl p{
+    width: 570px;
   }
 /* 解决方案样式END */
 

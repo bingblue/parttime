@@ -22,4 +22,15 @@ $(function(){
     gotoCase(--caseNow);
   });
   /* 首页-成功案例跑马灯END */
+
+  /* 解决方案-选择 */
+  $(".solutions-cont li").each(function(index){
+    $(this).click(function(){
+      $(".solutions-cont li.active").removeClass("active");
+      $(this).addClass("active");
+      $(".box.active").removeClass("active");
+      $(".box").eq(index).addClass("active");
+    });
+  });
+  /* 解决方案-选择END */
 });
