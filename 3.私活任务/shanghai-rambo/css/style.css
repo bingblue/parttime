@@ -374,6 +374,229 @@ ul{
   }
 /* 解决方案样式END */
 
+/* 服务支持样式 */
+
+.h_select,
+.h_select div,
+.h_menu li.h_select a {
+	color: #014099;
+}
+
+.h_main {
+	width: 1200px;
+	min-height: 100%;
+	margin: 20px auto;
+	position: relative;
+	display: flex;
+}
+
+.h_wrap {
+	min-width: 1200px;
+	width: 100%;
+	height: 240px;
+	position: relative;
+	display: inline-block;
+	background-color: #8c8c8c;
+}
+
+.h_wrap img {
+	height: 240px;
+}
+
+.h_left {
+	width: 220px;
+}
+
+.h_left .h_menu {
+	background: #014099;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.h_menu_title {
+	color: white;
+	/*padding: 12px 20px;*/
+	height: 68px;
+}
+
+.h_menu_title_left {
+	float: left;
+	margin: 10px 0px 10px 20px;
+}
+
+.h_menu_title_right {
+	float: right;
+	line-height: 68px;
+	margin-right: 15px;
+}
+
+.h_menu_title_right img {
+	width: 20px;
+	vertical-align: middle;
+}
+
+.h_menu ul {
+	width: 219px;
+	border-left: 1px solid #e8e8e8;
+	border-right: 1px solid #e8e8e8;
+}
+
+.h_menu li {
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	background: white;
+	display: inline-flex;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.h_menu li a {
+	padding: 0px 110px 0px 20px;
+	color: #a1a1a1;
+	text-align: center;
+}
+
+.h_left .h_link {
+	margin-top: 30px;
+	background: #5f5f5f;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.h_link_title {
+	color: white;
+	height: 55px;
+	line-height: 55px;
+}
+
+.h_link_title_left {
+	float: left;
+	margin-left: 20px;
+}
+
+.h_link_title_right {
+	float: right;
+	margin-right: 15px;
+}
+
+.h_link_title_right img {
+	width: 20px;
+	vertical-align: middle;
+}
+
+.h_link_content {
+	padding: 30px 0px;
+	text-align: center;
+	background: white;
+	border: 1px solid #e8e8e8;
+}
+
+.h_content {
+	text-align: center;
+	padding: 10px 30px;
+	color: #8c8b8b;
+	font-size: 18px;
+}
+
+.h_content p {
+	line-height: 28px;
+	text-align: left;
+	text-indent: 2em;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+}
+
+.h_content img {
+	margin: 20px;
+	max-width: 800px;
+	vertical-align: middle;
+}
+
+.h_content_title {
+	height: 70px;
+	line-height: 70px;
+	color: #999999;
+	background: #fafafa;
+	border-bottom: 2px solid #E8E8E8;
+	padding-left: 30px;
+}
+.h_main .h_show{
+	display: inline-block;
+}
+.h_right {
+	display: none;
+	margin-left: 25px;
+	width: 940px;
+	border: 1px solid #e8e8e8;
+}
+
+.h_content .h_content_list a {
+	text-align: left;
+	display: block;
+}
+
+.h_content .h_content_list p {
+	line-height: normal;
+	text-indent: 0em;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+}
+
+.h_content_list .h_news_list {
+	margin: 0 10px;
+	border-bottom: 1px dotted #cccccc;
+	height: 99px;
+}
+
+.h_news_title {
+	font-size: 14px;
+	color: #000000;
+}
+
+.h_news a .h_news_content {
+	font-size: 12px;
+	color: #808080;
+}
+.h_news_list div{
+	float: left;
+    margin-top: 15px;
+	}
+.h_news_list div.h_ad {
+	background: url(../img/icon_ad.png) no-repeat center center;
+	width: 12px;
+	height: 12px;
+	margin: 33px 15px 0px 15px;
+}
+.h_content .h_paging{
+	margin: 0 auto;
+	text-align: center;
+	height: 60px;
+	font-size: 12px;
+}
+.h_paging ul{
+	display: inline-block;
+    margin-top: 25px;
+}
+.h_paging li{
+    margin: 0 5px;
+    float: left;
+    border: 1px solid #999999;
+    padding: 3px 10px;
+}
+.h_paging .h_select{
+	border: 1px solid #014099;
+}
+
+
+/* 服务支持样式END */
 
 /* {pageName}样式 */
 

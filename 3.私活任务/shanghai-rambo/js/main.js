@@ -33,4 +33,14 @@ $(function(){
     });
   });
   /* 解决方案-选择END */
+  /* 服务支持-选择 */ 
+  $(".h_main .h_left .h_menu li").each(function(index){
+	$(this).click(function(){
+	  $(".h_main .h_left .h_menu li.h_select").removeClass("h_select");
+	  $(this).addClass("h_select");
+	  $(".h_right.h_show").removeClass("h_show");
+	  $(".h_right").eq(index).addClass("h_show");
+	});
+  });
+  /* 服务支持-选择END */
 });
