@@ -305,6 +305,11 @@ ul{
 /* 解决方案样式 */
 .solutions-banner{
   background: #c4dfef;
+  height: 240px;
+}
+.application-banner{
+  background: #000711;
+  height: 240px;
 }
 .solutions-title{
   padding-top: 60px;
