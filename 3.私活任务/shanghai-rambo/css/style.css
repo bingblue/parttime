@@ -290,7 +290,8 @@ ul {
 .cont h2 {
 	color: #014099;
 	font-size: 18px;
-	margin-top: 10px;
+	margin-top: 0px;
+	margin-bottom: 25px;
 }
 
 .cont p {
@@ -326,8 +327,8 @@ ul {
 	color: #014099;
 	display: inline-block;
 	width: 75px;
-	height: 23px;
-	line-height: 23px;
+	height: 24px;
+	line-height: 24px;
 	border: 1px solid #014099;
 }
 
@@ -395,7 +396,7 @@ ul {
 
 .solutions-title {
 	padding-top: 60px;
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 	text-align: center;
 }
 
@@ -457,7 +458,7 @@ ul {
 	float: left;
 	text-indent: 2em;
 	color: #8c8b8b;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .solutions-cont .box-xxl p {
@@ -664,6 +665,19 @@ ul {
 	text-indent: 0em;
 	-webkit-margin-before: 1em;
 	-webkit-margin-after: 1em;
+}
+.xm-content-info{
+	padding-bottom: 30px;
+}
+.xm-content-info h1{
+	font-size: 24px;
+	color: #333;
+	margin: 30px 0;
+	line-height: 24px;
+}
+.xm-content-info p{
+	font-size: 12px;
+	color: #666;
 }
 
 .h_content_list .h_news_list {
