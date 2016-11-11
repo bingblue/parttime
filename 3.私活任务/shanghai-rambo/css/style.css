@@ -129,6 +129,12 @@ ul {
 	margin-top: 5px;
 	text-align: center;
 }
+.header-right>.ercode {
+	position: absolute;
+	z-index: 999;
+	right: 30px;
+	display: none;
+}
 
 
 /* 头部样式END */
@@ -205,7 +211,7 @@ ul {
 /* 首页样式 */
 
 .banner {
-	background: #142444;
+	background: #f3f0e4;
 	height: 500px;
 }
 

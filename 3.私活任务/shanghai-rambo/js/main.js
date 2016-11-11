@@ -23,6 +23,41 @@ $(function() {
 		gotoCase(--caseNow);
 	});
 	/* 首页-成功案例跑马灯END */
+	/* 首页-Banner */
+	var bannerNow = 0;
+	var bannerNum = 4;
+	var bannerColor = ['#f3f0e4','#d5dfdd','#b9e2ee','#fadada'];
+	function gotoBanner(index) {
+		$(".banner-cont li").eq(bannerNow).fadeOut(200,function(){
+			$(".banner-cont li").eq(index).fadeIn(200);
+			$(".banner").css({
+				background:bannerColor[index]
+			})
+		});
+		bannerNow = index;
+		$(".banner-icons li.active").removeClass("active");
+		$(".banner-icons li").eq(index).addClass("active");
+	}
+	$(".banner-icons li").each(function(index){
+		$(this).click(function(){
+			gotoBanner(index);
+		});
+	});
+	setInterval(function(){
+		var num = bannerNow+1;
+		if(num>3){
+			num = 0;
+		}
+		gotoBanner(num)
+	},3000);
+
+	//二维码
+	$(".icon-ercode").mouseenter(function() {
+		$(".ercode").show();
+	}).mouseleave(function(){
+		$(".ercode").hide();
+	});
+	/* 首页-Banner END */
 
 	/* 解决方案-选择 */
 	$(".solutions-cont li").each(function(index) {
