@@ -40,12 +40,12 @@
     <div class="wrap menu">
       <div class="main">
         <ul>
-          <li><a href="#">网站首页</a></li>
-          <li><a href="#">新闻动态</a></li>
-          <li><a href="#">解决方案</a></li>
-          <li><a href="#">配套产品</a></li>
-          <li><a href="#">服务支持</a></li>
-          <li><a href="#">软件应用</a></li>
+          <li><a href="index.html">网站首页</a></li>
+          <li><a href="news.html">新闻动态</a></li>
+          <li><a href="solutions.html">解决方案</a></li>
+          <li><a href="products.html">配套产品</a></li>
+          <li><a href="service.html">服务支持</a></li>
+          <li><a href="application.html">软件应用</a></li>
         </ul>
       </div>
     </div>
@@ -105,17 +105,37 @@
     <div class="wrap footer">
       <div class="main">
         <ul>
-          <li><a href="#">网站首页</a></li>
-          <li><a href="#">新闻动态</a></li>
-          <li><a href="#">解决方案</a></li>
-          <li><a href="#">配套产品</a></li>
-          <li><a href="#">服务支持</a></li>
-          <li><a href="#">软件应用</a></li>
+          <li><a href="index.html">网站首页</a></li>
+          <li><a href="news.html">新闻动态</a></li>
+          <li><a href="solutions.html">解决方案</a></li>
+          <li><a href="products.html">配套产品</a></li>
+          <li><a href="service.html">服务支持</a></li>
+          <li><a href="application.html">软件应用</a></li>
         </ul>
         <p>版权所有：上海润博电子系统设备股份有限公司</p>
       </div>
     </div>
     <!-- 底部代码END -->
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        /* 通用 */
+        function getQueryString(name){
+          var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+          var r = window.location.search.substr(1).match(reg);
+          if(r!=null){
+            return decodeURI(r[2]);
+          }else{
+            return null;
+          }
+        }
+        var type = getQueryString("type")?getQueryString("type"):0;
+        if(type>4||type<0){type=0}
+        $(".solutions-cont li.active").removeClass("active");
+        $(".solutions-cont li").eq(type).addClass("active");
+        $(".box.active").removeClass("active");
+        $(".box").eq(type).addClass("active");
+      })
+    </script>
   </body>
 </html>
