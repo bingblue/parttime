@@ -119,17 +119,7 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
       $(function(){
-        /* 通用 */
-        function getQueryString(name){
-          var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-          var r = window.location.search.substr(1).match(reg);
-          if(r!=null){
-            return decodeURI(r[2]);
-          }else{
-            return null;
-          }
-        }
-        var type = getQueryString("type")?getQueryString("type"):0;
+        var type = $.getQueryString("type")?$.getQueryString("type"):0;
         if(type>4||type<0){type=0}
         $(".solutions-cont li.active").removeClass("active");
         $(".solutions-cont li").eq(type).addClass("active");

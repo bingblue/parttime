@@ -152,6 +152,29 @@
 		</div>
 		<!-- 底部代码END -->
 		<script src="js/main.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var categoryId = $.getQueryString("categoryId")?$.getQueryString("categoryId"):1;
+				var id = $.getQueryString("id")?$.getQueryString("id"):1;
+				var dataArr = [];
+				$.ajax({
+					url : 'js/news_data.json',
+					type : 'GET',
+					async: false,//使用同步的方式,true为异步方式
+					dataType:"json",
+					success : function(data){
+						dataArr = data.newData;
+					},
+					fail:function(){
+						window.location.reload(true);
+					}
+				});
+				var data = dataArr[categoryId-1].data;
+				var item = $.getDataById(id,data);
+				$(".xm-content-info h1").html(item.title);
+				$(".xm-content-info p").html(item.content);
+			});
+		</script>
 	</body>
 
 </html>

@@ -1,4 +1,24 @@
 $(function() {
+	/* 通用 */
+  $.getQueryString = function (name){
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null){
+      return decodeURI(r[2]);
+    }else{
+      return null;
+    }
+  }
+  $.getDataById = function (id,data){
+    var result = {};
+    $.each(data,function(index){
+    	if(data[index].id == id){
+    		result = data[index];
+    	}
+    });
+    return result;
+  }
+  /* 通用END */
 	/* 首页-成功案例跑马灯 */
 	var caseNow = 4;
 	var caseNum = $(".case-cont li").length;
@@ -80,11 +100,24 @@ $(function() {
 	});
 	/* 服务支持-选择END */
 	/* 公司新闻分页*/
-	var h_num = h_list.length;
+	var h_list = [];
+	$.ajax({
+		url : 'js/news_data.json',
+		type : 'GET',
+		async: false,//使用同步的方式,true为异步方式
+		dataType:"json",
+		success : function(data){
+			h_list = data.newData[0];
+		},
+		fail:function(){
+			window.location.reload(true);
+		}
+	});
+	var h_num = h_list.data.length;
 	var h_now = 1;
 	var h_list_num = 7;
-	var h_page_num = parseInt(h_list.length / h_list_num);
-	var temp = h_list.length % h_list_num;
+	var h_page_num = parseInt(h_num / h_list_num);
+	var temp = h_num % h_list_num;
 	if(temp > 0.0) {
 		h_page_num++;
 	}
@@ -133,7 +166,7 @@ $(function() {
 			var h_list_box = $(".h_content_list");
 			var h_html = "";
 			for(var i = start; i < end && i < h_num; i++) {
-				h_html = h_html + "<div class=\"h_news_list\"><div class=\"h_ad\"></div><div class=\"h_news\"><a href=\"#\"><p class=\"h_news_title\">" + h_list[i].title + "</p><p class=\"h_news_content\">" + h_list[i].content + "</p></a></div></div>";
+				h_html = h_html + "<div class=\"h_news_list\"><div class=\"h_ad\"></div><div class=\"h_news\"><a href='news_info.html?categoryId="+h_list.categoryId+"&id="+h_list.data[i].id+"'><p class=\"h_news_title\">" + h_list.data[i].title + "</p><p class=\"h_news_content\">" + h_list.data[i].content + "</p></a></div></div>";
 			}
 			h_list_box.html(h_html);
 			h_nums();
