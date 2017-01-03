@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<title>多图文</title>
+<link rel="stylesheet" type="text/css" href="http://www.5iuse.com/Public/admin/css/bootstrap/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.5iuse.com/Public/admin/css/libs/nanoscroller.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.5iuse.com/Public/admin/css/compiled/theme_styles.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.5iuse.com/Public/admin/css/layout.css"/>
+<link href="http://www.5iuse.com/Application/Admin/Common/uploadify/uploadify.css" rel="stylesheet" type="text/css" />
+<link href="http://www.5iuse.com/Application/Admin/Common/jqueryalert/jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+<link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
+<script src="http://www.5iuse.com/Public/admin/js/jquery.js"></script>
+<script src="http://www.5iuse.com/Public/admin/js/demo-rtl.js"></script>
+<!--[if lt IE 9]>
+    <script src="http://www.5iuse.com/Public/admin/js/html5shiv.js"></script>
+    <script src="http://www.5iuse.com/Public/admin/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<script src="http://www.5iuse.com/Public/admin/js/demo-skin-changer.js"></script>
+<script src="http://www.5iuse.com/Public/admin/js/bootstrap.js"></script>
+<script src="http://www.5iuse.com/Public/admin/js/jquery.nanoscroller.min.js"></script>
+<script src="http://www.5iuse.com/Public/admin/js/demo.js"></script>
+<script src="http://www.5iuse.com/Public/admin/js/scripts.js"></script>
+<script src="http://www.5iuse.com/Public/admin/js/pace.min.js"></script>
+<script src="http://www.5iuse.com/Public/js/common/bootbox.js"></script>
+<script src="http://www.5iuse.com/Application/Admin/Common/uploadify/jquery.uploadify.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var arrayImgObj = new Array();
+var public_uploadifyname = new Array();
+function info_uploadify(uploadifyname,width,height,auto,uploader,method,buttonText,multi,queueSizeLimit,fileTypeExts,fileSizeLimit,thum,thum_width,thum_height,functions){
+    $(uploadifyname).uploadify({
+        'height': height,               //上传按钮的高和宽
+        'width': width,
+        'auto'     : auto,              //选定文件后是否自动上传，默认false
+        'swf'      : '/Application/Admin/Common/uploadify/uploadify.swf?ver=' + Math.random(),
+        //'uploader' : '/index.php/Uploadify/uploadify',//后台上传function  参数  uploader
+        'uploader' : 'http://file.5iuse.com/index.php/Admin/Upload/index',//后台上传function  参数  uploader
+        'method'   : method,            //post get 传输方式
+        'buttonText' : buttonText,      //设置按钮文本
+        'multi'    : multi,             //允许同时上传多张图片
+//          'formData' :{'thum':thum,'thum_width':thum_width,'thum_height':thum_height},//后台传参 占时主要用于缩略图设置  thum是否创建缩略图 1->是 ，0->否
+        'queueSizeLimit' : queueSizeLimit, //最多一次上传几张
+        'fileTypeDesc' : 'Image Files', //只允许上传图像
+        'fileTypeExts' : fileTypeExts,  //限制允许上传的图片后缀'*.TIFF; *.tiff; *.gif; *.GIF; *.jpg; *.JPG; *.PNG; *.BMP; *.bmp; *.JPEG; *.jpeg; *.psd; *.PSD; *.png'
+        'fileSizeLimit' : fileSizeLimit,//限制上传的图片大小  '100kb'
+        'onUploadStart' : function(file) {
+                            //选中图片上传之前调用函数
+        },
+        'onUploadSuccess' : function(file, data, response) { //每次成功上传后执行的回调函数，从服务端返回数据到前端
+            var ImgObj = eval('(' + data + ')');
+            public_uploadifyname['uploadifyname'] = uploadifyname;
+            public_uploadifyname['filename'] = file.name;
+            arrayImgObj.push(ImgObj);
+            functions();
+        },
+        'onUploadError' : function(file,errorCode,errorMsg,errorString,swfuploadifyQueue) { //上传文件出错是触发（每个出错文件触发一次）
+
+            alert(' - 错误代码: ' + errorCode+ ' - 错误描述: ' + errorMsg+ ' - 简要错误描述: ' + errorString);
+        }
+    });
+}
+function info_uploadifys(uploadifyname,width,height,auto,uploader,method,buttonText,multi,queueSizeLimit,fileTypeExts,fileSizeLimit,thum,thum_width,thum_height,functions){
+    $(uploadifyname).uploadify({
+        'height': height,               //上传按钮的高和宽
+        'width': width,
+        'auto'     : auto,              //选定文件后是否自动上传，默认false
+        'swf'      : '/Application/Admin/Common/uploadify/uploadify.swf?ver=' + Math.random(),
+        'uploader' : 'http://file.5iuse.com/index.php/Admin/Upload/index',//后台上传function  参数  uploader
+        'method'   : method,            //post get 传输方式
+        'buttonText' : buttonText,      //设置按钮文本
+        'multi'    : multi,             //允许同时上传多张图片
+//          'formData' :{'thum':thum,'thum_width':thum_width,'thum_height':thum_height},//后台传参 占时主要用于缩略图设置  thum是否创建缩略图 1->是 ，0->否
+        'queueSizeLimit' : queueSizeLimit, //最多一次上传几张
+        'fileTypeDesc' : 'Image Files', //只允许上传图像
+        'fileTypeExts' : fileTypeExts,  //限制允许上传的图片后缀'*.TIFF; *.tiff; *.gif; *.GIF; *.jpg; *.JPG; *.PNG; *.BMP; *.bmp; *.JPEG; *.jpeg; *.psd; *.PSD; *.png'
+        'fileSizeLimit' : fileSizeLimit,//限制上传的图片大小  '100kb'
+        'onUploadStart' : function(file) {
+                            //选中图片上传之前调用函数
+        },
+        'onUploadSuccess' : function(file, data, response) { //每次成功上传后执行的回调函数，从服务端返回数据到前端
+            var ImgObj = eval('(' + data + ')');
+            arrayImgObj.push(ImgObj);
+            public_uploadifyname['uploadifyname'] = uploadifyname;
+            public_uploadifyname['filename'] = file.name;
+        },
+        'onQueueComplete': function(queueData){
+            functions();
+        },
+        'onUploadError' : function(file,errorCode,errorMsg,errorString,swfuploadifyQueue) { //上传文件出错是触发（每个出错文件触发一次）
+
+            alert(' - 错误代码: ' + errorCode+ ' - 错误描述: ' + errorMsg+ ' - 简要错误描述: ' + errorString);
+        }
+    });
+}
+</script>
+<script src="http://www.5iuse.com/Application/Admin/Common/jqueryalert/jquery.ui.draggable.js" type="text/javascript"></script>
+<script src="http://www.5iuse.com/Application/Admin/Common/jqueryalert/jquery.alerts.js" type="text/javascript"></script>
+<div id="theme-wrapper">
+<header class="navbar " id="header-navbar">
+<div class="container">
+<a href="index.html" id="logo" class="navbar-brand">
+<img style="width:50%" src="http://www.5iuse.com/Public/admin/img/logo.png" alt="" class="normal-logo logo-white"/>
+<img src="http://www.5iuse.com/Public/admin/img/logo-black.png" alt="" class="normal-logo logo-black"/>
+<img src="http://www.5iuse.com/Public/admin/img/logo-small.png" alt="" class="small-logo hidden-xs hidden-sm hidden"/>
+</a>
+<div class="clearfix">
+<button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="fa fa-bars"></span>
+</button>
+<div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">
+<ul class="nav navbar-nav pull-left">
+    <li>
+        <a id="make-small-nav" class="btn">
+        <i class="fa fa-bars"></i>
+        </a>
+    </li>
+</ul>
+</div>
+<div class="nav-no-collapse pull-right" id="header-nav">
+<ul class="nav navbar-nav pull-right">
+<li class="mobile-search">
+<a class="btn">
+<i class="fa fa-search"></i>
+</a>
+<div class="drowdown-search">
+<form role="search">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="搜索">
+<i class="fa fa-search nav-search-icon"></i>
+</div>
+</form>
+</div>
+</li>
+<li class="dropdown profile-dropdown">
+<a href="/index.php/Admin/Index/myaccount" class="dropdown-toggle" data-toggle="dropdown">
+<img alt=""  height="80" width="80" src="http://picture.5iuse.com/org/1/d1/922/059e/17f225da7c80bcc8fee971.jpg"/>
+<span class="hidden-xs">zhangyong</span> <b class="caret"></b>
+</a><ul class="dropdown-menu">
+<li><a href="/index.php/Home/Index/index" target="blank"><i class="fa fa-home"></i>官网</a></li>
+<li><a href="/index.php/Admin/Index/index"><i class="fa fa-dashboard"></i>数据中心</a></li>
+<li><a href="/index.php/Admin/Index/myaccount"><i class="fa fa-user"></i>账号设置</a></li>
+<!-- <li><a href="#"><i class="fa fa-cog"></i>Settings</a></li> -->
+<!-- <li><a href="#"><i class="fa fa-envelope-o"></i>Messages</a></li> -->
+<li><a href="/index.php/Admin/Login/logout"><i class="fa fa-power-off"></i>退出</a></li>
+</ul>
+</li>
+<li class="dropdown hidden-xs">
+<ul class="dropdown-menu notifications-list">
+<li class="pointer">
+<div class="pointer-inner">
+<div class="arrow"></div>
+</div>
+</li>
+<li class="item-header">You have 6 new notifications</li>
+<li class="item">
+<a href="#">
+<i class="fa fa-comment"></i>
+<span class="content">New comment on ‘Awesome P...</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item">
+<a href="#">
+<i class="fa fa-plus"></i>
+<span class="content">New user registration</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item">
+<a href="#">
+<i class="fa fa-envelope"></i>
+<span class="content">New Message from George</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item">
+<a href="#">
+<i class="fa fa-shopping-cart"></i>
+<span class="content">New purchase</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item">
+<a href="#">
+<i class="fa fa-eye"></i>
+<span class="content">New order</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item-footer">
+<a href="#">
+View all notifications
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown hidden-xs">
+
+<ul class="dropdown-menu notifications-list messages-list">
+<li class="pointer">
+<div class="pointer-inner">
+<div class="arrow"></div>
+</div>
+</li>
+<li class="item first-item">
+<a href="#">
+<img src="http://www.5iuse.com/Public/admin/img/samples/messages-photo-1.png" alt=""/>
+<span class="content">
+<span class="content-headline">
+George Clooney
+</span>
+<span class="content-text">
+Look, just because I don't be givin' no man a foot massage don't make it
+right for Marsellus to throw...
+</span>
+</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item">
+<a href="#">
+<img src="http://www.5iuse.com/Public/admin/img/samples/messages-photo-2.png" alt=""/>
+<span class="content">
+<span class="content-headline">
+Emma Watson
+</span>
+<span class="content-text">
+Look, just because I don't be givin' no man a foot massage don't make it
+right for Marsellus to throw...
+</span>
+</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item">
+<a href="#">
+<img src="http://www.5iuse.com/Public/admin/img/samples/messages-photo-3.png" alt=""/>
+<span class="content">
+<span class="content-headline">
+Robert Downey Jr.
+</span>
+<span class="content-text">
+Look, just because I don't be givin' no man a foot massage don't make it
+right for Marsellus to throw...
+</span>
+</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item-footer">
+<a href="#">
+View all messages
+</a>
+</li>
+</ul>
+</li>
+
+
+<li class="hidden-xxs">
+<a class="btn" href="/index.php/Admin/Login/logout">
+<i class="fa fa-power-off"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<div id="page-wrapper" class="container">
+<div class="row">
+
+  <div id="nav-col">
+<section id="col-left" class="col-left-nano has-scrollbar">
+<div id="col-left-inner" class="col-left-nano-content" tabindex="0" style="right: -17px;">
+<div id="user-left-box" class="clearfix hidden-sm hidden-xs">
+<a href="/index.php/Admin/Index/index">
+<img alt=""  height="80" width="80" src="http://picture.5iuse.com/org/1/d1/922/059e/17f225da7c80bcc8fee971.jpg"/>
+</a><div class="user-box">
+<span class="name">
+<font color="#ccc">欢迎您</font>
+<br />
+<a href="/index.php/Admin/Index/myaccount">
+zhangyong</a>
+</span>
+<span class="status">
+<i class="fa fa-circle"></i> 在线
+</span>
+</div>
+</div>
+<div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
+<ul class="nav nav-pills nav-stacked">
+<li >
+      <input type="hidden" value="Wechat" />
+        <a href="#" class="dropdown-toggle">
+        <i class="fa fa-user"></i>
+                <span>用户设置</span>
+        <i class="fa fa-chevron-circle-right drop-icon"></i>
+        </a>
+        <ul class="submenu" >
+        <li>
+        <a href="/index.php/Admin/User/index"  >
+          用户管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Role/index"  >
+          角色管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Department/index"  >
+          共享组        </a>
+        </li>        </ul>
+    </li><li >
+      <input type="hidden" value="Wechat" />
+        <a href="#" class="dropdown-toggle">
+                  <i class="fa fa-th-large"></i>
+                <span>自定义设置</span>
+        <i class="fa fa-chevron-circle-right drop-icon"></i>
+        </a>
+        <ul class="submenu" >
+        <li>
+        <a href="/index.php/Admin/Customfields/index"  >
+          字段管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Relmodulefields/add"  >
+          相关字段        </a>
+        </li><li>
+        <a href="/index.php/Admin/Customcadefield/index"  >
+          级联字段        </a>
+        </li><li>
+        <a href="/index.php/Admin/Relmoduleinfo/index"  >
+          相关信息        </a>
+        </li><li>
+        <a href="/index.php/Admin/Customreport/index"  >
+          报表        </a>
+        </li>        </ul>
+    </li><li >
+      <input type="hidden" value="Wechat" />
+        <a href="#" class="dropdown-toggle">
+                    <i class="fa fa-edit"></i>
+                <span>在线表单</span>
+        <i class="fa fa-chevron-circle-right drop-icon"></i>
+        </a>
+        <ul class="submenu" >
+        <li>
+        <a href="/index.php/Admin/FormDesign/index"  >
+          表单设计        </a>
+        </li><li>
+        <a href="/index.php/Admin/FormList/index"  >
+          表单管理        </a>
+        </li>        </ul>
+    </li><li class="open active">
+      <input type="hidden" value="Wechat" />
+        <a href="#" class="dropdown-toggle">
+                  <i class="glyphicon glyphicon-phone" style="margin-top:14px;"></i>
+                <span>微信应用</span>
+        <i class="fa fa-chevron-circle-right drop-icon"></i>
+        </a>
+        <ul class="submenu" style="display: block;">
+        <li>
+        <a href="/index.php/Admin/Wechatsingle/index"  >
+          单图文        </a>
+        </li><li>
+        <a href="/index.php/Admin/Wechatmulti/index"  class="active">
+          多图文        </a>
+        </li><li>
+        <a href="/index.php/Admin/Wechatdefault/index"  >
+          默认回复        </a>
+        </li><li>
+        <a href="/index.php/Admin/Wechattext/index"  >
+          文本        </a>
+        </li><li>
+        <a href="/index.php/Admin/UserAccount/index"  >
+          公众账号设置        </a>
+        </li><li>
+        <a href="/index.php/Admin/Bottommenu/index"  >
+          底部菜单        </a>
+        </li><li>
+        <a href="/index.php/Admin/Fans/index"  >
+          粉丝        </a>
+        </li>        </ul>
+    </li><li >
+      <input type="hidden" value="Wechat" />
+        <a href="#" class="dropdown-toggle">
+                  <i class="fa fa-beer"></i>
+                <span>微信营销</span>
+        <i class="fa fa-chevron-circle-right drop-icon"></i>
+        </a>
+        <ul class="submenu" >
+        <li>
+        <a href="/index.php/Admin/Appointment/index"  >
+          预约管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Vote/index"  >
+          投票管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Questionnaire/index"  >
+          问卷管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/KanJia/index"  >
+          砍价活动        </a>
+        </li>        </ul>
+    </li><li >
+      <input type="hidden" value="Wechat" />
+        <a href="#" class="dropdown-toggle">
+                  <i class="fa fa-bank"></i>
+                <span>店铺</span>
+        <i class="fa fa-chevron-circle-right drop-icon"></i>
+        </a>
+        <ul class="submenu" >
+        <li>
+        <a href="/index.php/Admin/ShopSettings/settings"  >
+          店铺设置        </a>
+        </li><li>
+        <a href="/index.php/Admin/Shopgoods/goods"  >
+          商品管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Shoporder/order"  >
+          订单管理        </a>
+        </li>        </ul>
+    </li><li >
+      <input type="hidden" value="Wechat" />
+        <a href="#" class="dropdown-toggle">
+                  <i class="fa fa-book"></i>
+                <span>教育</span>
+        <i class="fa fa-chevron-circle-right drop-icon"></i>
+        </a>
+        <ul class="submenu" >
+        <li>
+        <a href="/index.php/Admin/Classschedule/index"  >
+          课程表        </a>
+        </li><li>
+        <a href="/index.php/Admin/Studentenroll/index"  >
+          学生报名        </a>
+        </li><li>
+        <a href="/index.php/Admin/School/index"  >
+          学校管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Student/index"  >
+          学生管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Campus/index"  >
+          校区管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Teacher/index"  >
+          教师管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Classroom/index"  >
+          教室管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Class/index"  >
+          班级管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Course/index"  >
+          排课管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/StudentAttendance/index"  >
+          学生考勤        </a>
+        </li><li>
+        <a href="/index.php/Admin/TeacherAttendance/index"  >
+          教师考勤        </a>
+        </li><li>
+        <a href="/index.php/Admin/Courses/index"  >
+          课程管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Orders/index"  >
+          合同管理        </a>
+        </li><li>
+        <a href="/index.php/Admin/Wages/index"  >
+          教师工资        </a>
+        </li><li>
+        <a href="/index.php/Admin/Score/index"  >
+          学生成绩        </a>
+        </li>        </ul>
+    </li><li >
+      <input type="hidden" value="Wechat" />
+        <a href="#" class="dropdown-toggle">
+                  <i class="fa fa-user"></i>
+                 <span>联系管理</span>
+        <i class="fa fa-chevron-circle-right drop-icon"></i>
+        </a>
+        <ul class="submenu" >
+        <li>
+        <a href="/index.php/Admin/Contacts/index"  >
+          联系人        </a>
+        </li><li>
+        <a href="/index.php/Admin/Record/index"  >
+          联系记录        </a>
+        </li>        </ul>
+    </li><li >
+      <input type="hidden" value="Wechat" />
+        <a href="#" class="dropdown-toggle">
+                  <i class="fa fa-calendar"></i>
+                 <span>日程管理</span>
+        <i class="fa fa-chevron-circle-right drop-icon"></i>
+        </a>
+        <ul class="submenu" >
+        <li>
+        <a href="/index.php/Admin/Calendar/index"  >
+          日程安排        </a>
+        </li>        </ul>
+    </li><li >
+      <input type="hidden" value="Wechat" />
+        <a href="#" class="dropdown-toggle">
+                    <i class="fa fa-desktop"></i>
+                <span>微官网</span>
+        <i class="fa fa-chevron-circle-right drop-icon"></i>
+        </a>
+        <ul class="submenu" >
+        <li>
+        <a href="/index.php/Admin/WebsiteSetting/index"  >
+          官网设置        </a>
+        </li><li>
+        <a href="/index.php/Admin/WebsiteColumn/index"  >
+          栏目管理        </a>
+        </li>        </ul>
+    </li><li >
+      <input type="hidden" value="Wechat" />
+        <a href="#" class="dropdown-toggle">
+                  <i class="fa fa-money"></i>        <span>支付管理</span>
+        <i class="fa fa-chevron-circle-right drop-icon"></i>
+        </a>
+        <ul class="submenu" >
+        <li>
+        <a href="/index.php/Admin/PaymentMethod/index"  >
+          支付方式        </a>
+        </li>        </ul>
+    </li></ul>
+</div>
+</div>
+<div class="nano-pane" style="opacity: 1; visibility: visible;"><div class="nano-slider" style="height: 68px; transform: translate(0px, 0px);"></div></div>
+</section>
+</div>
+
+    <style type="text/css">
+  .ke-container{
+    width: 100% !important;
+    /*float: left!important;*/
+  }
+  .tuwenedit{
+    float: left;width: 50%;
+    margin-bottom: 20px;
+  }
+  #content-wrapper{min-height: 1200px; overflow-y: scroll ;}
+  blockquote::before{
+    content:"";
+  }
+  </style>
+  <div id="content-wrapper">
+  <div class="row">
+  <div class="col-lg-12">
+<div class="row">
+  <div class="col-lg-12">
+    <ol class="breadcrumb">
+    <li><a href="javascript:void(0)">微信应用</a></li>
+    <li><a href="/index.php/Admin/Wechatmulti/index">关键字</a></li>
+    <li class="active"><span>编辑多图文</span></li>
+    </ol>
+  </div>
+</div>
+<!-- 图文old -->
+<div class="row">
+  <div class="col-lg-6" style="width:100%">
+  <div class="main-box">
+    <!--<header class="main-box-header clearfix">
+      <h2>编辑多图文</h2>
+    </header>
+    <div class="main-box-body clearfix">
+      <form role="form">
+        <div class="form-group">
+          <label for="title">标题</label>
+            <input name="title" id="title" type="text" style="width:50%" value="xxx" class="form-control" placeholder="请输入标题">
+        </div>
+        <div class="form-group">
+          <label for="key">关键字</label>
+          <input name="key" id="key" type="text" disabled style="width:50%" value="lr" class="form-control" placeholder="请输入关键字">
+        </div>
+        <div class="form-group">
+          <label for="desc">描述</label>
+          <textarea id="desc" name="desc" class="form-control" placeholder="请输入描述">delete</textarea>
+        </div>
+        <div class="form-group">
+          <label>图片</label>
+          <input type="file" id='upload_file'/>
+          <input type="hidden" value="" name="img_url" />
+          <input type="hidden" value="0" name="img_id" />
+          <img  id="image" style="display:block;margin-top:10px;" src="http://www.5iuse.com/Application/Admin/Common/images/default.jpg" width="320" height="200" />    <span>（尺寸 320 x 200,建议不超过200K）</span>
+        </div>
+        <script  type="text/javascript">
+          info_uploadify('#upload_file',84,30,true,"/index.php/Admin/Uploadify/uploadify","post","上传图片",true,1,"*.gif; *.GIF; *.jpg; *.JPG; *.PNG;","200kb",0,0,0,successFunction);
+          function successFunction(){
+            var count = arrayImgObj.length;
+            var img_url = arrayImgObj[count-1].org;
+            var img_id = arrayImgObj[count-1].id;
+            $("input[name='img_url']").val(img_url);
+            $("input[name='img_id']").val(img_id);
+            $("#image").attr("src",img_url);
+            $("#img_url").attr("src",img_url);
+          }
+        </script>
+        <div class="form-group">
+          <input name="radio" class="radio" type="radio" value="1" >
+          <label for="url">链接</label>
+          <input id="url" name="url" class="form-control" placeholder="请输入链接" type="text" value="" style="width:50%;" disabled="disabled">
+        </div>
+        <div class="form-group">
+          <input name="radio" class="radio" type="radio" value="2" >
+          <label for="menu1">模块</label>
+          <select style="width:50%;" class="form-control" name="menu1" id="menu1" disabled="disabled">
+            <option value="0">请选择一级模块</option>
+              <option  value="105">表单管理</option>  <option  value="19">预约管理</option> <option  value="41">投票管理</option> <option  value="43">问卷管理</option> <option  value="29">店铺</option> <option  value="111">学生报名</option>  <option  value="50">教师管理</option> <option  value="54">学生考勤</option> <option  value="55">教师考勤</option> <option  value="91">联系人</option>  <option  value="92">联系记录</option> <option  value="109">官网设置</option>  <option  value="115">学生成绩</option>  <option  value="117">砍价活动</option></select>
+        </div>
+        <div class="form-group" id="level_two" style="display:none" >
+          <div id="level_two_select"></div>
+        </div>
+        <div class="form-group">
+          <input name="radio" class="radio" type="radio" value="3" checked="checked">
+          <label for="desc">内容</label>
+          <div id="content_div"  style="display:block;" >
+            <textarea id="content" class="form-control" name="content">
+              <section class="wwei-editor"><section style="max-width:100%;margin:0.8em 0px 0.5em;overflow:hidden;"><section placeholder="请输入标题" style="box-sizing:border-box !important;height:36px;display:inline-block;color:#FFF;font-size:16px;font-weight:bold;padding:0 10px;line-height:36px;float:left;vertical-align:top;background-color:#F96E57;" class="wweibrush">请输入标题</section><section style="box-sizing:border-box !important;display:inline-block;height:36px;vertical-align:top;border-left-width:9px;border-left-style:solid;border-left-color:#F96E57;border-top-width:18px !important;border-top-style:solid !important;border-top-color:transparent !important;border-bottom-width:18px !important;border-bottom-style:solid !important;border-bottom-color:transparent !important;"></section></section></section>
+              <p>
+                <br />
+              </p>
+              <section class="wwei-editor">
+              <h2 class="wweibrush" data-bcless="darken" placeholder="深色边框标题" style="margin:10px 0px;padding:10px;font-size:16px;line-height:25px;text-shadow:#225F87 0px 1px 0px;color:#CAFBD7;border-radius:4px;box-shadow:#999999 2px 2px 4px;border-left-width:10px;border-left-style:solid;border-color:#0A892B;background-color:#0EB83A;">
+                深色边框标题
+              </h2>
+              </section>
+              <p>
+              <br />
+              </p>
+              <section class="wwei-editor"><section style="margin:2px 0.8em 1em 0;text-align:center;font-size:1em;vertical-align:middle;white-space:nowrap;"><section style="height:0px;white-space:nowrap;border-top:1.5em solid #47C1A8;border-bottom:1.5em solid #47C1A8;border-left-width:1.5em ! important;border-left-style:solid ! important;border-right-width:1.5em ! important;border-right-style:solid ! important;border-color:#47C1A8;"></section><section style="height:0;white-space:nowrap;margin:-2.75em 1.65em;border-top:1.3em solid #ffffff;border-bottom:1.3em solid #ffffff;border-left:1.3em solid transparent;border-right:1.3em solid transparent;"></section><section style="height:0px;white-space:nowrap;margin:0.45em 2.1em;vertical-align:middle;border-top:1.1em solid #47C1A8;border-bottom:1.1em solid #47C1A8;border-left-width:1.1em ! important;border-left-style:solid ! important;border-right-width:1.1em ! important;border-right-style:solid ! important;border-color:#47C1A8;"><section class="wweibrush" data-ct="fix" placeholder="一行短标题" style="max-height:1em;padding:0px;margin-top:-0.5em;color:#FEFFFD;font-size:1.2em;line-height:1em;white-space:nowrap;overflow:hidden;font-style:normal;">一行短标题</section></section></section></section>
+              <p>
+                <br />
+              </p>
+              <section class="wwei-editor">
+              <h2 class="wweibrush" placeholder="请输入标题" style="white-space:normal;font-size:16px;margin:10px 0px;padding:10px;max-width:100%;border-top:solid 2px;border-left:0px;border-bottom:solid 2px;line-height:25px;color:#6D97C8;font-weight:bold;text-align:center;">
+                请输入标题
+              </h2>
+              </section>
+              <p>
+                <br />
+              </p>
+              <br />
+            </textarea>
+            <link href="http://www.5iuse.com/Application/Admin/Common/Public/css/wwei_editor.css?2023" rel="stylesheet" type="text/css" />
+            <link rel="stylesheet" type="text/css" href="http://www.5iuse.com/Application/Admin/Common/Public/wxeditor/css/jquery.jgrowl.css" />
+            <div class="tuwenedit">
+              <div class="span5">
+                <div class="tab-content template-content">
+                  <h4>图文排版</h4>
+                  <div>
+                    色调：<input class="colorPicker form-control" style="width:80px;" id="custom-color" value="#866EBB" />
+                    &nbsp;&nbsp;<label class="checkbox inline"><input type="checkbox" id="replace-color-all" value="1">正文换色</label>
+                  </div>
+                  <div>
+                    <ul class="nav nav-tabs" id="templateTab">
+                      <li class="active"><a href="#temp-title" data-type="title">标题</a></li>
+                      <li><a href="#temp-text" data-type="text">正文</a></li>
+                      <li><a href="#temp-img" data-type="img">图片</a></li>
+                      <li><a href="#temp-follow" data-type="follow">吸粉</a></li>
+                      <li><a href="#temp-scene" data-type="scene">场景</a></li>
+                      <li><a href="#temp-tpl" data-type="tpl">模板</a></li>
+                    </ul>
+                  </div>
+                  <div id="template-loading" class="hide">
+                    <img src="http://www.5iuse.com/Application/Admin/Common/Public/images/loading.gif"> 加载中...
+                  </div>
+                  <div class="tab-pane active" id="temp-title"></div>
+                  <div class="tab-pane" id="temp-text"></div>
+                  <div class="tab-pane" id="temp-img"></div>
+                  <div class="tab-pane" id="temp-follow"></div>
+                  <div class="tab-pane" id="temp-scene"></div>
+                  <div class="tab-pane" id="temp-tpl"></div>
+                </div>
+              </div>
+              <script src="http://www.5iuse.com/Application/Admin/Common/Public/wxeditor/css/jquery.jgrowl.min.js"></script>
+              <script type="text/javascript" src="http://www.5iuse.com/Application/Admin/Common/Public/wxeditor/js/less.js"></script>
+              <script type="text/javascript" src="http://www.5iuse.com/Application/Admin/Common/Public/wxeditor/js/colorPicker.js"></script>
+              <script type="text/javascript" src="http://www.5iuse.com/Application/Admin/Common/Public/wxeditor/js/ueditor1_4_3/ueditor.config.js"></script>
+              <script type="text/javascript" src="http://www.5iuse.com/Application/Admin/Common/Public/wxeditor/js/ueditor1_4_3/ueditor.all.min.js"></script>
+              <script type="text/javascript" src="http://www.5iuse.com/Application/Admin/Common/Public/wxeditor/js/ueditor1_4_3/third-party/zeroclipboard/ZeroClipboard.min.js"></script>
+              <script type="text/javascript" src="http://www.5iuse.com/Application/Admin/Common/Public/wxeditor/js/wwei_editor.js"></script>
+              <script type="text/javascript">
+                var less_parser = new less.Parser;
+                ZeroClipboard.config({ swfPath: "/Application/Admin/Common/Public/wxeditor/js/ueditor1_4_3/third-party/zeroclipboard/ZeroClipboard.swf" } );
+
+                var wwei_editor = UE.getEditor('wwei_editor');
+                //加载本地缓存
+                /*
+                wwei_editor.ready(function(){
+                  var editor_document = wwei_editor.selection.document;
+                  if( window.localStorage){
+                    if(typeof window.localStorage._wweiContent != "undefined"){
+                      //wwei_editor.setContent(window.localStorage._wweiContent);
+                    }
+                    setInterval(function(){
+                      window.localStorage._wweiContent = wwei_editor.getContent();
+                    },2000);            
+                  }
+                });*/
+                
+                $(function () {
+                  /*模板Tab */
+                  var dataType = 'title';
+                  
+                  function _loadtemp(dataType){
+                    $("#template-loading").show();
+                    $.ajax({
+                      type: "POST",
+                      // url: "/index.php/wxeditor/loadtemp.html",
+                      //url: "/index.php/Admin/Wechatmulti/loadtemp",
+                      url: "/index.php/Admin/Wechatedit/loadtemp",
+                      data: {"type":dataType},
+                      success: function(data){
+                        $("#template-loading").hide();
+                        var tabPane = $("#temp-"+dataType);
+                        //tabPane.html('');
+                        tabPane.html(data);
+                        $(".tab-pane").each(function () {
+                          $(this).css('display','none');
+                        });
+                        tabPane.css('display','block');
+                        var _tempLi = tabPane.find('.template-list li');
+                        _tempLi.hover(function(){
+                          $(this).css({"background-color":"#f5f5f5"});
+                        },function(){
+                          $(this).css({"background-color":"#fff"});
+                        });
+                        _tempLi.click(function(){
+                          if(dataType=='tpl')
+                          {
+                            var _tempHtml = $(this).find('.tpl-code').html();
+                            //wwei_editor.setContent("");
+                            //wwei_editor.execCommand('insertHtml', _tempHtml);
+                            window.editor_content.insertHtml(_tempHtml + "<p><br/></p>");
+                          }else
+                          {
+                            var _tempHtml = $(this).html();
+                            window.editor_content.insertHtml(_tempHtml + "<p><br/></p>");
+                            //insertHtml(_tempHtml + "<p><br/></p>");
+                          }
+                          
+                        });
+                      }
+                    });
+                  }
+                  _loadtemp(dataType);//加载
+                  //TAB切换
+                  $('#templateTab a').click(function (e) {
+                    e.preventDefault();
+                    $(this).tab('show');
+                    $("#templateTab a").each(function () {
+                      $(this).css('color','#666666');
+                    });
+                    $(this).css('color','red');
+                    dataType = $(this).attr("data-type");
+                    if(dataType)
+                    {
+                      var tabPane = $("#temp-"+dataType);
+                      // if(tabPane.find('.template-list').length<=0)
+                      // {
+                        _loadtemp(dataType);
+                      // }
+                    }
+                  });
+
+                
+                  //清空
+                  $('#clear-editor').click(function(){
+                    if(confirm('是否确认清空内容，清空后内容将无法恢复')){
+                      window.editor_content.html("");
+                    }        
+                  });
+                  //复制
+                  var client = new ZeroClipboard( $('#copy-editor-html') );
+                  client.on( 'ready', function(event) {
+                    client.on( 'copy', function(event) {
+                        event.clipboardData.setData('text/html', getEditorHtml());
+                        event.clipboardData.setData('text/plain', getEditorHtml());
+                        showSuccessMessage("已成功复制到剪切板");
+                    });
+                  });
+
+                  //预览效果
+                  $("#wx-template-name").blur(function(){
+                    var val = $(this).val();
+                    if(val)
+                    {
+                      $("#wxpreview h4").html(val);
+                    }
+                  });
+                  $("#wx-template-dateline").blur(function(){
+                    var val = $(this).val();
+                    if(val)
+                    {
+                      $("#wxpreview em").html(val);
+                    }
+                  });
+                  $("#wx-template-cover").blur(function(){
+                    var val = $(this).val();
+                    if(val)
+                    {
+                      $("#wxpreview .wxpreimg").html('<img src="'+ val +'" width="290" height="209">');
+                    }
+                  });
+                  
+                  $("#wx-template-intro").blur(function(){
+                    var val = $(this).val();
+                    if(val)
+                    {
+                      $("#wxpreview .wxstr").html(val);
+                    }
+                  });
+
+                  $("#wx-template-wxid").change(function(){
+                    var val = $(this).find("option:selected").val(),text = $(this).find("option:selected").text(),url=$(this).find("option:selected").attr("data-url");
+
+                    if(text)
+                    {
+                      if(val==0) text = '';
+                      if(!url) url = 'javascript:void(0);';
+                      $("#wxpreview .wxhao").html('<a href="'+url+'" target="_blank">'+text+'</a>');
+                    }
+                  });
+                  //定制效果
+                  $("#is_show_title").click(function(){
+                    var cked = $(this).attr("checked");
+                    if(cked==undefined)
+                    {
+                      $("#wx_show_title").hide();
+                      
+                    }else
+                    {
+                      $("#wx_show_title").show();
+                    }
+                  });
+                  $("#is_show_statis").click(function(){
+                    var cked = $(this).attr("checked");
+                    if(cked==undefined)
+                    {
+                      $("#wxpreview .wxfoot").hide();
+                      
+                    }else
+                    {
+                      $("#wxpreview .wxfoot").show();
+                    }
+                  });
+                  
+                  //颜色选择
+                  $('.colorPicker').colorPicker({
+                    customBG: '#222',
+                    init: function(elm, colors) { // colors is a different instance (not connected to colorPicker)
+                      elm.style.backgroundColor = elm.value;
+                      elm.style.color = colors.rgbaMixCustom.luminance > 0.22 ? '#222' : '#ddd';
+                    }
+                  });
+                });
+              </script>
+              <!-- script end -->
+            <!--</div>
+          </div>
+          <div class="col-lg-offset-2 col-lg-10">
+            <input id="cid" name="cid" type="hidden" value="3">
+            <input id="multiid" name="multiid" type="hidden" value="11">
+            <input id="id" name="id" type="hidden" value="14">
+            <input class="btn btn-primary submit_button" type="button" value="提交">
+          </div>
+        </div>这个DIV是增加的闭合标签
+      </form>
+    </div>--><!-- 删除原来的 -->
+    <!-- 新版图文START -->
+    <section>
+      <section class="panel panel-default">
+        <div class="panel-body">
+          <form class="form-horizontal form-validate" method="post" action="/api/form/ajaxform">
+            <div class="row">
+              <!-- 左侧视图 -->
+              <div class="col-md-4 show-box">
+                <div class="show-first jq-item">
+                  <h2>标题</h2>
+                  <img src="img/logo2.png">
+                  <div class="mask-item"><i class="fa fa-pencil"></i></div>
+                </div>
+                <div class="show-items">
+                  <!-- <div class="show-item jq-item">
+                    <h2>标题</h2>
+                    <img src="img/logo3.png">
+                    <div class="mask-item"><i class="fa fa-pencil"></i></div>
+                  </div>
+                  <div class="show-item jq-item">
+                    <h2>标题</h2>
+                    <img src="img/logo3.png">
+                    <div class="mask-item"><i class="fa fa-pencil"></i></div>
+                  </div> -->
+                </div>
+                <div class="show-add">
+                  <a href="javascript:;"><i class="fa fa-plus"></i></a>
+                </div>
+                <div class="show-form">
+                  <input type="hidden" id="data" val="">
+                  <button type="button" id="submit" class="btn btn-primary">保存</button>
+                  <a href="#" class="btn btn-default">取消</a>
+                </div>
+              </div><!-- 左侧视图END -->
+              <!-- 右侧视图 -->
+              <div class="col-md-7 info-box">
+                <div class="form-group">
+                  <div class="col-sm-1 col-sm-offset-10 info-del">
+                    <a href="javascript:;" class="btn btn-danger">删除</a>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label must">标题：</label>
+                  <div class="col-sm-6">
+                    <input name="title" type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">作者（选填）：</label>
+                  <div class="col-sm-6">
+                    <input name="author" type="text" class="form-control xl">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label must">关键字：</label>
+                  <div class="col-sm-6">
+                    <input name="key" type="text" class="form-control xl">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label must">描述：</label>
+                  <div class="col-sm-6">
+                    <textarea id="desc" name="desc" class="form-control" placeholder="请输入描述"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label must">封面：</label>
+                  <div class="col-sm-9 small-img">
+                    <img id="image" class="thumb_img" src="img/wei.jpg" width="160" height="100" />
+                    <input type="file" id='upload_file'/>
+                    <span>（尺寸 320 x 200,建议不超过200K）</span>
+                    <input type="hidden" value="" name="img_url" />
+                    <input type="hidden" value="0" name="img_id" />
+                  </div>
+                </div>
+                <script type="text/javascript">
+                  info_uploadify('#upload_file',84,30,true,"/index.php/Admin/Uploadify/uploadify","post","上传图片",true,1,"*.gif; *.GIF; *.jpg; *.JPG; *.PNG;","200kb",0,0,0,successFunction);
+                  function successFunction(){
+                    var count = arrayImgObj.length;
+                    var img_url = arrayImgObj[count-1].org;
+                    var img_id = arrayImgObj[count-1].id;
+                    $("input[name='img_url']").val(img_url);
+                    $("input[name='img_id']").val(img_id);
+                    $("#image").attr("src",img_url);
+                    $("#img_url").attr("src",img_url);
+                  }
+                </script>
+
+                <div id="menus_action_choose" class="form-group">
+                  <label class="col-sm-3 control-label must">点击动作：</label>
+                  <div class="radio">
+                    <input name="radio" id="urllink_type" class="radio_type" type="radio" value="1" checked>
+                    <label for="urllink_type">链接</label>
+                  </div>
+                  <div class="radio">
+                    <input name="radio" id="single_type" class="radio_type" type="radio" value="2">
+                    <label for="single_type">模块</label>
+                  </div>
+                  <div class="radio">
+                    <input name="radio" id="multi_type" class="radio_type" type="radio" value="3">
+                    <label for="multi_type">内容</label>
+                  </div>
+                </div>
+                <div id="menus_action_content" class="form-group">
+                  <div class="action1 col-sm-6 col-sm-offset-3">
+                    <input id="url" name="url" class="form-control" placeholder="请输入链接" type="text" value="">
+                  </div>
+                  <div class="action2 col-sm-7 col-sm-offset-3">
+                    <select style="width:40%;float:left;margin-right:10px;" class="form-control" name="menu1" id="menu1">
+                      <option value="0">请选择一级模块</option>
+                      <option value="105">表单管理</option>
+                      <option value="19">预约管理</option>
+                      <option value="41">投票管理</option>
+                      <option value="43">问卷管理</option>
+                      <option value="29">店铺</option>
+                      <option value="111">学生报名</option>
+                      <option value="50">教师管理</option>
+                      <option value="54">学生考勤</option>
+                      <option value="55">教师考勤</option>
+                      <option value="91">联系人</option>
+                      <option value="92">联系记录</option>
+                      <option value="109">官网设置</option>
+                      <option value="115">学生成绩</option>
+                      <option value="117">砍价活动</option>
+                    </select>
+                    <div id="level_two" style="float:left;display:inline-block;">
+                      <div id="level_two_select col-sm-5">
+                        <select style="width:100%;" class="form-control" name="menu2" id="menu2">
+                          <option value="0">请选择二级模块</option>
+                          <option value="8">你喜欢吃的水果</option>
+                          <option value="9">test</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="action3 col-sm-8 col-sm-offset-3">
+                    <textarea id="content2" class="form-control" name="content2" style="display:none;">
+                    <!-- <script id="content" name="content" class="form-control" type="text/plain"> -->
+                      <section class="wwei-editor"><section style="max-width:100%;margin:0.8em 0px 0.5em;overflow:hidden;"><section placeholder="请输入标题" style="box-sizing:border-box !important;height:36px;display:inline-block;color:#FFF;font-size:16px;font-weight:bold;padding:0 10px;line-height:36px;float:left;vertical-align:top;background-color:#F96E57;" class="wweibrush">请输入标题</section><section style="box-sizing:border-box !important;display:inline-block;height:36px;vertical-align:top;border-left-width:9px;border-left-style:solid;border-left-color:#F96E57;border-top-width:18px !important;border-top-style:solid !important;border-top-color:transparent !important;border-bottom-width:18px !important;border-bottom-style:solid !important;border-bottom-color:transparent !important;"></section></section></section>
+                      <p>
+                        <br />
+                      </p>
+                      <section class="wwei-editor">
+                      <h2 class="wweibrush" data-bcless="darken" placeholder="深色边框标题" style="margin:10px 0px;padding:10px;font-size:16px;line-height:25px;text-shadow:#225F87 0px 1px 0px;color:#CAFBD7;border-radius:4px;box-shadow:#999999 2px 2px 4px;border-left-width:10px;border-left-style:solid;border-color:#0A892B;background-color:#0EB83A;">
+                        深色边框标题
+                      </h2>
+                      </section>
+                      <p>
+                      <br />
+                      </p>
+                      <section class="wwei-editor"><section style="margin:2px 0.8em 1em 0;text-align:center;font-size:1em;vertical-align:middle;white-space:nowrap;"><section style="height:0px;white-space:nowrap;border-top:1.5em solid #47C1A8;border-bottom:1.5em solid #47C1A8;border-left-width:1.5em ! important;border-left-style:solid ! important;border-right-width:1.5em ! important;border-right-style:solid ! important;border-color:#47C1A8;"></section><section style="height:0;white-space:nowrap;margin:-2.75em 1.65em;border-top:1.3em solid #ffffff;border-bottom:1.3em solid #ffffff;border-left:1.3em solid transparent;border-right:1.3em solid transparent;"></section><section style="height:0px;white-space:nowrap;margin:0.45em 2.1em;vertical-align:middle;border-top:1.1em solid #47C1A8;border-bottom:1.1em solid #47C1A8;border-left-width:1.1em ! important;border-left-style:solid ! important;border-right-width:1.1em ! important;border-right-style:solid ! important;border-color:#47C1A8;"><section class="wweibrush" data-ct="fix" placeholder="一行短标题" style="max-height:1em;padding:0px;margin-top:-0.5em;color:#FEFFFD;font-size:1.2em;line-height:1em;white-space:nowrap;overflow:hidden;font-style:normal;">一行短标题</section></section></section></section>
+                      <p>
+                        <br />
+                      </p>
+                      <section class="wwei-editor">
+                      <h2 class="wweibrush" placeholder="请输入标题" style="white-space:normal;font-size:16px;margin:10px 0px;padding:10px;max-width:100%;border-top:solid 2px;border-left:0px;border-bottom:solid 2px;line-height:25px;color:#6D97C8;font-weight:bold;text-align:center;">
+                        请输入标题
+                      </h2>
+                      </section>
+                      <p>
+                        <br />
+                      </p>
+                      <br />
+                    </textarea>
+                    <!-- </script> -->
+                    <!-- 加载编辑器的容器 -->
+                    <script id="container" name="content" type="text/plain">
+                        
+                    </script>
+                    <script type="text/javascript">
+                        window.UEDITOR_HOME_URL = "css/";
+                    </script>
+                    <script type="text/javascript" src="js/ueditor.config.js"></script>
+                    <script type="text/javascript" src="js/ueditor.all.js"></script>
+                    <script type="text/javascript" src="js/zh-cn.js"></script>
+                    <script type="text/javascript" src="http://xiumi.us/connect/ue/xiumi-ue-dialog-v1.js"></script>
+                    <script type="text/javascript" src="http://xiumi.us/connect/ue/xiumi-ue-v1.css"></script>
+                    
+                    <script type="text/javascript">
+                        var ue = UE.getEditor('container');
+                        ue.ready(function() {
+                            //ue.setContent("<h1 style='color:red'>我是h1</h1>");
+                        });
+                    </script>
+                  </div>
+
+                </div>
+
+              </div><!-- 右侧视图END -->
+            </div>
+          </form>
+        </div>
+      </section>
+      <link rel="stylesheet" type="text/css" href="css/graphic.css"/>
+      <script type="text/javascript">
+        window.initData = [{
+          id:1,
+          title:"我是标题111111！",
+          author:"我是作者111111！",
+          key:"我是关键字111111！",
+          desc:"我是表述11111111！",
+          img:"img/logo2.png",
+          action:1,//1.链接  2.模块 3.内容
+          content:"www.baidu.com"
+        },{
+          id:2,
+          title:"我是标题2！",
+          author:"我是作者111111！",
+          key:"我是关键字2！",
+          desc:"我是表述2！",
+          img:"img/avatar12.jpg",
+          action:2,//1.链接  2.模块 3.内容
+          content:[105,66]
+        },{
+          id:3,
+          title:"我是标题333！",
+          author:"我是作者333！",
+          key:"我是关键字3！",
+          desc:"我是表述3！",
+          img:"img/avatar12.jpg",
+          action:3,//1.链接  2.模块 3.内容
+          content:"sfdsafdf"
+        }];
+      </script>
+      <script src="js/graphic.js"></script>
+    </section>
+    <!-- 新版图文END -->
+  </div>
+  </div>
+  <div class="col-lg-3"></div>
+</div>
+<!-- 图文old END -->
+</div>
+</div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<footer id="footer-bar" class="row">
+<p id="footer-copyright" class="col-xs-12">
+Copyright&copy;2015-2016 5iuse Inc. All Rights Reserved. 京ICP备15027119号-1 
+</p>
+</footer>
+<div id="config-tool" class="closed">
+<a id="config-tool-cog">
+<i class="fa fa-cog"></i>
+</a>
+<div id="config-tool-options">
+<h4>布局选项</h4>
+<ul>
+<li>
+<div class="checkbox-nice">
+<input type="checkbox" id="config-fixed-header"/>
+<label for="config-fixed-header">
+固定头部</label></div>
+</li>
+<li>
+<div class="checkbox-nice">
+<input type="checkbox" id="config-fixed-sidebar"/>
+<label for="config-fixed-sidebar">
+固定左侧菜单</label></div>
+</li>
+<li>
+<div class="checkbox-nice">
+<input type="checkbox" id="config-fixed-footer"/>
+<label for="config-fixed-footer">
+固定页脚</label></div>
+</li>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">系统提示</h4>
+      </div>
+      <div class="modal-body">
+        您确认要删除这条信息吗？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</ul>
+<br/>
+<h4>皮肤颜色</h4>
+<ul id="skin-colors" class="clearfix">
+<li>
+<a class="skin-changer" data-skin="theme-default" data-toggle="tooltip" title="默认" style="background-color: #34495e;">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-white" data-toggle="tooltip" title="白/绿" style="background-color: #2ecc71;">
+</a>
+</li>
+<li>
+<a class="skin-changer blue-gradient" data-skin="theme-blue-gradient" data-toggle="tooltip" title="渐变">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-turquoise" data-toggle="tooltip" title="海绿" style="background-color: #1abc9c;">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-amethyst" data-toggle="tooltip" title="紫晶" style="background-color: #9b59b6;">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-blue" data-toggle="tooltip" title="蓝" style="background-color: #2980b9;">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-red" data-toggle="tooltip" title="红" style="background-color: #e74c3c;">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-whbl" data-toggle="tooltip" title="白/蓝" style="background-color: #3498db;">
+</a>
+</li>
+</ul>
+</div>
+</div>
+<script src="http://www.5iuse.com/Application/Admin/Common/highcharts/highcharts.js" type="text/javascript" ></script>
+<script src="http://www.5iuse.com/Application/Admin/Common/highcharts/modules/exporting.js" type="text/javascript" ></script>
+<script charset="utf-8" src="http://www.5iuse.com/Application/Admin/Common/kindeditor/kindeditor.js"></script>
+<script charset="utf-8" src="http://www.5iuse.com/Application/Admin/Common/kindeditor/lang/zh_CN.js"></script>
+<script charset="utf-8" src="http://www.5iuse.com/Application/Admin/Common/datepicker/WdatePicker.js"></script>
+<link rel="stylesheet" href="http://www.5iuse.com/Application/Admin/Common/artDialog4.1.7/skins/default.css" type="text/css" />
+<script src="http://www.5iuse.com/Application/Admin/Common/artDialog4.1.7/artDialog.js" type="text/javascript"></script>
+<script src="http://www.5iuse.com/Application/Admin/Common/artDialog4.1.7/plugins/iframeTools.js" type="text/javascript"></script>
+<script type="text/javascript">
+function trim(str){ //删除左右两端的空格
+　  return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function ltrim(str){ //删除左边的空格
+　  return str.replace(/(^\s*)/g,"");
+}
+function rtrim(str){ //删除右边的空格
+　　return str.replace(/(\s*$)/g,"");
+}
+bootbox.setLocale("zh_CN");
+</script>
+</body>
+</html>
+
+<script type="text/javascript">
+  $("#menu1").change(function(){
+    var id=$(this).val();
+    $("#level_two").css('display','none');
+    if(id!=0){
+      $.ajax( {
+        url: "/index.php/Admin/Wechatmulti/ajaxGetMenuList",
+        data:{
+             id : id,
+        },
+        type:'post',
+        cache:false,
+        dataType:'text',
+        success:function(data) {
+          if(data){
+            $("#level_two_select").html(data);
+            $("#level_two").css('display','block');
+        }
+         }
+      });
+    }
+  });
+  $(".submit_button").click(function(){
+    var id=$("input[name='id']").val();
+    var multiid=$("input[name='multiid']").val();
+    var title=$("input[name='title']").val();
+    var picid=$("input[name='img_id']").val();
+    var url=$("input[name='url']").val();
+    var cid=$("#cid").val();
+    var menu1=$("#menu1").val();
+    if(menu1=='undefind'){
+      menu1="";
+    }
+    var menu2=$("#menu2").val();
+    if(menu2=='undefind'){
+      menu2="";
+    }
+    editor_content.sync();
+    var content=$("#content").val();
+    // editor_desc.sync();
+      var desc=$("#desc").val();
+    //desc=encodeURIComponent(desc);
+      if(trim(title)=="")
+      {
+        bootbox.alert("请输入标题！", function() {
+            });
+        return false;
+
+      }
+      $.ajax( {
+        url: "/index.php/Admin/Wechatmulti/ajaxaddmulti",
+        data:{
+          id : id,
+          multiid : multiid,
+          title : title,
+          picid : picid,
+          url : url,
+          menu1 : menu1,
+          menu2 : menu2,
+          desc : desc,
+          content : content,
+          cid : cid,
+        },
+        type:'post',
+        cache:false,
+        dataType:'json',
+        success:function(data) {
+            if(data==1)
+        {
+          bootbox.alert("多图文添加成功！", function() {
+            location.href="/index.php/Admin/Wechatmulti/details?id="+multiid;
+                });
+        }else if(data==2){
+          bootbox.alert("多图文修改成功！", function() {
+            location.href="/index.php/Admin/Wechatmulti/details?id="+multiid;
+                });
+        }else{
+          bootbox.alert("多图文操失败！", function() {
+                });
+        }
+         }
+    });
+
+  });
+  $(function(){
+  //KindEditor.ready(function(K) {
+  //    window.editor_content = K.create('#content',{
+  //      width : "50%",
+  //    height : "300",
+  //    filterMode: false,//是否开启过滤模式
+  //    // cssData :'body{float:left;width:100%}',
+  //      resizeType : 1,
+  //      uploadJson : "/index.php/Admin/Kindeditor/uploadify",
+  //      });
+  //});
+
+  // KindEditor.ready(function(K) {
+  //     window.editor_desc = K.create('#desc',{
+  //      width : "50%",
+  //    height : "300",
+  //      resizeType : 1,
+  //      uploadJson : "/index.php/Admin/Kindeditor/uploadify",
+  //       });
+  // });
+
+  })
+</script>
