@@ -366,6 +366,7 @@ a{
 	width: 140px;
 	height: 195px;
 	background: url('../images/qq.png') no-repeat top center;
+	z-index: 3;
 }
 .qq a{
 	display: inline-block;
