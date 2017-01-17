@@ -366,7 +366,6 @@ a{
 	width: 140px;
 	height: 195px;
 	background: url('../images/qq.png') no-repeat top center;
-	z-index: 3;
 }
 .qq a{
 	display: inline-block;
@@ -392,6 +391,7 @@ a{
 	font-size: 20px;
 	text-align: center;
 	line-height: 60px;
+	text-indent:-60px;
 }
 .signone{
 	text-align: center;
@@ -845,6 +845,7 @@ a{
 @media screen and (max-width: 640px) {
 	body{
 		min-width: 100%;
+		overflow-x: hidden;
 	}
 	.qq{
 		display: none;
@@ -948,5 +949,76 @@ a{
 	.footerr img{
 		width: 50%;
 		margin: 2%;
+	}
+	.sucdown .right{
+		margin-top: 30px;
+		width: 100%;
+	}
+	.sucdown .right li{
+		width: 80%;
+		margin-left: 10%; 	
+		display: inline-block;
+	}
+	.sucdown .right li img{
+		height: auto;
+	}
+	.sign h3{
+		text-indent: 0px;
+	}
+	.sign .publicw{
+		width: 80%;
+		margin-left: 10%;
+	}
+	.regidiv{
+		width: 100%;
+	}
+	#regetform .releft{
+		text-align: left;
+		text-indent: 2%;
+	}
+	#regetform div input{
+		width: 100%;
+	}
+	#regetform .error{
+		text-indent: 2%;
+	}
+	#regetform input{
+		margin: 0 auto;
+	}
+	#regetform .regetdiv{
+		margin: 0px;
+	}
+	#regetform .regis{
+		margin-left: 0px;
+		width: 100%;
+		margin-top: 10px;
+	}
+	.signdiv .account, .signdiv .word{
+		width: 100%;
+	}
+	.signdiv{
+		width: 100%;
+	}
+	.signone hr{
+		display: none;
+	}
+	
+}
+@media screen and (max-width: 385px){
+	#signform .regetdiv{
+		display: block;
+		float: left;
+		margin-bottom: 10px;
+	}
+	#signform div{
+		overflow: hidden;
+	}
+}
+@media screen and (max-width: 490px){
+	#regetform .regetdiv{
+		float: left;
+		margin: 0px;
+		margin-top: 10px;
+		margin-bottom: 10px;
 	}
 }
