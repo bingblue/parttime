@@ -1022,3 +1022,15 @@ a{
 		margin-bottom: 10px;
 	}
 }
+
+
+/* XiaoMuCOOL update*/
+table.one,table.two{
+	width: 100%;
+}
+
+@media screen and (max-width: 1200px){
+	.bg{
+		width: 100%;
+	}
+}

@@ -132,12 +132,12 @@ function package(){
 		var top=$(document).scrollTop();
 		if(top>507){
 			$(".bg .two").css({"margin-top":"124px"});
-			$(".bg .two .h").css({"width":"182px"});
-			$(".bg .one").css({"position":"fixed","top":"0px"});
+			//$(".bg .two .h").css({"width":"182px"});
+			$(".bg .one").css({"position":"fixed","top":"0px",maxWidth:1200});
 		}else{
 			$(".bg .one").css({"position":""});
 			$(".bg .two").css({"margin-top":""});
-			$(".bg .two .h").css({"width":"181px"});
+			//$(".bg .two .h").css({"width":"181px"});
 		}
 	})
 }
