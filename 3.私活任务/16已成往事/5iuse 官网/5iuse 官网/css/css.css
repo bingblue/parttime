@@ -1002,7 +1002,68 @@ a{
 	.signone hr{
 		display: none;
 	}
-	
+	.cp li{
+		width:40%;
+		margin:5% 5%;
+		height: auto;	
+	}
+	.cp li img{
+		margin-bottom: 0px;
+	} 
+	.cpfl{
+		margin-left: 0px;
+		width: 556px;
+		margin: 0 auto;
+	}
+	.newgdown div.left{
+		width: auto;
+	}
+	.notie ul{
+		width: auto;
+	}
+	.notie li{
+		width: auto;
+		margin-right: 0px;
+	}
+}
+@media screen and (max-width: 380px){
+	.newgtop li{
+		width: 50%;
+	}
+	.page a{
+		line-height: 24px; 	
+		padding: 0px 10px;
+	}
+	.page li.up{
+		margin-right: 2px;
+	}
+}
+@media screen and (max-width: 556px){
+	.cpfl{
+		margin-left: 0px;
+		width: 417px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 417px){
+	.cpfl{
+		margin-left: 0px;
+		width: 278px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 574px){
+	.cp{
+		width: 100%;
+		overflow: hidden;
+	}
+	.cp li{
+		width: 212px;
+		height: auto;
+		margin: 5% auto;
+		float: none;
+		overflow: hidden;
+	}
 }
 @media screen and (max-width: 385px){
 	#signform .regetdiv{
