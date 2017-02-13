@@ -1,0 +1,7 @@
+1.手机端页面，用h5 + 响应式做
+2.命名规范，不要有中文拼音，命名连接符用中横杠，不要用驼峰命名法 例子:
+.btn{}
+.btn-info{}
+3.作用域:不要直接命名在class里，而是给body一个新的class，<body class="xc"></body>例子:
+.xc .btn{}  
+.xc .btn-info{}
