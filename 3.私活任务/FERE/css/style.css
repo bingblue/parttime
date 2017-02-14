@@ -39,10 +39,6 @@
 }
 
 /*goto.html 开始*/
-.xc-goto .wrap{
-  background: url(../img/goto-bg.png) no-repeat ;
-  background-size:cover;
-}
 .xc-goto .main{
   width: 94%;
   margin: 0 auto;
