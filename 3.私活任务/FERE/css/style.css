@@ -1,7 +1,13 @@
 @charset "UTF-8";
-/* 第一步：
-   这是全局类，可以使用、
-   如不用也请不要删除，直接跳到第二步 */
+@font-face {
+  font-family: "alliewriting";
+  src: url('../font/alliewriting__by_pixie_dixie_rulz.ttf');
+}
+@font-face {
+  font-family: "MyriadPro Regular";
+  src: url('../font/MyriadPro Regular.otf');
+}
+/* 是全局类  */
 .btn {
   display: inline-block;
   width: 100%;
@@ -31,15 +37,8 @@
   overflow: hidden;
   position: relative; 
 }
+
 /*goto.html 开始*/
-@font-face {
-  font-family: "alliewriting";
-  src: url('../font/alliewriting__by_pixie_dixie_rulz.ttf');
-}
-@font-face {
-  font-family: "MyriadPro Regular";
-  src: url('../font/MyriadPro Regular.otf');
-}
 .xc-goto .wrap{
   background: url(../img/goto-bg.png) no-repeat ;
   background-size:cover;
@@ -55,14 +54,13 @@
   line-height: 400%;
   font-weight: 600;
 }
-.xc-goto .main h1{
+.xc-goto h1{
   border-bottom: 1px solid #a09fa2;
   padding: 1% 0px;
   margin: 0 auto;
   font-size: 400%;
   text-align: center;
   color: #fff;
-  font-family: "Hiragino Sans GB W3";
 }
 .xc-goto .main div{
   padding-top: 1%;
@@ -74,13 +72,13 @@
 .xc-goto .main div span{
   display: block;
 }
-.xc-goto .main #goto-load img{
+.xc-goto #goto-load img{
   padding-bottom: 1%;
   width: 50%;
   display: block;
   margin: 0 auto;
 }
-.xc-goto .main h3{
+.xc-goto h3{
   overflow: hidden;
   font-size: 300%;
   font-family: "alliewriting";
@@ -88,18 +86,20 @@
   border-top: 1px solid #a09fa2;
   padding: 1% 0px;
 }
-.xc-goto .main h3 a{
+.xc-goto h3 a{
   color: #bfbfbf;
   font-family: "alliewriting";
 }
-.xc-goto .main h3 .left{
+.xc-goto h3 .left{
   float: left;
   margin-left: 3%;
 }
-.xc-goto .main h3 .right{
+.xc-goto h3 .right{
   float: right;
   margin-right: 3%;
 }
+
+/* 音乐类和动画模板 */
 #audio_btn {
   position: fixed;
   right: 20px;
