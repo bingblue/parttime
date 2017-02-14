@@ -1,9 +1,4 @@
 @charset "UTF-8";
-/* 
- * 注意：请务必按照注释步骤来写，并删除注释！！！
- * 注意：请务必按照注释步骤来写，并删除注释！！！
- * 注意：请务必按照注释步骤来写，并删除注释！！！
- */
 /* 第一步：
    这是全局类，可以使用、
    如不用也请不要删除，直接跳到第二步 */
@@ -22,7 +17,7 @@
   min-width: 320px;
   max-width: 640px;
   width: 100%;
-  min-height: 100%;
+  min-height: 100%;g
   margin: 0 auto;
   font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
   overflow: hidden;
@@ -34,8 +29,81 @@
   height: auto;
   margin: 0 auto;
   overflow: hidden;
-  position: relative; }
-
+  position: relative; 
+}
+/*goto.html 开始*/
+@font-face {
+  font-family: "alliewriting";
+  src: url('../font/alliewriting__by_pixie_dixie_rulz.ttf');
+}
+@font-face {
+  font-family: "MyriadPro Regular";
+  src: url('../font/MyriadPro Regular.otf');
+}
+@font-face {
+  font-family: "Hiragino Sans GB W3";
+  src: url('../font/Hiragino Sans GB W3.otf');
+}
+.xc-goto .wrap{
+  background: url(../img/goto-bg.png) no-repeat ;
+  background-size:cover;
+}
+.xc-goto .main{
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 50%;
+  background-color: rgba(0,0,0,0.6);
+  line-height: 400%;
+  font-weight: 600;
+}
+.xc-goto .main h2{
+  border-bottom: 1px solid #a09fa2;
+  padding: 1% 0px;
+}
+.xc-goto .main h2 p{
+  width: 80%;
+  margin: 0 auto;
+  font-size: 400%;
+  text-align: center;
+  color: #fff;
+  font-family: "Hiragino Sans GB W3";
+}
+.xc-goto .main div{
+  padding-top: 1%;
+  font-size: 250%;
+  text-align: center;
+  font-family: "MyriadPro Regular";
+  color: #bfbfbf;
+}
+.xc-goto .main div span{
+  display: block;
+}
+.xc-goto .main #goto-load img{
+  padding-bottom: 1%;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.xc-goto .main h3{
+  overflow: hidden;
+  font-size: 300%;
+  font-family: "alliewriting";
+  color: #bfbfbf;
+  border-top: 1px solid #a09fa2;
+  padding: 1% 0px;
+}
+.xc-goto .main h3 a{
+  color: #bfbfbf;
+  font-family: "alliewriting";
+}
+.xc-goto .main h3 .left{
+  float: left;
+  margin-left: 3%;
+}
+.xc-goto .main h3 .right{
+  float: right;
+  margin-right: 3%;
+}
 #audio_btn {
   position: fixed;
   right: 20px;
@@ -54,30 +122,8 @@
 audio {
   height: 1px;
   width: 1px;
-  display: none; }
-
-/* 第二步：
-   请在此处写你的CSS代码，请在所有class前加 “.你的bodyClass”，如：
-   你的bodyClass为xm,则应该写为：
-.xm .class{
-  
-} 
-.xm ul{
-  
+  display: none;
 }
-.xm #id{
-  
-}
-*/
-.class{
-
-}
-
-
-
-/* 第三步：
-   css3动画使用教程，可以参考使用，并在最后删除下面代码！*/
-
 .music-ani {
   -webkit-transform-origin: 50% 50%;
   animation-timing-function: linear;/*linear,ease,ease-in,ease-in-out,ease-out*/
