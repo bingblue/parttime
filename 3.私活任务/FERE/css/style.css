@@ -17,7 +17,7 @@
   min-width: 320px;
   max-width: 640px;
   width: 100%;
-  min-height: 100%;g
+  min-height: 100%;
   margin: 0 auto;
   font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
   overflow: hidden;
@@ -40,10 +40,6 @@
   font-family: "MyriadPro Regular";
   src: url('../font/MyriadPro Regular.otf');
 }
-@font-face {
-  font-family: "Hiragino Sans GB W3";
-  src: url('../font/Hiragino Sans GB W3.otf');
-}
 .xc-goto .wrap{
   background: url(../img/goto-bg.png) no-repeat ;
   background-size:cover;
@@ -51,17 +47,17 @@
 .xc-goto .main{
   width: 94%;
   margin: 0 auto;
-  margin-top: 50%;
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform : translateY(-50%);
   background-color: rgba(0,0,0,0.6);
   line-height: 400%;
   font-weight: 600;
 }
-.xc-goto .main h2{
+.xc-goto .main h1{
   border-bottom: 1px solid #a09fa2;
   padding: 1% 0px;
-}
-.xc-goto .main h2 p{
-  width: 80%;
   margin: 0 auto;
   font-size: 400%;
   text-align: center;
