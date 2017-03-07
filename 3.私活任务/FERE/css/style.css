@@ -390,13 +390,14 @@ body {
   display: none;
 }
 .xc-home .wrap {
-  width: 160%;
   overflow: hidden;
-  margin-left: -60%;
 }
 .xc-home .sidebar {
-  width: 37.5%;
-  float: left;
+  position: fixed;
+  left: -100%;
+  width: 95%;
+  height: 100%;
+  z-index: 2;
 }
 .xc-home .sidebar li a {
   display: block;
@@ -408,8 +409,8 @@ body {
 }
 .xc-home .sidebar li a span {
   position: absolute;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 14px;
   border-radius: 10px;
   padding: 3px 8px;
   display: inline-block;
@@ -434,7 +435,6 @@ body {
 .xc-home .main {
   position: relative;
   float: left;
-  width: 62.5%;
 }
 .xc-home .home-h1 {
   overflow: hidden;
@@ -504,6 +504,7 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   float: left;
+  padding: 15px 0 20px 0;
 }
 .xc-home .usergroup p {
   position: relative;
@@ -514,8 +515,10 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding: 15px 0 20px 0;
 }
 .xc-home .dpgroup {
+  width: 100%;
   overflow: hidden;
   border-top: 1px solid #ccc;
   font-size: 200%;
@@ -593,7 +596,7 @@ body {
     width: 5%;
   }
   .xc-home .sidebar li a {
-    font-size: 200%;
+    font-size: 180%;
     line-height: 250%;
   }
   .xc-home .usergroup {
@@ -657,6 +660,58 @@ body {
   margin-top: 2%;
   width: 15%;
 }
+/* xiaomu update */
+.loading{
+  position: fixed;
+  z-index: 99;
+  margin-left: 0 !important;
+  width: 100% !important;
+  -webkit-animation-name: "ani-loading";
+  -webkit-animation-delay: 2s;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+.xc-home .sidebar ul{
+  position: relative;
+  top: 30%;
+}
+.btn-close{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 25px;
+}
+.login-group{
+  position: absolute;
+  bottom: 0;
+  width: 105.27%;
+  background: #fff;
+  display: inline-block;
+  padding: 20px 0px 30px 0px;
+}
+.login-group a{
+  display: inline-block;
+  float: left;
+  color: #000;
+  line-height: 10px;
+  font-size: 150%;
+  width: 10%;
+  text-align: center;
+  margin: 0 20px;
+}
+.login-group .btn-logout{
+  float: right;
+}
+.menu-on .main{
+  -webkit-animation-name: "ani-menu";
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+.menu-on .sidebar{
+  -webkit-animation-name: "ani-sidebar";
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
 /* 音乐类和动画模板 */
 #audio_btn {
   position: fixed;
@@ -692,5 +747,34 @@ audio {
   100% {
     -webkit-transform: rotate(36000deg);
     transform: rotate(36000deg);
+  }
+}
+
+@-webkit-keyframes ani-loading {
+  0% {
+    opacity: 1;
+    z-index: 99;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@-webkit-keyframes ani-menu {
+  0% {
+    transform:scale(1) translate(0px);
+  }
+  100% {
+    transform:scale(0.6) translate(95%,0);
+  }
+}
+
+@-webkit-keyframes ani-sidebar {
+  0% {
+    transform:translate(0px);
+  }
+  100% {
+    transform:translate(105.27%,0);
   }
 }

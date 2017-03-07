@@ -16,20 +16,26 @@ $(function() {
 		}, 3000)
 	}
 	bannerclick();
-	$(".xc-home .home-h1 .left").click(function(event) {
-		$(".xc-home .wrap").animate({
-			marginLeft: 0
-		});
-		$(".xc-home .mark").show();
-		$(".xc-home ,html").css({"overflow":"hidden","height":"100%"});
+	// $(".xc-home .home-h1 .left").click(function(event) {
+	// 	$(".xc-home .wrap").animate({
+	// 		marginLeft: 0
+	// 	});
+	// 	$(".xc-home .mark").show();
+	// 	$(".xc-home ,html").css({"overflow":"hidden","height":"100%"});
 
+	// });
+	// $(".xc-home .mark").click(function(event) {
+	// 	$(".xc-home .wrap").animate({
+	// 		"marginLeft" : "-60%"
+	// 	});
+	// 	$(".xc-home .mark").hide();
+	// 	$(".xc-home, html").css({"overflow":"scroll","height":"auto"});
+	// });
+	$(".btn-menu").click(function(){
+		$(".home").addClass('menu-on');
 	});
-	$(".xc-home .mark").click(function(event) {
-		$(".xc-home .wrap").animate({
-			"marginLeft" : "-60%"
-		});
-		$(".xc-home .mark").hide();
-		$(".xc-home, html").css({"overflow":"scroll","height":"auto"});
+	$(".home .btn-close").click(function(){
+		$(".home").removeClass('menu-on');
 	});
 });
 
