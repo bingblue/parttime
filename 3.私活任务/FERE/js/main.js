@@ -46,6 +46,35 @@ $(function() {
 		$(this).parent().siblings('.left').find('span').text($(this).val());
 		$(this).removeClass('no').siblings().addClass('no');
 	});
+	// brand 整体导航
+	(function(){
+		$(".brand .brand-items>div").each(function(index) {
+			$(this).click(function(event) {
+				$(this).addClass('active').siblings().removeClass('active');
+				$(".brand .pro-list>div").eq(index).addClass('active').siblings().removeClass('active');
+			});
+		});
+	})();
+	// brand list-3
+	(function(){
+		setInterval(function(){
+			$(".brand .list-3-movie").find(".active").removeClass('active').siblings().addClass('active');
+		},2000);
+	})();
+	// brand-1 list
+	(function(){
+		var $num = 0;
+		var $brand = $(".brand .brand-list-group>a");
+		var $length = $brand.length;
+		setInterval(function(){
+			$num ++;
+			if ( $num>=$length ) {
+				$num = 0;
+			}
+			$brand.eq($num).fadeIn("slow").addClass('active').siblings("a").fadeOut(0).removeClass('active');
+			$(".brand .brand-list-group ul>li").removeClass('active').eq($num).addClass('active');
+		},3000)
+	})();
 });
 
 function bannerclick() {

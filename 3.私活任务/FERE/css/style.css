@@ -1461,11 +1461,16 @@ body {
 }
 .follow .cont .right .btn{
   background-color: #65add5;
-  color: #fff
+  color: #fff;
+  width: 58px;
+}
+.follow .cont .right .btn.gz{
+  background-color: #fff;
+  color: #65add5;
 }
 .follow .homemain-down{
   margin-left: 23px;
-  width: 90%;
+  width: 80%;
 }
 .follow .cont .top{
   padding: 2% 0;
@@ -1504,7 +1509,7 @@ body {
 .follow .head p{
   text-align: center;
   float: left;
-  width: 30%
+  width: 28%
 }
 .xc-homepage .home-main li{
   margin-bottom: 0px;
@@ -1546,6 +1551,144 @@ body {
   font-size: 16px;
   bottom: 5px;
   text-align: center;
+}
+/*chat*/
+.chat-titile{
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0px 0px;
+}
+/*品牌*/
+.brand-items{
+  position: fixed;
+  left :0px;
+  bottom: 0px;
+  width: 92%;
+  padding: 0 4%;
+  bottom:0px;
+  display: flex;
+  background-color: #fff;
+}
+.brand-items div{
+  flex: 1;
+  text-align:center;
+  border-bottom: 2px solid #fff;
+  line-height: 40px;
+  font-size: 16px;
+  color: #999;
+}
+.brand .pro-list>div{
+  display: none;
+}
+.brand .pro-list>div.active{
+  display: block;
+}
+.brand-items div.active{
+  border-bottom: 2px solid #666;
+}
+.brand .list-1 .group{
+  display: flex;
+}
+.brand .list-1 .group div{
+  flex: 1;
+}
+.brand .list-2-2{
+  position: relative;
+}
+.brand .list-2-2 p{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: #fff;
+  text-decoration: underline;
+}
+.brand .list-2-2 p img{
+  width: 10px;
+  margin-right: 10px;
+}
+.brand .main{
+  padding-bottom: 42px;
+}
+.brand .list-2{
+  background-color: #ccc;
+}
+.brand .list-2>div{
+  margin-bottom: 10px;
+}
+.brand .list-2>div:last-child{
+  margin-bottom: 0px;
+}
+.brand .list-3-movie .movie{
+  position: relative;
+}
+.brand .list-3-movie .movie a{
+  position: absolute;
+  bottom: 42%;
+  right: 10%;
+  display: block;
+  width: 20%;
+}
+.brand .list-3-movie>div{
+  display: none;
+}
+.brand .list-3-movie>div.active{
+  display: block;
+}
+.brand .list-3-2{
+  padding:14% 4%;
+}
+.brand-item .brand-conent{
+  text-align: center;
+}
+.brand-item .brand-conent h3{
+  margin-top: 20px;
+}
+.brand-item .brand-conent>div{
+  margin-bottom: 20px;
+}
+.brand-item .brand-conent h3 img{
+  width: 30%;
+}
+.brand-item .brand-item-1{
+  position: relative;
+}
+.brand-item .brand-item-1 .btn{
+  position: absolute;
+  width: auto;
+  padding: 4px 10px;
+  background-color: #fff;
+  border: 1px solid #8cbbfa;
+  color: #8cbbfa;
+  left: 4%;
+  bottom: 30%;
+}
+.brand .brand-list-group{
+  position: relative;
+}
+.brand .brand-list-group>a{
+  display: none;
+}
+.brand .brand-list-group>a.active{
+  display: block;
+}
+.brand .brand-list-group li{
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.brand .brand-list-group li.active{
+  background-color: #ccc;
+}
+.brand .brand-list-group ul{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -40px;
 }
 /* 音乐类和动画模板 */
 #audio_btn {
