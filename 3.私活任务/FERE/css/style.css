@@ -302,10 +302,45 @@ body {
 }
 .xc-homepage .home-main {
   padding: 5% 5%;
-  width: 75%;
+  width: 80%;
+}
+.xc-homepage .bj{
+  width: auto;
+  font-size: 12px;
+  position: absolute;
+  padding:4px 12px;
+  z-index: 99999;
+  border-radius: 0px;
+  top: 10%;
+  right: 4%;
 }
 .xc-homepage .home-main li {
   margin-bottom: 2%;
+  position: relative;
+}
+.xc-homepage .home-main li .bj{
+  right: 0px;
+  top: 13px;
+}
+.xc-homepage .home-main li .bj.wc{
+  color: #fff;
+  background-color: #ccc;
+}
+.xc-homepage .home-top{
+  position: relative;
+}
+.xc-homepage .home-top a{
+  position: absolute; 
+  width: 5%;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.xc-homepage .home-top .search{
+  right: 0px;
+}
+.xc-homepage .home-top .img{
+  width: 8%;
 }
 .xc-homepage .home-main .homemain-top {
   line-height: 50px;
@@ -330,7 +365,6 @@ body {
   color: #fff;
 }
 .xc-homepage .main-down-left {
-  margin-top: 2%;
   float: left;
   width: 42%;
 }
@@ -341,7 +375,6 @@ body {
   background-color: #65add5;
 }
 .xc-homepage .main-down-right {
-  margin-top: 2%;
   float: right;
   width: 54%;
 }
@@ -355,7 +388,6 @@ body {
   width: 100%;
   bottom: 0;
   font-weight: 200;
-  padding: 1%;
   text-indent: 5%;
 }
 .xc-homepage .home-main .homemain-top span {
@@ -368,6 +400,8 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
+  display: block;
+  z-index: 2;
 }
 @media screen and (max-width: 400px) {
   .xc-homepage .bannerlist p {
@@ -711,6 +745,807 @@ body {
   -webkit-animation-name: "ani-sidebar";
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
+}
+/*新登录页面开始*/
+/*header*/
+.sign-in .bottom{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 20%;
+  z-index: 999;
+}
+.sign-in .header{
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 92%;
+  margin: 0 auto;
+  padding: 2% 4%;
+  border-bottom: 1px solid #ccc;
+}
+.sign-in .header .img{
+  width: 9%;
+}
+.sign-in .header a{
+  position:  absolute;
+  display: inline-block;
+  width: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sign-in .header .return {
+  left : 4%;
+}
+.sign-in .header .search {
+  right : 4%;
+}
+/*content*/
+.sign-in .content {
+  line-height: 40px;
+  font-size: 40px;
+}
+.sign-in .content h3{
+  text-align: center;
+  margin: 26% 0 8% 0;
+}
+.sign-in .content a{
+  font-size: 14px;
+  line-height: 14px;
+  display: inline-block;
+  color: #000;
+}
+.sign-in .content p{
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 15%;
+}
+.sign-in .content input{
+  width: 60%;
+  display: block;
+  margin: 3% auto;
+  border: none;
+  background: none;
+  text-align: center;
+  color: #000;
+  font-size: 26px;
+  line-height: 46px;
+  border-bottom: 1px solid #ccc;
+}
+.sign-in .content input[type="button"] {
+  border: 1px solid #000;
+  border-radius: 40px;
+  
+}
+/*登陆2*/
+.sign-in .interest{
+  width: 92%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.sign-in .interest h3{
+  font-size: 24px;
+  line-height: 40px;
+  font-family: "HiraginoSansGB W3";
+  text-align: center;
+  margin: 2% auto 4%;
+}
+.sign-in .interest ul{
+  width: 110%;
+  overflow: hidden;
+}
+.sign-in .interest li img{
+  border-radius: 4px;
+}
+.sign-in .interest li{
+  font-size: 18px;
+  line-height: 48px;
+  width: 26%;
+  float: left;
+  text-align: center;
+  margin-right: 6%;
+}
+.sign-in .interest li a{
+  color: #000;
+}
+/*登陆3*/
+.sign-in .header .search.and{
+  width: 14%;
+  color: #000;
+  font-size: 14px;
+  right: 4%;
+  text-align: right;
+}
+.sign-in .mess h3{
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  margin:2% 0 5%;
+}
+.sign-in .head{
+  overflow: hidden;
+  width: 92%;
+  padding: 0 4% 2%;
+  border-bottom: 1px solid #ccc;
+}
+.sign-in .head input[type="file"]{
+  display: none;
+}
+.sign-in .head span{
+  display: block;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ccc;
+  border-radius: 45px;
+  float: left;
+  overflow: hidden;
+}
+.sign-in .head .btn{
+  float: left;
+  width: 70px;
+  padding: 2px 5px;
+  border-radius: 0px;
+  margin:20px 0px 0px 20px;
+  text-align: center;
+}
+.sign-in .down .p{
+  width: 92%;
+  padding: 0 4%;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  font-size: 22px;
+  overflow: hidden;
+}
+.sign-in .down .p input{
+  border: none;
+  width: 40%;
+}
+.sign-in .down .left,
+.sign-in .down .right{
+  width: 50%;
+  float: left;
+}
+.sign-in .down .left.td{
+  width: 100%;
+}
+.sign-in .down .left.td input{
+  width: 70%;
+}
+.sign-in .down .right .btn.no{
+  background-color: #ccc;
+}
+.sign-in .down .right .btn{
+  width: 15%;
+  padding: 5px 0px;
+  margin: 7px 10px 0px 0px;
+  display: block;
+  float: left;
+}
+.sign-in .down .right a{
+  display: block;
+  width: 5%;
+}
+.sign-in .down .right a img{
+   vertical-align:baseline;
+}
+/*登陆4*/
+.sign-in .header.no{
+  border: none;
+}
+.sign-in .inserlist h3{
+  text-align: center;
+  font-size: 30px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  padding: 6% 0 4%;
+}
+.sign-in .cont .left,
+.sign-in .cont .right{
+  float: left;
+  width: 30%;
+}
+.sign-in .cont .left {
+  width: 70%;
+  font-size: 14px;
+  line-height: 22px;
+}
+.sign-in .cont .left .from{
+  color: #ccc;
+}
+.sign-in .cont .left a span{
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 45px;
+}
+.sign-in .cont .left a{
+  float: left;
+  margin-right: 10px;
+}
+.sign-in .cont .right .btn{
+  font-size: 12px;
+  border: 1px solid #65add5;
+  color: #65add5;
+  background:none;
+  padding: 5px 10px;
+  width: auto;
+  float: right;
+  display: block;
+  margin-top: 12px;
+}
+.sign-in .cont li{
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  width: 92%;
+  padding: 1% 4%;
+}
+.sign-in .cont .top{
+  overflow: hidden;
+}
+.sign-in .cont .down{
+  margin: 4px 50px;
+}
+.sign-in .cont .down .nr{
+  width: 106%;
+  overflow: hidden;
+}
+.sign-in .cont .down a img{
+  float: left;
+}
+.sign-in .cont .down a{
+  width: 27.3%;
+  display: inline-block;
+  margin-right: 6%;
+  float: left;
+}
+/*登陆5*/
+.sign-in .content h3 img{
+  width: 40%;
+}
+.sign-in .content input.go{
+  margin-top: 25%;
+}
+/*分享页面*/
+.share-photo .header {
+  position: relative;
+}
+.share-photo .header a{
+  position: absolute;
+  top: 40px;
+  left: 4%;
+  display: block;
+  width: 5%;
+}
+.share-photo .content{
+  background-color: #ccc;
+}
+.share-photo .self{
+  background-color: #fff;
+  width: 92%;
+  padding: 4% 4%;
+  line-height: 40px;
+  margin-bottom: 2%;
+}
+.share-photo .head{
+  color: #ccc;
+  font-size: 16px;
+}
+.share-photo .head img{
+  width: 40px;
+}
+.share-photo .head span{
+  margin: 0px 8px;
+}
+.share-photo .head img.good{
+  width: 30px;
+  margin-left: 15px;
+}
+.share-photo .body{
+  font-size: 18px;
+  line-height: 36px;
+  word-wrap:break-word; 
+  word-break:normal;
+}
+.share-photo .body a{
+  color: #000;
+  text-decoration: underline;
+}
+.share-photo .outer{
+  background-color: #fff;
+  width: 92%;
+  padding: 4% 4%;
+  margin-bottom: 2%;
+}
+.share-photo .outer-head img{
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  float: left;
+  margin-right: 2%;
+}
+.share-photo .outer-head span{
+  font-size: 20px;
+  line-height:  45px;
+}
+.share-photo .outer-head .btn{
+  float: right;
+  width: 20%;
+  border: 1px solid #65add5;
+  color: #65add5;
+  background:none;
+  padding: 2% 0px;
+  margin-top:2px;
+}
+.share-photo .outer-body{
+  overflow: hidden;
+  padding: 5% 0% 0%;
+}
+.share-photo .sayhead{
+  line-height: 45px;
+  font-size: 24px;
+  overflow: hidden;
+}
+.share-photo .sayhead img{
+  width: 30px;
+  margin-left: 4%; 
+  margin-top: -10px;
+}
+.share-photo .say-left{
+  float: left;
+  width: 30%;
+}
+.share-photo .say-right{
+  float: right;
+  width: 70%;
+  text-align: right;
+}
+.share-photo .say-right img{
+  width: 40px;
+  margin-top: -3px;
+}
+.share-photo .say-right .btn,
+.gz{
+  width: 20%;
+  float: right;
+  border: 1px solid #65add5;
+  color: #65add5;
+  background:none;
+  padding: 6px 0px;
+  margin-top: 7px;
+  margin-left: 2%;
+}
+.share-photo .saybody{
+  font-size: 16px;
+  line-height: 30px;
+  color: #ccc;
+}
+.share-photo .saybody span{
+  margin: 0px 5px;
+  color: #000;
+}
+.share-photo .rec-head{
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 60px;
+}
+.share-photo .rec-head h4{
+  float: left;
+  color: #ccc;
+}
+.share-photo .recommend{
+  overflow: hidden;
+  width: 92%;
+  padding: 0% 4%;
+  background-color: #fff;
+}
+.share-photo .rec-head a{
+  float: right;
+  color: #000;
+}
+.share-photo .rec-body{
+  overflow: hidden;
+  padding-bottom: 4%;
+}
+.share-photo .rec-body li{
+  width: 33.3333%;
+  float: left;
+}
+.share-photo .rec-body ul{
+  width: 106%;
+}
+.share-photo .rec-body li img{
+  width: 80%;
+}
+/*share-up*/
+.share-up li{
+  margin-bottom: 2%;
+}
+.share-up .return {
+ position: absolute;
+ width: 5%;
+ left: 4%;
+ top: 40px;
+ display: block;
+ z-index: 999;
+}
+/*share-comment 评论页面*/
+.share-comment .header{
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  padding-top: 2%;
+}
+.share-comment .header a{
+  position: absolute;
+  width: 5%;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+  display: block;
+}
+.share-comment .content{
+  overflow: hidden;
+  line-height: 40px;
+}
+.share-comment .head{
+  overflow: hidden;
+  color: #000;
+}
+.share-comment .head a{
+  color: #000;
+}
+.share-comment .content li{
+  width: 92%;
+  padding:2% 4%;
+  border-bottom: 1px #ccc solid;
+}
+.share-comment .head p{
+  float: right;
+  color: #ccc;
+}
+.share-comment .head img{
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.share-comment .body{
+  margin: 0px 50px;
+  color:#988F8F;
+}
+.share-comment .body p span{
+  margin: 0 5px;
+  color: #000;
+}
+/*个人信息*/
+.per-infor .infor-img h3{
+  text-align: center;
+  width: 92%;
+  padding: 0 4%;
+  position: relative;
+  margin-top: -30px;
+}
+.per-infor .infor-img h3 img{
+  width: 60px;
+  border-radius: 60px;
+  border:3px solid #fff;
+}
+.per-infor .infor-img h3 .gz{
+  position: absolute;
+  bottom: 0px;
+  right: 4%;
+  width: 15%;
+}
+.per-infor .infor-img p{
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  line-height: 30px;
+}
+.per-infor .infor-img p img{
+  width: 15px;
+  margin-left: 5px;
+}
+.per-infor .infor-img p a{
+  color: #000;
+}
+.per-infor .infor-img p.res{
+  color: #666;
+}
+.per-infor .infor-cont{
+  overflow: hidden;
+  width: 92%;
+  padding: 2% 4% 10%;
+}
+.per-infor .infor-cont li{
+  width: 50%;
+  float: left;
+  overflow: hidden;
+  line-height: 40px;
+  font-size: 16px;
+  color: #666;
+}
+.per-infor .infor-cont li span{
+  margin-right: 5px;
+}
+.per-infor .infor-cont li.block{
+  overflow: hidden;
+  width: 100%;
+}
+.per-infor .infor-cont .gift{
+  position: relative;
+}
+.per-infor .infor-cont .gift .gz{
+  margin-top: 0px;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 17%;
+}
+.per-infor .infor-cont .gift img{
+  width: 20%;
+}
+.per-infor-edit .infor-edit{
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  overflow: hidden;
+  width: 92%;
+  padding: 0 4%;
+}
+.per-infor-edit .infor-edit span{
+  float: right;
+}
+.per-infor-edit .infor-cont li input{
+  border:none;
+  width: 60%;
+  color: #666;
+  font-size: 16px;
+  vertical-align: middle;
+  line-height: 21px;
+  margin-top: -3px;
+}
+.per-infor-edit .infor-cont li textarea{
+  width: 100%;
+  color: #666;
+}
+/*personal-gift*/
+.gift .home-warp {
+  border-bottom: 1px solid #ccc;
+}
+.gift .gift-conent{
+  width: 92%;
+  padding: 2% 4%;
+  overflow: hidden;
+}
+.gift .gift-num{
+  overflow: hidden;
+}
+.gift .gift-conent img{
+  float: left;
+  width: 100px;
+}
+.gift .gift-conent div{
+  overflow: hidden;
+  padding: 2% 0px;
+  line-height: 70px;
+  font-size: 14px;
+}
+.gift .gift-conent .div .btn{
+  width: auto;
+  padding: 4px 10px;
+  margin-top: 20px;
+}
+.gift .gift-conent .div .gift-name{
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+}
+.gift .gift-num p{
+  font-size: 16px;
+  line-height: 24px;
+}
+.gift .gift-num p.margin{
+  margin-top: 19px;
+}
+.gift .gift-num p a{
+  float: right;
+  color: #000;
+  text-decoration: underline;
+}
+.gift .gift-conent .div br{
+  display: none;
+}
+@media screen and (max-width: 450px) {
+  .gift .gift-conent .div br{
+    display: inline-block;
+  }
+  .gift .gift-conent .div{
+    line-height: 35px;
+  }
+  .gift .gift-conent .div{
+    text-align: right;
+  }
+  .gift .gift-conent .div .btn{
+    margin-top: 0px;
+  }
+}
+.gift .gift-dic {
+  font-size: 14px;
+  text-align: center;
+  padding: 2%;
+  border-bottom: 1px solid #ccc;
+}
+.gift .gift-record{
+  padding: 0% 4%;
+}
+.gift .gift-record h4{
+  font-size: 18px;
+  padding: 2% 0;
+}
+.gift .gift-record h4 img{
+  width: 14px;
+  margin-left: 5px;
+}
+.gift .gift-record p{
+  font-size: 14px;
+  color: #666;
+  padding: 2% 0px;
+}
+.gift .gift-record p span.name{
+  margin-left: 0px;
+}
+.gift .gift-record p span{
+  margin: 0 5px;
+}
+/*商城*/
+.market .gift-conent .div input.btn{
+  width: 40px;
+}
+.market .gift-conent .div span img{
+  width: 10px;
+  float: none;
+  vertical-align: baseline;
+  margin-left: 2px;
+}
+.market .gift-num h4{
+  font-size: 24px;
+  font-weight: 600;
+  text-indent: 20px;
+}
+.market .gift-dic{
+  border: none;
+  font-size: 16px;
+}
+.market .gift-dic a{
+  color: #000;
+  text-decoration: underline;
+}
+/*personal-messgae*/
+#message li{
+  padding: 4% 4% 2% 4%;
+  width: 92%;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  line-height: 25px;
+}
+#message{
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+#message li img{
+  float: left;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+#message li .time{ 
+  float: right;
+}
+#message li .say{
+  color: #666;
+}
+/*follow*/
+.follow .home-main{
+  width: 92%;
+  padding: 0% 4% 5%;
+}
+.follow  .cont li{
+  border: none;
+}
+.follow .cont .right .btn{
+  background-color: #65add5;
+  color: #fff
+}
+.follow .homemain-down{
+  margin-left: 23px;
+  width: 90%;
+}
+.follow .cont .top{
+  padding: 2% 0;
+}
+.follow-say{
+  font-size: 30px;
+  padding: 4% 0px 2%;
+  text-align: center;
+}
+.follow .head span{
+  display: inline;
+  border: none;
+  float: none;
+  margin: 0 0.5%;
+}
+.follow .head{
+  border: none;
+}
+.follow .head img{
+  width: 18%;
+  margin: 0 0.5%;
+}
+.follow .head img.good{
+  width: 18%;
+  margin-left: 0px;
+}
+.follow .cont li{
+  width: 100%;
+  padding: 1% 0px;
+}
+.follow .head{
+  width: 100%;
+  padding: 2% 0px;
+  padding-left: 23px;
+}
+.follow .head p{
+  text-align: center;
+  float: left;
+  width: 30%
+}
+.xc-homepage .home-main li{
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 450px) {
+  .follow .head span{
+    font-size: 12px;
+  }
+}
+/*follow-list*/
+.follow .item{
+  overflow: hidden;
+}
+.follow .item div{
+  width: 16.66%;
+  float: left;
+}
+/*start1*/
+.start img{
+  width: 40%;
+  display: block;
+  margin: 30% auto;
+}
+.start div p{
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  background-color:#fff;
+  padding:0px 4px;
+}
+.start div hr{
+  position: relative;
+  top: -20px;
+}
+.start div{
+  position: absolute;
+  width: 100%;
+  line-height: 40px;
+  font-size: 16px;
+  bottom: 5px;
+  text-align: center;
 }
 /* 音乐类和动画模板 */
 #audio_btn {

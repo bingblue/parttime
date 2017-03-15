@@ -37,6 +37,15 @@ $(function() {
 	$(".home .btn-close").click(function(){
 		$(".home").removeClass('menu-on');
 	});
+	// 完善信息 
+	$("#headbtn").click(function(event) {
+		$("#headfile").click();
+	});
+	// 完善信息男女切换
+	$("#reManwomen .btn").click(function(){
+		$(this).parent().siblings('.left').find('span').text($(this).val());
+		$(this).removeClass('no').siblings().addClass('no');
+	});
 });
 
 function bannerclick() {
@@ -52,10 +61,10 @@ function bannerclick() {
 	}, 5000);
 
 	function margin(num) {
-		$(".banner").children().eq(num).fadeIn(200).css({
+		$(".banner").children("div").eq(num).fadeIn(200).css({
 			position: 'relative',
 			zIndex: 1
-		}).siblings().fadeOut(200).css({
+		}).siblings("div").fadeOut(200).css({
 			position: 'absolute',
 			zIndex: 1
 		});
