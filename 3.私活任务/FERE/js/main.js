@@ -75,7 +75,10 @@ $(function() {
 			$(".brand .brand-list-group ul>li").removeClass('active').eq($num).addClass('active');
 		},3000)
 	})();
-
+	// 消息关闭
+	$(".pre-message .close").click(function(event) {
+		$(this).parents(".mark").fadeOut('slow');
+	});
 	//返回事件
 	$('.return').click(function(){
 		history.go(-1);
