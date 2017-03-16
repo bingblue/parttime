@@ -850,11 +850,12 @@ body {
 }
 /*登陆3*/
 .sign-in .header .search.and{
-  width: 14%;
+  width: auto;
   color: #000;
   font-size: 14px;
   right: 4%;
   text-align: right;
+  display: inline-block;
 }
 .sign-in .mess h3{
   font-size: 24px;
@@ -1689,6 +1690,40 @@ body {
   bottom: 20px;
   left: 50%;
   margin-left: -40px;
+}
+/*上传须知*/
+.upload .header.no{
+  border-bottom: 1px solid #ccc;
+}
+.upload .header{
+  position: fixed;
+  top: 0px;
+  padding:10px  4%;
+  background-color: #fff;
+}
+.upload.sign-in .header img{
+  width: 30px;
+}
+.upload .return img{
+  width: 13px;
+}
+.upload-img {
+  margin-top: 63px;
+}
+.upload-content{
+  width: 92%;
+  padding:  0px 4% 60px;
+}
+.upload-content h3{
+  font-size: 16px;
+  font-weight: 600;
+  line-height : 40px;
+  padding : 5px 0px;
+}
+.upload-content p{
+  font-size: 14px;
+  line-height: 30px;
+   padding : 3px 0px;
 }
 /* 音乐类和动画模板 */
 #audio_btn {
