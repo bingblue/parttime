@@ -34,8 +34,12 @@ $(function() {
 	$(".btn-menu").click(function(){
 		$(".home").addClass('menu-on');
 	});
-	$(".home .btn-close").click(function(){
+	$(".home .btn-close,.mask-home").click(function(){
 		$(".home").removeClass('menu-on');
+	});
+	//注册步骤
+	$('#reg').click(function(){
+		location.href = 'reg1.html';
 	});
 	// 完善信息 
 	$("#headbtn").click(function(event) {

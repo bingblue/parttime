@@ -420,6 +420,7 @@ body {
   height: 100%;
   background-color: rgba(0,0,0,0.6);
   z-index: 2;
+  display: none;
 }
 .xc-home .wrap {
   overflow: hidden;
@@ -494,7 +495,7 @@ body {
   overflow: hidden;
 }
 .xc-home .home-main ul>li {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background-color: #f2f2f2;
 }
 .xc-home .home-main li h2 {
@@ -768,12 +769,13 @@ body {
 .sign-in .header a{
   position:  absolute;
   display: inline-block;
-  width: 3%;
+  width: 8%;
   top: 50%;
+  left : 4%;
   transform: translateY(-50%);
 }
 .sign-in .header .return {
-  left : 4%;
+  width: 3%;
 }
 .sign-in .header .search {
   right : 4%;
@@ -798,7 +800,8 @@ body {
   text-align: center;
   margin-bottom: 15%;
 }
-.sign-in .content input{
+.sign-in .content input,
+.sign-in .content .input-reg{
   width: 60%;
   display: block;
   margin: 3% auto;
@@ -812,8 +815,11 @@ body {
 }
 .sign-in .content input[type="button"] {
   border: 1px solid #000;
-  border-radius: 40px;
-  
+}
+.sign-in .content .input-reg{
+  color: #fff;
+  border: 1px solid #000;
+  background: #000;
 }
 /*登陆2*/
 .sign-in .interest{
@@ -2188,6 +2194,23 @@ audio {
 .sreach-history{
   background-color: #f2f2f2;
 }
+
+/* xiaomu update home.html */
+.mask-home{
+  position: absolute;
+  width: 30%;
+  height: 80%;
+  top: 0;
+  margin-right: -7%;
+  right: 0;
+}
+.sign-in .header a.next{
+  color: #000;
+  right: 4%;
+  width: auto;
+  text-align: right;
+  font-size: 14px;
+}
 .music-ani {
   -webkit-transform-origin: 50% 50%;
   animation-timing-function: linear; /*linear,ease,ease-in,ease-in-out,ease-out*/
@@ -2221,10 +2244,10 @@ audio {
 
 @-webkit-keyframes ani-menu {
   0% {
-    transform:scale(1) translate(0px);
+    transform:translate(0px);
   }
   100% {
-    transform:scale(0.6) translate(95%,0);
+    transform:translate(78%,160px);
   }
 }
 

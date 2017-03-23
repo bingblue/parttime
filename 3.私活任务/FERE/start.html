@@ -17,16 +17,13 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="xc-start">
-	<div class="wrap">
-	  <img src="img/start-bg.jpg" alt="背景" id="start-bg">
-	  <div class="main">
-	  	<!--  <a href="javascript:;" id="start-a"><img src="img/start-a.png" alt="开始"></a> -->
-	  	 <div class="start-footer">
-	  	 	<p>A New<br>Fashion Sharing Platform<br>一个新的服装共享平台</p>
-	  	 </div>
-	  </div>
+	<div class="wrap loading">
+		<img src="img/start-bg.jpg" alt="背景">
 	</div>
-	<script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/main.js"></script>
+	<script>
+		setTimeout(function(){
+			location.href = "home.html";
+		},4000);
+	</script>
 </body>
 </html>
