@@ -37,6 +37,13 @@ $(function() {
 	$(".home .btn-close,.mask-home").click(function(){
 		$(".home").removeClass('menu-on');
 	});
+	//home-menu-on 菜单
+	$(".home-menu-on").click(function(){
+		$(".home-menu").show();
+	});
+	$(".close-home-menu").click(function(){
+		$(".home-menu").hide();
+	});
 	//注册步骤
 	$('#reg').click(function(){
 		location.href = 'reg1.html';

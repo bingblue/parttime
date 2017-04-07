@@ -16,18 +16,42 @@
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="xc-homepage gift">
-	<div class="wrap">
-	  <a href="javascript:;" id="homepage-bg"><img src="img/mess.png" alt="消息" ></a>
-	  <div class="main">
-	  <div class="home-warp">
-	  	<div class="home-top">
-			<a href="javascript:;" class="return"><img src="img/return.png" alt="返回"></a>
-			<img src="img/home-bg.png" class="img" alt="图标">
-			<a href="javascript:;" class="search"><img src="img/search.png" alt="搜索"></a>
+<body class="xc-homepage gift xc-home">
+	<div class="wrap home">
+		<div class="sidebar">
+		<a href="javascript:;" class="btn-close"><img src="img/close.png"></a>
+		<ul>
+			<li>
+			<a href="personal-message.html">我的消息<span>20</span></a>
+			</li>
+			<li>
+			<a href="follow-list.html">我的关注</a>
+			</li>
+			<li>
+			<a href="personal.html">个人主页</a>
+			</li>
+			<li>
+			<a href="history-list.html">历史浏览</a>
+			</li>
+			<li>
+			<a href="personal-info.html">设置</a>
+			</li>
+			<li>
+			<a href="javascript:;">help</a>
+			</li>
+		</ul>
+		<div class="mask-home"></div>
+		<div class="login-group">
+			<a href="login.html" class="btn-login">登入</a>
+			<a href="javascript:;" class="btn-logout">退出</a>
 		</div>
 	  </div>
-	  <h5 class="chat-titile">消息</h5>
+	  <div class="main">
+		<div class="home-h1">
+			<a href="javascript:;" class="btn-menu"><img src="img/menu.png" alt="菜单"></a>
+			<img src="img/home-bg.png" alt="图标" class="bg">
+			<a href="search.html" class="right"><img src="img/search.png" alt="搜索"></a>
+		</div>
 	  <div id="message">
 	  	<ul>
 	  	  <li>
@@ -67,6 +91,7 @@
 	  	  </li>
 	  	</ul>
 	  </div>
+	  <a href="javascript:;" id="homepage-bg"><img src="img/mess.png" alt="消息" ></a>
 	  </div>
 	</div>
 	<script src="js/jquery-2.1.4.min.js"></script>

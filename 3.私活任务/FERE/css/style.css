@@ -430,7 +430,7 @@ body {
   left: -100%;
   width: 95%;
   height: 100%;
-  z-index: 2;
+  z-index: 10;
 }
 .xc-home .sidebar li a {
   display: block;
@@ -470,7 +470,7 @@ body {
   float: left;
 }
 .xc-home .home-h1 {
-  overflow: hidden;
+  /*overflow: hidden; 和homemenuon冲突*/
   text-align: center;
   position: relative;
   width: 94%;
@@ -494,11 +494,11 @@ body {
   background-color: #c5c5c5;
   overflow: hidden;
 }
-.xc-home .home-main ul>li {
+.xc-home .home-main>ul>li {
   margin-bottom: 10px;
   background-color: #f2f2f2;
 }
-.xc-home .home-main li h2 {
+.xc-home .home-main>ul li h2 {
   position: relative;
   font-size: 300%;
   line-height: 200%;
@@ -508,7 +508,7 @@ body {
   font-weight: 600;
   background-color: #f2f2f2;
 }
-.xc-home .home-main li h2 img {
+.xc-home .home-main>ul li h2 img {
   position: absolute;
   right: 3%;
   width: 8%;
@@ -2207,10 +2207,62 @@ audio {
 .sign-in .header a.next{
   color: #000;
   right: 4%;
-  width: auto;
+  left: auto;
   text-align: right;
   font-size: 14px;
 }
+
+/* add home.html --> homeMenu */
+.home-main{
+  position: relative;
+}
+.home-menu-on{
+  position: absolute;
+  width: 10%;
+  left: 45%;
+  z-index: 99;
+  top: 100%;
+}
+.home-menu{
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.home-menu .menutop{
+  display: inline-block;
+}
+.home-menu .menutop li{
+  float: left;
+  width: 6.3%;
+  padding: 6px 3%;
+  margin-top: 15px;
+  border-right: 1px solid #fff;
+}
+.home-menu .menutop li:last-child{
+  border-right: 0;
+}
+.home-menu .menumiddle li{
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+  color: #fff;
+  font-size: 28px;
+}
+.home-menu .menumiddle li>a{
+  border-radius: 50%;
+  background: #30b3ed;
+  padding: 25px 15px;
+  display: inline-block;
+  color: #fff;
+  font-size: 28px;
+}
+
+
+
 .music-ani {
   -webkit-transform-origin: 50% 50%;
   animation-timing-function: linear; /*linear,ease,ease-in,ease-in-out,ease-out*/
