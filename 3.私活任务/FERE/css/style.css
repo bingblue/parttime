@@ -397,11 +397,47 @@ body {
 }
 .xc-homepage #homepage-bg {
   width: 18%;
+  height: 10%;
   position: fixed;
   right: 0;
   bottom: 0;
   display: block;
   z-index: 2;
+  background-size: 100%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+.xc-homepage #homepage-bg li{
+    display: block;
+    width: 100%;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    position: absolute;
+    padding:10px 0;
+    top: 50%;
+    margin-top: -2px;
+    transform-origin: right bottom;
+    transform: rotate(0deg);
+}
+.xc-homepage #homepage-bg li.sed{
+    transform: rotate(90deg);
+}
+.xc-homepage #homepage-bg li a{
+    display: block;
+    width: auto;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 40%;
+}
+.xc-homepage #homepage-bg.off{
+  background-image: url('../img/rdmenu_off.png');
+}
+.xc-homepage #homepage-bg.off li{
+  display: none;
+}
+.xc-homepage #homepage-bg.on{
+  background-image: url('../img/rdmenu_on.png');
 }
 @media screen and (max-width: 400px) {
   .xc-homepage .bannerlist p {
@@ -425,14 +461,14 @@ body {
 .xc-home .wrap {
   overflow: hidden;
 }
-.xc-home .sidebar {
+.sidebar {
   position: fixed;
   left: -100%;
   width: 95%;
   height: 100%;
   z-index: 10;
 }
-.xc-home .sidebar li a {
+.sidebar li a {
   display: block;
   width: 100%;
   text-align: center;
@@ -440,7 +476,7 @@ body {
   line-height: 300%;
   color: #000;
 }
-.xc-home .sidebar li a span {
+.sidebar li a span {
   position: absolute;
   font-size: 14px;
   line-height: 14px;
@@ -452,7 +488,7 @@ body {
   margin-top: 25px;
   margin-left: 5px;
 }
-.xc-home .sidebar .out-in {
+.sidebar .out-in {
   color: #000;
   margin: 0 auto;
   margin-top: 100px;
@@ -462,14 +498,14 @@ body {
   line-height: 10px;
   font-size: 200%;
 }
-.xc-home .sidebar .out-in img {
+.sidebar .out-in img {
   margin-bottom: 5px;
 }
 .xc-home .main {
   position: relative;
   float: left;
 }
-.xc-home .home-h1 {
+.home-h1 {
   /*overflow: hidden; 和homemenuon冲突*/
   text-align: center;
   position: relative;
@@ -477,17 +513,17 @@ body {
   margin: 0 auto;
   padding: 2% 0;
 }
-.xc-home .home-h1 a {
+.home-h1 a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   display: block;
   width: 10%;
 }
-.xc-home .home-h1 .bg {
+.home-h1 .bg {
   width: 10%;
 }
-.xc-home .home-h1 a.right {
+.home-h1 a.right {
   right: 0px;
 }
 .xc-home .home-main>ul {
@@ -628,7 +664,7 @@ body {
   .xc-home .home-main li h2 img {
     width: 5%;
   }
-  .xc-home .sidebar li a {
+.sidebar li a {
     font-size: 180%;
     line-height: 250%;
   }
@@ -636,10 +672,10 @@ body {
     font-size: 150%;
     line-height: 280%;
   }
-  .xc-home .sidebar .out-in {
+  .sidebar .out-in {
     width: 23%;
   }
-  .xc-home .sidebar li a span {
+  .sidebar li a span {
     margin-top: 13px;
   }
   .xc-home .usergroup p {
@@ -704,7 +740,7 @@ body {
   -webkit-animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
 }
-.xc-home .sidebar ul{
+.sidebar ul{
   position: relative;
   top: 30%;
 }
@@ -1319,7 +1355,7 @@ body {
   color: #666;
 }
 /*personal-gift*/
-.gift .home-warp {
+.home-warp {
   border-bottom: 1px solid #ccc;
 }
 .gift .gift-conent{
@@ -2210,6 +2246,7 @@ audio {
   left: auto;
   text-align: right;
   font-size: 14px;
+  width: auto;
 }
 
 /* add home.html --> homeMenu */
@@ -2237,7 +2274,7 @@ audio {
 }
 .home-menu .menutop li{
   float: left;
-  width: 6.3%;
+  width: 6.2%;
   padding: 6px 3%;
   margin-top: 15px;
   border-right: 1px solid #fff;
@@ -2248,14 +2285,14 @@ audio {
 .home-menu .menumiddle li{
   width: 100%;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 20px;
   color: #fff;
   font-size: 28px;
 }
 .home-menu .menumiddle li>a{
   border-radius: 50%;
   background: #30b3ed;
-  padding: 25px 15px;
+  padding: 23px 12px;
   display: inline-block;
   color: #fff;
   font-size: 28px;
@@ -2309,5 +2346,37 @@ audio {
   }
   100% {
     transform:translate(105.27%,0);
+  }
+}
+.rdmenuItemOut{
+  -webkit-animation-timing-function: linear;/*linear,ease,ease-in,ease-in-out,ease-out*/
+  -webkit-animation-name: "ani-rdmenuItemOut"; /*动画属性名，也就是我们前面keyframes定义的动画名*/
+  -webkit-animation-duration: 1s; /*动画持续时间*/
+  -webkit-animation-delay: 0s; /*动画延迟时间*/
+  -webkit-animation-iteration-count: 1; /*定义循环资料，infinite为无限次*/
+  -webkit-animation-fill-mode: forwards; /* forwards 固定在最后一帧| backwards 固定在第一帧*/
+}
+@-webkit-keyframes ani-rdmenuItemOut {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(-90deg);
+  }
+}
+.rdmenuItemIn{
+  -webkit-animation-timing-function: linear;/*linear,ease,ease-in,ease-in-out,ease-out*/
+  -webkit-animation-name: "ani-rdmenuItemIn"; /*动画属性名，也就是我们前面keyframes定义的动画名*/
+  -webkit-animation-duration: 1s; /*动画持续时间*/
+  -webkit-animation-delay: 0s; /*动画延迟时间*/
+  -webkit-animation-iteration-count: 1; /*定义循环资料，infinite为无限次*/
+  -webkit-animation-fill-mode: forwards; /* forwards 固定在最后一帧| backwards 固定在第一帧*/
+}
+@-webkit-keyframes ani-rdmenuItemIn {
+  0% {
+    transform:rotate(90deg);
+  }
+  100% {
+    transform:rotate(0deg);
   }
 }

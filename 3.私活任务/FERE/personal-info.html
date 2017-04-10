@@ -1,64 +1,96 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Personal-infor</title>
-<meta name="Keywords" content="">
-<meta name="Description" content="">
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
-<meta content="no-cache" http-equiv="pragma">
-<meta content="0" http-equiv="expires">
-<meta content="telephone=no, address=no" name="format-detection">
-<meta name="apple-mobile-web-app-capable" content="yes"> 
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <title>Personal-infor</title>
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+  <meta content="no-cache" http-equiv="pragma">
+  <meta content="0" http-equiv="expires">
+  <meta content="telephone=no, address=no" name="format-detection">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="xc-homepage per-infor">
-	<div class="wrap">
-	  <a href="javascript:;" id="homepage-bg"><img src="img/infor.png" alt="主页" ></a>
-	  <div class="main">
-		<div class="home-top">
-			<a href="javascript:;" class="return"><img src="img/return.png" alt="返回"></a>
-			<img src="img/home-bg.png" class="img" alt="图标">
-			<a href="javascript:;" class="search"><img src="img/search.png" alt="搜索"></a>
-		</div>
-		<div class="infor-img">
-			<img src="img/infor-img.png" alt="头图">
-			<h3>
-				<img src="img/infor-user.png" alt="用户头像">
-				<button class="btn gz">关注</button>
-			</h3>
-			<p>selly-Lo‘ok<img src="img/she.png" alt="性别"></p>
-			<p><a href="personal-info-edit.html">发消息</a></p>
-			<p class="res">
-				<span>111</span>关注&nbsp;&nbsp;&nbsp;&nbsp;
-				<span>111</span>粉丝
-			</p>
-		</div>
-		<div class="infor-cont">
-			<ul>
-				<li><span>年龄</span>24</li>
-				<li><span>体重</span>56kg</li>
-				<li><span>身高</span>173cm</li>
-				<li><span>爱好</span>吃饭、喝酒</li>
-				<li><span>所在地</span>上海</li>
-				<li><span>发型</span>短发</li>
-				<li class="block"><span>简介</span>我有一个小毛驴啊，从来也不骑</li>
-				<li class="block gift">
-					<div><img src="img/gift.png">收到的礼物总数<span>13214个</span><button class="btn gz">赠送</button></div>
-				</li>
-				
-				<li><span>微博</span>sfasadasdasda</li>
-				<li><span>淘宝</span>sfasadasdasda</li>
-				<li><span>微信</span>sfasadasdasda</li>
-			</ul>
-		</div>
-	  </div>
-	</div>
-	<script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/main.js"></script>
+  <div class="wrap home">
+    <div class="sidebar">
+      <a href="javascript:;" class="btn-close"><img src="img/close.png"></a>
+      <ul>
+        <li>
+          <a href="chat.html">我的消息<span>20</span></a>
+        </li>
+        <li>
+          <a href="follow.html">我的关注</a>
+        </li>
+        <li>
+          <a href="personal.html">个人主页</a>
+        </li>
+        <li>
+          <a href="history.html">历史浏览</a>
+        </li>
+        <li>
+          <a href="personal-info.html">设置</a>
+        </li>
+        <li>
+          <a href="javascript:;">help</a>
+        </li>
+      </ul>
+      <div class="mask-home"></div>
+      <div class="login-group">
+        <a href="login.html" class="btn-login">登入</a>
+        <a href="javascript:;" class="btn-logout">退出</a>
+      </div>
+    </div>
+    <a href="javascript:;" id="homepage-bg"><img src="img/infor.png" alt="主页"></a>
+    <div class="main">
+      <div class="home-h1">
+        <a href="javascript:;" class="btn-menu"><img src="img/menu.png" alt="菜单"></a>
+        <img src="img/home-bg.png" alt="图标" class="bg">
+        <a href="search.html" class="right"><img src="img/search.png" alt="搜索"></a>
+      </div>
+      <div class="infor-img">
+        <img src="img/infor-img.png" alt="头图">
+        <h3>
+          <img src="img/infor-user.png" alt="用户头像">
+          <button class="btn gz">关注</button>
+        </h3>
+        <p>selly-Lo‘ok<img src="img/she.png" alt="性别"></p>
+        <p><a href="personal-info-edit.html">发消息</a></p>
+        <p class="res">
+          <span>111</span>关注&nbsp;&nbsp;&nbsp;&nbsp;
+          <span>111</span>粉丝
+        </p>
+      </div>
+      <div class="infor-cont">
+        <ul>
+          <li><span>年龄</span>24</li>
+          <li><span>体重</span>56kg</li>
+          <li><span>身高</span>173cm</li>
+          <li><span>爱好</span>吃饭、喝酒</li>
+          <li><span>所在地</span>上海</li>
+          <li><span>发型</span>短发</li>
+          <li class="block"><span>简介</span>我有一个小毛驴啊，从来也不骑</li>
+          <li class="block gift">
+            <div><img src="img/gift.png">收到的礼物总数<span>13214个</span><button class="btn gz">赠送</button></div>
+          </li>
+
+          <li><span>微博</span>sfasadasdasda</li>
+          <li><span>淘宝</span>sfasadasdasda</li>
+          <li><span>微信</span>sfasadasdasda</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/jquery.mutouch.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
