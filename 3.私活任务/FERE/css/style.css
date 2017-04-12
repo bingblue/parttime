@@ -761,12 +761,15 @@ body {
 .login-group a{
   display: inline-block;
   float: left;
-  color: #000;
+  color: #ccc;
   line-height: 10px;
   font-size: 150%;
   width: 10%;
   text-align: center;
   margin: 0 20px;
+}
+.login-group a.active{
+  color: #000;
 }
 .login-group .btn-logout{
   float: right;
