@@ -2005,6 +2005,55 @@ audio {
 .tag .show-body{
   padding: 10px 45px 10px;
 }
+.list-1.tag .show-body{
+  padding: 10px 0 10px;
+} 
+.list-1.tag .show-footer,
+.list-1.tag .show-comment{
+  padding: 0 4%;
+}
+.list-1.tag .show-comment .respeak{
+  padding: 0px 10px;
+  color: #ccc;
+}
+.list-1.tag .comment-head h3{
+  font-size: 20px
+}
+.list-1.tag .reveal{
+  padding: 5px 0px;
+  color: #ccc;
+}
+.list-1.tag .reveal .des{
+  overflow: hidden;
+}
+.list-1.tag .reveal .left{
+  float: left;
+}
+.list-1.tag .reveal .right{
+  float: right;
+  color: #000
+}
+.list-1.tag .show {
+  padding: 20px 0%;
+}
+.list-1.tag .show-head{
+  padding: 0px 4%;
+}
+.list-1 .btngroup{
+  padding: 5px 0px;
+  overflow: hidden;
+}
+.list-1 .btngroup .btn{
+  display: inline-block;
+  float: right;
+  width: auto;
+  padding: 0px 5px;
+  background-color: #fff;
+  color: #a2d7fd;
+  border: #a2d7fd 1px solid;
+  text-decoration: none;
+  border-radius: 0px;
+}
 .tag .show-body .less{
   line-height: 24px;
 }
@@ -2069,11 +2118,18 @@ audio {
   float: left;
   overflow: hidden;
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
   .sreach-content .brand .brand-list li{
       width: 18%;
       margin-left: 5.6%;
- }
+   }
+  .list-1.tag .reveal .left{
+      float: none;
+  }
+  .list-1.tag .reveal .right{
+      float: none;
+      color: #000
+  }
 }
 .sreach-content .brand .brand-list li a{
   color:  #000;
