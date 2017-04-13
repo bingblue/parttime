@@ -2356,9 +2356,51 @@ audio {
   color: #fff;
   font-size: 28px;
 }
-
-
-
+/*brand-go*/
+.brand-go .shop-icon div{
+  text-align: center;
+}
+.brand-go .shop-icon {
+  padding: 10px 4%;
+  position:relative;
+}
+.brand-go .shop-icon div img{
+  width: 40%;
+  margin: 0 auto;
+}
+.brand-go .shop-icon a{
+  display: inline-block;
+  position: absolute;
+  right: 4%;
+  top : 10px;
+  width: 5%;
+}
+.brand-go .shop-img {
+  text-align: center;
+}
+.brand-go .shop h2{
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 8% 0px 10%;
+}
+.brand-go .shop  .btn-group {
+  text-align: center;
+}
+.brand-go .shop .btn{
+  width: auto;
+  padding: 0px 5px;
+  background-color: #fff;
+  border-radius: 0px;
+  border:1px solid #000;
+  color:#000;
+  margin: 0 auto;
+}
+.brand-go .shop-img img{
+  width: 80%;
+  margin: 20% 0px 0 0px;
+}
 .music-ani {
   -webkit-transform-origin: 50% 50%;
   animation-timing-function: linear; /*linear,ease,ease-in,ease-in-out,ease-out*/
