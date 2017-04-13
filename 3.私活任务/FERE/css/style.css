@@ -2017,7 +2017,9 @@ audio {
   color: #ccc;
 }
 .list-1.tag .comment-head h3{
-  font-size: 20px
+  font-size: 20px;
+  float: left;
+  background: url(../img/down.png) no-repeat 44px  center;
 }
 .list-1.tag .reveal{
   padding: 5px 0px;
