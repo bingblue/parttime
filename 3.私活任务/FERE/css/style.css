@@ -366,7 +366,7 @@ body {
 }
 .xc-homepage .main-down-left {
   float: left;
-  width: 42%;
+  width: 50%;
 }
 .xc-homepage .homemain-down .main-down-left p {
   background-color: #fcb465;
@@ -376,7 +376,7 @@ body {
 }
 .xc-homepage .main-down-right {
   float: right;
-  width: 54%;
+  width: 50%;
 }
 .xc-homepage .homemain-down>div span {
   top: 5%;
@@ -840,7 +840,8 @@ body {
   margin-bottom: 15%;
 }
 .sign-in .content input,
-.sign-in .content .input-reg{
+.sign-in .content .input-reg,
+.sign-in .content a{
   width: 60%;
   display: block;
   margin: 3% auto;
@@ -851,6 +852,19 @@ body {
   font-size: 26px;
   line-height: 46px;
   border-bottom: 1px solid #ccc;
+}
+.sign-in .content a.signin{
+  margin-top: 25%;
+}
+.sign-in .content a.signin,
+.sign-in .content a.signup{
+  color: #000;
+  border: 1px solid #000;
+}
+.sign-in .content a.signin:hover,
+.sign-in .content a.signup:hover{
+  color: #fff;
+  background-color: #000;
 }
 .sign-in .content input[type="button"] {
   border: 1px solid #000;
@@ -2111,6 +2125,10 @@ audio {
 }
 .tag .comment-body p span{
   color: #000
+}
+.tag .comment-body p span.re-cmment{
+  margin: 0px 10px;
+  color: #ccc;
 }
 .hot .hot-list{
   overflow: hidden;
