@@ -329,6 +329,81 @@ body {
 .xc-homepage .home-top{
   position: relative;
 }
+.xc-homepage.talk .home-top{
+  width: 92%;
+  position: fixed;
+  top: 0px;
+  padding: 15px 4%;
+  background-color: #fff;
+}
+.xc-homepage.talk .message-down{
+  position: fixed;
+  bottom: 0px;
+  width: 92%;
+  padding: 15px 4%;
+  display: flex;
+  font-size: 14px;
+  background-color: #fff;
+}
+.xc-homepage.talk .message-down input{
+  flex: 1;
+  background: none;
+  border: none;
+  line-height: 34px;
+  border-bottom: 1px #000 solid;
+}
+.xc-homepage.talk .message-down a{
+  flex: 0 auto;
+  background-color: #0AD210;
+  line-height: 30px;
+  padding: 2px 8px;
+  margin-left: 20px;
+  color: #fff;
+}
+.xc-homepage.talk .home-top .img{
+  width: 40px;
+}
+.xc-homepage.talk #message li{
+  border:none;
+}
+.xc-homepage.talk #message li.me img{
+  float: right;
+  margin-right: 0px;
+  margin-left: 10px;
+}
+.xc-homepage.talk #message li.me .name{
+  float: right;
+}
+.xc-homepage.talk #message li.me .time{
+  float: left;
+}
+.xc-homepage.talk #message li.me p.say{
+  text-align: right;
+}
+.xc-homepage.talk #message li.me p{
+  overflow: hidden;
+}
+.xc-homepage.talk #message{
+  margin-top: 84px;
+  display: flex;
+  overflow-x: hidden;
+  margin-bottom: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  width: 100%;
+}
+.xc-homepage.talk #message ul{
+  width: 100%;
+}
+.xc-homepage.talk .home-top a{
+  text-align: left;
+  width: 100%;
+  color: #000;
+}
+.xc-homepage.talk .home-top a img{
+  width: 3%;
+  margin-right: 10px;
+}
 .xc-homepage .home-top a{
   position: absolute; 
   width: 5%;
@@ -352,6 +427,7 @@ body {
 }
 .xc-homepage .homemain-down {
   overflow: hidden;
+  background-color: #fff;
 }
 .xc-homepage .homemain-down>div {
   position: relative;
