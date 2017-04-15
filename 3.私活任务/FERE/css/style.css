@@ -534,6 +534,21 @@ body {
   margin-bottom: 10px;
   background-color: #f2f2f2;
 }
+.xc-home .minimalist .home-main>ul>li{
+  background-color: #fff;
+}
+.xc-home  .minimalist .home-main>ul li h2{
+  background-color: #fff;
+}
+.minimalist .home-title h2{
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  margin: 10px 0px;
+}
+.minimalist .home-title h2 img{
+  margin-left: 10px
+}
 .xc-home .home-main>ul li h2 {
   position: relative;
   font-size: 300%;
@@ -556,6 +571,7 @@ body {
   line-height: 300%;
   width: 96%;
   margin: 0 auto;
+  overflow: hidden;
 }
 .xc-home .usergroup p img {
   position: absolute;
@@ -2420,6 +2436,58 @@ audio {
 .brand-go .shop-img img{
   width: 80%;
   margin: 20% 0px 0 0px;
+}
+.date-xc{
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+}
+.date .nav {
+  padding: 10px 4%;
+  display: flex;
+}
+.date .nav li{
+  flex: 1;
+  color: #939ba0;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  border-bottom: 2px solid #fff;
+}
+.date .nav li.active{
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+.date-down{
+  padding:0px 6%;
+}
+.date-down li{
+  position: relative;
+  margin: 20px 0px;
+}
+.date-down li .date-btn{
+  position: absolute;
+  line-height: 28px;
+  font-size: 18px;
+  background-color: #6ab4e7;
+  color: #fff;
+  right: 0px;
+  bottom: 0px;
+  padding: 2px 8px;
+}
+.date-down li .date-good{
+  position: absolute;
+  left: 1%;
+  bottom: 1%;
+  width: 6%;
+}
+.date-down li h2{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-50%,-50%);
+  font-size: 30px;
+  font-weight: 600;
 }
 .music-ani {
   -webkit-transform-origin: 50% 50%;
