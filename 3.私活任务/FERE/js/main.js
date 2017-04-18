@@ -118,7 +118,24 @@ $(function () {
 			});
 		});
 	})();
-
+  //进入聊天页面
+	$("#messageList li").mutouch({
+		banRight: true,
+		offsetX: 5,
+		offsetY: 5,
+		onTap: function (tapNum) {
+			location.href = "talk.html";
+		}
+	});
+  //进入首页
+	$(".home-h1 .bg").mutouch({
+		banRight: true,
+		offsetX: 5,
+		offsetY: 5,
+		onTap: function (tapNum) {
+			location.href = "home.html";
+		}
+	});
 	//右下角菜单切换
 	var menuName = $("#homepage-bg").data("menu");
 	var menuUrl = $("#homepage-bg").data("url");

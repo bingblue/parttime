@@ -399,10 +399,13 @@ body {
   text-align: left;
   width: 100%;
   color: #000;
+  font-size: 1.4rem;
 }
 .xc-homepage.talk .home-top a img{
   width: 3%;
   margin-right: 10px;
+  position: relative;
+  top: -2px;
 }
 .xc-homepage .home-top a{
   position: absolute; 
@@ -419,7 +422,7 @@ body {
 }
 .xc-homepage .home-main .homemain-top {
   line-height: 50px;
-  font-size: 20px;
+  font-size: 1rem;
   color: #ccc;
   background: url("../img/down.png") no-repeat right center;
   display: inline-block;
@@ -594,7 +597,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   display: block;
-  width: 10%;
+  width: 8%;
 }
 .home-h1 .bg {
   width: 10%;
@@ -603,7 +606,7 @@ body {
   right: 0px;
 }
 .xc-home .home-main>ul {
-  background-color: #c5c5c5;
+  background-color: #ddd;
   overflow: hidden;
 }
 .xc-home .home-main>ul>li {
@@ -627,7 +630,7 @@ body {
 }
 .xc-home .home-main>ul li h2 {
   position: relative;
-  font-size: 300%;
+  font-size: 230%;
   line-height: 200%;
   width: 94%;
   padding: 0 3%;
@@ -638,7 +641,7 @@ body {
 .xc-home .home-main>ul li h2 img {
   position: absolute;
   right: 3%;
-  width: 8%;
+  width: 5%;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -689,6 +692,7 @@ body {
   width: 33.3333%;
   text-align: center;
   float: left;
+  font-size: 1rem;
 }
 .xc-home .dpgroup p img {
   width: 12%;
@@ -919,6 +923,7 @@ body {
 .sign-in .content h3{
   text-align: center;
   margin: 26% 0 8% 0;
+  font-size: 1.5rem;
 }
 .sign-in .content a{
   font-size: 14px;
@@ -929,7 +934,7 @@ body {
 .sign-in .content p{
   overflow: hidden;
   text-align: center;
-  margin-bottom: 15%;
+  margin-bottom: 4%;
 }
 .sign-in .content input,
 .sign-in .content .input-reg,
@@ -941,9 +946,14 @@ body {
   background: none;
   text-align: center;
   color: #000;
-  font-size: 26px;
+  font-size: 1.2rem;
   line-height: 46px;
   border-bottom: 1px solid #ccc;
+}
+.sign-in .content a.forget{
+  font-size: 0.6rem;
+  border-bottom: 0px;
+  color: #ddd;
 }
 .sign-in .content a.signin{
   margin-top: 25%;
@@ -1179,7 +1189,7 @@ body {
 }
 .share-photo .head{
   color: #ccc;
-  font-size: 16px;
+  font-size: 0.8rem;
 }
 .share-photo .head img{
   width: 40px;
@@ -1600,6 +1610,7 @@ body {
 }
 #message li .say{
   color: #666;
+  line-height: 50px;
 }
 /*follow*/
 .follow .home-main{
@@ -1626,7 +1637,7 @@ body {
   padding: 2% 0;
 }
 .follow-say{
-  font-size: 30px;
+  font-size: 1.4rem;
   padding: 4% 0px 2%;
   text-align: center;
 }
