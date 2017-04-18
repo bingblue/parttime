@@ -1624,6 +1624,8 @@ body {
   background-color: #65add5;
   color: #fff;
   width: 58px;
+  -webkit-appearance:none;
+  border-radius: 0;
 }
 .follow .cont .right .btn.gz{
   background-color: #fff;
@@ -2596,6 +2598,7 @@ audio {
   text-align: left;
   padding: 2%;
   font-size: 0.8rem;
+  border-top: 0;
 }
 .feedback input{
   background: #fff;
@@ -2604,6 +2607,7 @@ audio {
   padding: 2px 8px;
   margin-top: 10px;
   font-size: 0.9rem;
+  border-radius: 0;
 }
 .music-ani {
   -webkit-transform-origin: 50% 50%;
