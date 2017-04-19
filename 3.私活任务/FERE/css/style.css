@@ -408,7 +408,7 @@ body {
 .xc-homepage.talk #message ul{
   width: 100%;
 }
-.xc-homepage.talk .home-top a{
+.xc-homepage.talk a.return{
   text-align: left;
   width: 100%;
   color: #000;
@@ -1477,7 +1477,7 @@ body {
   font-size: 14px;
   overflow: hidden;
   width: 92%;
-  padding: 0 4%;
+  padding: 0 4% 8px;
 }
 .per-infor-edit .infor-edit span{
   float: right;
@@ -1498,6 +1498,7 @@ body {
 /*personal-gift*/
 .home-warp {
   border-bottom: 1px solid #ccc;
+  position: relative;
 }
 .gift .gift-conent{
   width: 92%;
@@ -2500,17 +2501,19 @@ audio {
 .home-menu .menumiddle li{
   width: 100%;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   color: #fff;
   font-size: 28px;
 }
 .home-menu .menumiddle li>a{
   border-radius: 50%;
   background: #30b3ed;
-  padding: 23px 12px;
+  width: 60px;
+  height: 60px;
   display: inline-block;
   color: #fff;
-  font-size: 28px;
+  font-size: 1.2rem;
+  line-height: 60px;
 }
 /*brand-go*/
 .brand-go .shop-icon div{
@@ -2609,8 +2612,17 @@ audio {
   font-size: 30px;
   font-weight: 600;
 }
-
-/* feedback */
+/* 进度条 */
+.progress{
+  width: 0%;
+  background-image: -webkit-linear-gradient(left,#7fd0f3, #e3f5fc);
+  z-index: 3;
+  height: 3px;
+  position: absolute;
+  bottom: -2px;
+  border: 0;
+}
+/* 意见反馈 */
 .feedback{
   width: 92%;
   padding: 3% 4%;

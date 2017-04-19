@@ -120,7 +120,11 @@ $(function () {
 	})();
 	//关注效果
 	$("input.gz").click(function(){
-		$(this).val("已关注").removeClass("gz");
+		if($(this).hasClass("gz")){
+			$(this).val("已关注").removeClass("gz");
+		}else{
+			$(this).val("关注").addClass("gz");
+		}
 	});
   //进入聊天页面
 	$("#messageList li").mutouch({
@@ -140,6 +144,28 @@ $(function () {
 		}else{
 			$(this).prop("src","img/homedown.png");
 			$(this).parents("li").find(".on").removeClass("on");
+		}
+	});
+	//进度条
+	$(".progress").animate({
+		width:"135%"
+	},3000,function(){
+		$(".progress").css({
+			width:"0%"
+		})
+	});
+	$(".sreach-content").mutouch({
+		banRight: false,
+		offsetX: 5,
+		offsetY: 5,
+		onSwipeTop: function (typeLR) {
+			$(".progress").animate({
+				width:"135%"
+			},3000,function(){
+				$(".progress").css({
+					width:"0%"
+				})
+			});
 		}
 	});
   //进入首页
