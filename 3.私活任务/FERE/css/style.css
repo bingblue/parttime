@@ -318,6 +318,19 @@ body {
   margin-bottom: 2%;
   position: relative;
 }
+.home-main .submenu {
+  position: relative;
+}
+.home-main .submenu .off{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10.8%;
+  display: none;
+}
+.home-main .submenu .on{
+  display: block;
+}
 .xc-homepage .home-main li .bj{
   right: 0px;
   top: 13px;
@@ -485,6 +498,15 @@ body {
   background-size: 100%;
   background-position: right bottom;
   background-repeat: no-repeat;
+}
+#homepage-bg2 {
+  width: 6%;
+  height: auto;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: block;
+  z-index: 2;
 }
 .xc-homepage #homepage-bg li{
     display: block;
@@ -1987,7 +2009,7 @@ audio {
 }
 /*sreach*/
 .sreach-fixed{
-  position: fixed;
+  position: absolute;
   width: 92%;
   padding: 10px 4% 0px;
   overflow: hidden;
@@ -1995,7 +2017,7 @@ audio {
   background-color: #fff;
 }
 .sreach-head{
-  display: flex;
+  display: block;
   margin-bottom: 10px;
 }
 .sreach-banner{
@@ -2323,6 +2345,13 @@ audio {
   color: #323c3f;
   border-color: #323c3f;
 }
+.sreach-head h2{
+  width:92%;
+  padding: 4% 4% 0;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 800;
+}
 .sreach-head .sreach-return img{
   width: 30px;
 }
@@ -2332,6 +2361,8 @@ audio {
 }
 .sreach-head .sreach-input{
   width: 100%;
+  text-align: center;
+  margin-top: 15px;
 }
 .sreach-head .sreach-input input{
   width: 80%;

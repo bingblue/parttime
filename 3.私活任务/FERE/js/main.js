@@ -118,6 +118,10 @@ $(function () {
 			});
 		});
 	})();
+	//关注效果
+	$("input.gz").click(function(){
+		$(this).val("已关注").removeClass("gz");
+	});
   //进入聊天页面
 	$("#messageList li").mutouch({
 		banRight: true,
@@ -127,8 +131,19 @@ $(function () {
 			location.href = "talk.html";
 		}
 	});
+
+	//首页submenu效果
+	$(".submenu-down").click(function(){
+		if(!$(this).parents("li").find(".on").length>0){
+			$(this).prop("src","img/homeleft.png");
+			$(this).parents("li").find(".off").addClass("on");
+		}else{
+			$(this).prop("src","img/homedown.png");
+			$(this).parents("li").find(".on").removeClass("on");
+		}
+	});
   //进入首页
-	$(".home-h1 .bg").mutouch({
+	$(".home-h1 .bg,.header .img").mutouch({
 		banRight: true,
 		offsetX: 5,
 		offsetY: 5,
