@@ -24,7 +24,7 @@ body {
   padding: 10px 0;
   text-align: center;
   font-size: 14px;
-  border-radius: 5px;
+  border-radius: 0px;
   color: #fff;
   border: 0;
   background: #383838;
@@ -325,7 +325,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 10.8%;
+  width: 100%;/*10.8%*/
   display: none;
 }
 .home-main .submenu .on{
@@ -489,7 +489,7 @@ body {
 }
 .xc-homepage #homepage-bg {
   width: 18%;
-  height: 10%;
+  height: 11%;
   position: fixed;
   right: 0;
   bottom: 0;
@@ -854,8 +854,8 @@ body {
   margin-left: 0 !important;
   width: 100% !important;
   -webkit-animation-name: "ani-loading";
-  -webkit-animation-delay: 2s;
-  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: .5s;
   -webkit-animation-fill-mode: forwards;
 }
 .sidebar ul{
@@ -894,12 +894,12 @@ body {
 }
 .menu-on .main{
   -webkit-animation-name: "ani-menu";
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: .5s;
   -webkit-animation-fill-mode: forwards;
 }
 .menu-on .sidebar{
   -webkit-animation-name: "ani-sidebar";
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: .5s;
   -webkit-animation-fill-mode: forwards;
 }
 /*新登录页面开始*/
@@ -1087,6 +1087,9 @@ body {
   width: 50%;
   float: left;
 }
+#reManwomen input,#headbtn{
+  -webkit-appearance:none;
+}
 .sign-in .down .left.td{
   width: 100%;
 }
@@ -1200,7 +1203,7 @@ body {
   width: 5%;
 }
 .share-photo .content{
-  background-color: #ccc;
+  background-color: #f5f5f5;
 }
 .share-photo .self{
   background-color: #fff;
@@ -1214,18 +1217,20 @@ body {
   font-size: 0.8rem;
 }
 .share-photo .head img{
-  width: 40px;
+  width: 25px;
+  position: relative;
+  top: -4px;
 }
 .share-photo .head span{
   margin: 0px 8px;
 }
 .share-photo .head img.good{
-  width: 30px;
+  width: 20px;
   margin-left: 15px;
 }
 .share-photo .body{
-  font-size: 18px;
-  line-height: 36px;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
   word-wrap:break-word; 
   word-break:normal;
 }
@@ -1249,6 +1254,7 @@ body {
 .share-photo .outer-head span{
   font-size: 20px;
   line-height:  45px;
+  color: #000;
 }
 .share-photo .outer-head .btn{
   float: right;
@@ -1262,20 +1268,21 @@ body {
 .share-photo .outer-body{
   overflow: hidden;
   padding: 5% 0% 0%;
+  width: 100%;
 }
 .share-photo .sayhead{
   line-height: 45px;
-  font-size: 24px;
+  font-size: 1.2rem;
   overflow: hidden;
 }
 .share-photo .sayhead img{
-  width: 30px;
-  margin-left: 4%; 
-  margin-top: -10px;
+  width: 20px;
+  margin-left: 5px; 
 }
 .share-photo .say-left{
   float: left;
   width: 30%;
+  color: #6a6a6a;
 }
 .share-photo .say-right{
   float: right;
@@ -1298,7 +1305,8 @@ body {
   margin-left: 2%;
 }
 .share-photo .saybody{
-  font-size: 16px;
+  margin-left: 5%;
+  font-size: 0.9rem;
   line-height: 30px;
   color: #ccc;
 }
@@ -1371,6 +1379,10 @@ body {
 .share-comment .content{
   overflow: hidden;
   line-height: 40px;
+  font-size: 0.9rem;
+}
+.share-comment .content ul{
+  padding-bottom: 40px;
 }
 .share-comment .head{
   overflow: hidden;
@@ -1383,6 +1395,37 @@ body {
   width: 92%;
   padding:2% 4%;
   border-bottom: 1px #ccc solid;
+}
+.comment-send{
+  display: block;
+  position: fixed;
+  width: 92%;
+  padding: 5px 4% 5px;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  background: #fff;
+}
+.comment-send input{
+  background: #f0f0f0;
+  height: 30px;
+  width: 70%;
+  border: 0;
+}
+.comment-send img{
+  width: 30px;
+  margin-left: 5%;
+}
+.comment-send a{
+  display: inline-block;
+  background: #fff;
+  height: 28px;
+  line-height: 28px;
+  width: 20%;
+  border: 1px solid #7d7d7d;
+  text-align: center;
+  color: #333;
+  margin-left: 5px;
 }
 .share-comment .head p{
   float: right;
@@ -1418,7 +1461,7 @@ body {
 }
 .per-infor .infor-img h3 .gz{
   position: absolute;
-  bottom: 0px;
+  bottom: -10px;
   right: 4%;
   width: 15%;
 }
@@ -1634,6 +1677,17 @@ body {
 #message li .say{
   color: #666;
   line-height: 50px;
+}
+
+#upload-fiexd{
+  position: fixed;
+  width: 10%;
+  right: 10px;
+  bottom: 10px;
+}
+#headfile2{
+  position: absolute;
+  opacity: 0;
 }
 /*follow*/
 .follow .home-main{
@@ -2501,19 +2555,19 @@ audio {
 .home-menu .menumiddle li{
   width: 100%;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #fff;
   font-size: 28px;
 }
 .home-menu .menumiddle li>a{
   border-radius: 50%;
   background: #30b3ed;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   display: inline-block;
   color: #fff;
   font-size: 1.2rem;
-  line-height: 60px;
+  line-height: 70px;
 }
 /*brand-go*/
 .brand-go .shop-icon div{
@@ -2546,6 +2600,12 @@ audio {
 }
 .brand-go .shop  .btn-group {
   text-align: center;
+}
+.close-home-menu img{
+  width: 20px;
+}
+.menumiddle{
+  padding-top: 20px;
 }
 .brand-go .shop .btn{
   width: auto;

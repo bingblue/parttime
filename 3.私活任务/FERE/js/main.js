@@ -121,9 +121,15 @@ $(function () {
 	//关注效果
 	$("input.gz").click(function(){
 		if($(this).hasClass("gz")){
-			$(this).val("已关注").removeClass("gz");
+			$(this).val("已关注").removeClass("gz").css({
+				backgroundColor: "#65add5",
+    		color: "#fff"
+			});
 		}else{
-			$(this).val("关注").addClass("gz");
+			$(this).val("关注").addClass("gz").css({
+				backgroundColor: "#fff",
+    		color: "#65add5"
+			});;
 		}
 	});
   //进入聊天页面
@@ -169,12 +175,21 @@ $(function () {
 		}
 	});
   //进入首页
-	$(".home-h1 .bg,.header .img").mutouch({
+	$(".home-h1 .bg,.header .img,#loginBtn").mutouch({
 		banRight: true,
 		offsetX: 5,
 		offsetY: 5,
 		onTap: function (tapNum) {
 			location.href = "home.html";
+		}
+	});
+  //进入详情页
+	$(".submenu>img:first-child,.homemain-down img").mutouch({
+		banRight: true,
+		offsetX: 5,
+		offsetY: 5,
+		onTap: function (tapNum) {
+			location.href = "share-photo.html";
 		}
 	});
 	//右下角菜单切换

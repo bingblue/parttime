@@ -17,83 +17,114 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="sign-in">
-	<div class="wrap">
+	<div class="wrap home">
+		<div class="sidebar">
+			<a href="javascript:;" class="btn-close"><img src="img/close.png"></a>
+			<ul>
+				<li>
+					<a href="chat.html">我的消息<span>20</span></a>
+				</li>
+				<li>
+					<a href="follow.html">我的关注</a>
+				</li>
+				<li>
+					<a href="personal.html">个人主页</a>
+				</li>
+				<li>
+					<a href="history.html">历史浏览</a>
+				</li>
+				<li>
+					<a href="feedback.html">意见反馈</a>
+				</li>
+				<li>
+					<a href="personal-info.html">设置</a>
+				</li>
+				<li>
+					<a href="help.html">help</a>
+				</li>
+			</ul>
+			<div class="mask-home"></div>
+			<div class="login-group">
+				<a href="login.html" class="btn-login active">登入</a>
+				<a href="javascript:;" class="btn-logout">退出</a>
+			</div>
+		</div>
 	  <div class="main">
 	   <div class="header">
-	   	<a href="javascript:;" class="btn-menu"><img src="img/menu.png" alt="菜单"></a>
-	   	<img src="img/home-bg.png" class="img" alt="图标">
-	   	<a href="reg2.html" class="next">下一步</a>
+		   <a href="javascript:;" class="btn-menu"><img src="img/menu.png" alt="菜单"></a>
+		   <img src="img/home-bg.png" class="img" alt="图标">
+		   <a href="reg2.html" class="next">下一步</a>
 	   </div>
-	   <div class="interest">
-	   	<h3>请选择感兴趣的</h3>
-	   	<ul>
-	   	 <li>
-	   	  <a href="javascript:;">
-	   	   <img src="img/chineseStyle.png" alt="中国风">
-	   	   中国风
-	   	  </a>
-	   	 </li>
-	   	 <li>
-	   	  <a href="javascript:;">
-	   	   <img src="img/xvdieo.png" alt="欧美风">
-	   	   欧美风
-	   	  </a>
-	   	 </li>
-	   	 <li>
-	   	  <a href="javascript:;">
-	   	   <img src="img/prettyss.png" alt="韩系">
-	   	   韩系
-	   	  </a>
-	   	 </li>
-	   	 <li>
-	   	  <a href="javascript:;">
-	   	   <img src="img/japanese.png" alt="日系">
-	   	   日系
-	   	  </a>
-	   	 </li>
-	   	 <li>
-	   	  <a href="javascript:;">
-	   	   <img src="img/retro.png" alt="复古">
-	   	   复古
-	   	  </a>
-	   	 </li>
-	   	 <li>
-	   	  <a href="javascript:;">
-	   	   <img src="img/galant.png" alt="华丽">
-	   	   华丽
-	   	  </a>
-	   	 </li>
-	   	 <li>
-	   	  <a href="javascript:;">
-	   	   <img src="img/mashup.png" alt="混搭">
-	   	   混搭
-	   	  </a>
-	   	 </li>
-	   	 <li>
-	   	  <a href="javascript:;">
-	   	   <img src="img/minimal.png" alt="极简">
-	   	   极简
-	   	  </a>
-	   	 </li>
-	   	 <li>
-	   	  <a href="javascript:;">
-	   	   <img src="img/street.png" alt="街头">
-	   	   街头
-	   	  </a>
-	   	 </li>
-	   	 <li>
-	   	  <a href="javascript:;">
-	   	   <img src="img/neutral.png" alt="中性">
-	   	   中性
-	   	  </a>
-	   	 </li>
-	   	 <li>
-	   	  <a href="javascript:;">
-	   	   <img src="img/work.png" alt="职场">
-	   	   职场
-	   	  </a>
-	   	 </li>
-	   	</ul>
+	   <div class="mess">
+	   	<h3>完善信息</h3>
+	   	<form action="">
+	   	 <div class="head">
+	   	 	<span></span>
+	   	 	<input type="file" value="上传照片" id="headfile">
+	   	 	<input type="button" class="btn" value="上传照片" id="headbtn">
+	   	 </div>
+	   	 <div class="down">
+	   	 	<div class="p">
+	   	 		<div class="left">
+	   	 			<label>性别：<span>男</span></label>
+	   	 		</div>
+				<div class="right" id="reManwomen">
+					<input class="btn" value="男" type="button" />
+					<input class="btn no" value="女" type="button" />
+				</div>
+	   	 	</div>
+	   	 	<div class="p">
+	   	 		<div class="left">
+	   	 			<label>年龄：<input type="text" placeholder="选填"></label>
+	   	 		</div>
+				<div class="right" >
+					<a href="javascript:;"><img src="img/right.png" alt="右"></a>
+				</div>
+	   	 	</div>
+	   	 	<div class="p">
+	   	 		<div class="left">
+	   	 			<label>所在地：<input type="text" placeholder="选填"></label>
+	   	 		</div>
+				<div class="right" >
+					<a href="javascript:;"><img src="img/right.png" alt="右"></a>
+				</div>
+	   	 	</div>
+	   	 	<div class="p">
+	   	 		<div class="left">
+	   	 			<label>身高：<input type="text" placeholder="选填"></label>
+	   	 		</div>
+				<div class="right" >
+					<a href="javascript:;"><img src="img/right.png" alt="右"></a>
+				</div>
+	   	 	</div>
+	   	 	<div class="p">
+	   	 		<div class="left">
+	   	 			<label>体重：<input type="text" placeholder="选填"></label>
+	   	 		</div>
+				<div class="right" >
+					<a href="javascript:;"><img src="img/right.png" alt="右"></a>
+				</div>
+	   	 	</div>
+	   	 	<div class="p">
+	   	 		<div class="left">
+	   	 			<label>发型：<input type="text" placeholder="选填"></label>
+	   	 		</div>
+				<div class="right" >
+					<a href="javascript:;"><img src="img/right.png" alt="右"></a>
+				</div>
+	   	 	</div>
+	   	 	<div class="p">
+	   	 		<div class="left td">
+	   	 			<label>爱好：<input type="text" placeholder="选填"></label>
+	   	 		</div>
+	   	 	</div>
+	   	 	<div class="p">
+	   	 		<div class="left td">
+	   	 			<label>简介：<input type="text" placeholder="选填"></label>
+	   	 		</div>
+	   	 	</div>
+	   	 </div>
+	   	</form>
 	   </div>
 	  </div>
 	</div>
