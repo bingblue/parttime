@@ -105,6 +105,17 @@ $(function () {
 	$(".pre-message .close").click(function (event) {
 		$(this).parents(".mark").fadeOut('slow');
 	});
+	//聊天提醒自动关闭
+	(function () {
+		setTimeout(function(){
+			$("#haschat").fadeOut(200);
+		},3000);
+	})();
+	//点击聊天提醒出来聊天框
+	$("#haschat").click(function(){
+		$("#haschat").fadeOut(200);
+		$(".mark").show();
+	});
 	//返回事件
 	$('.return').click(function () {
 		history.go(-1);
@@ -119,7 +130,7 @@ $(function () {
 		});
 	})();
 	//关注效果
-	$("input.gz").click(function(){
+	$("input[type='button'].gz").click(function(){
 		if($(this).hasClass("gz")){
 			$(this).val("已关注").removeClass("gz").css({
 				backgroundColor: "#65add5",
