@@ -158,6 +158,15 @@ $(function () {
 			location.href = "talk.html";
 		}
 	});
+	//标签进入搜索页
+	$(".usergroup a").mutouch({
+		banRight: true,
+		offsetX: 5,
+		offsetY: 5,
+		onTap: function (tapNum) {
+			location.href = "search.html";
+		}
+	});
 
 	//首页submenu效果
 	$(".submenu-down").click(function(){
