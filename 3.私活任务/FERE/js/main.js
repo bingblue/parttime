@@ -143,6 +143,12 @@ $(function () {
 			});;
 		}
 	});
+	//home页消息发送
+	$(".footer .send").click(function(){
+		var txt = $(".footer .message-say input").val();
+		$(".pre-message .body").append($("<p class='right'>"+txt+"</p>"));
+		$(".footer .message-say input").val("");
+	});
   //进入聊天页面
 	$("#messageList li").mutouch({
 		banRight: true,

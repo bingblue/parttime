@@ -2575,6 +2575,10 @@ audio {
   font-size: 1.2rem;
   line-height: 70px;
 }
+.pre-message .body .right{
+  text-align: right;
+  margin-top: 10px;
+}
 /*brand-go*/
 .brand-go .shop-icon div{
   text-align: center;
