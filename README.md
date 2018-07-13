@@ -8,7 +8,7 @@
 
 **感谢** : 欢迎大家加入,一起做页面,一起提升能力,加入前请先 `follow @XiaoMuCOOL`,并点击右上角 `star` 本项目。
 
-##Getting Started
+## Getting Started
 ### 荣誉榜2017(参与人员)
 昵称 | **QQ号** | 勋章(page) | 备注
 ---- |--------- |:------------:| ----
@@ -23,16 +23,16 @@
 [丝袜][7]     | 695344490  | 0            | 
 [Daemon][8]   | 526752951  | 0            | 
 
-##Tips
+## Tips
 大家可以自己接了项目，互帮互助，分给大家做，放在 `3.私活任务` 里新建一个文件夹里！
 
-##版本日志
+## 版本日志
 - [X] v1.0103 16已成往事,17继续前行
 - [X] v0.0512 更改项目结构
 - [X] v0.0313 增加模板步骤
 - [X] v0.0314 增加README.md
 
-##License
+## License
 
 **Bingblue & parttime** is licensed under the GNU GENERAL PUBLIC LICENSE, Version 3. 
 
